@@ -246,31 +246,31 @@
 		3BD161F619088204002F057D /* libSGLKitTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGLKitTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD1622719089902002F057D /* SGLKitTouch-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SGLKitTouch-Prefix.pch"; sourceTree = "<group>"; };
 		3BD162401909940C002F057D /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
-		3BD16279190AC276002F057D /* Basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic.frag; sourceTree = "<group>"; };
-		3BD1627A190AC276002F057D /* BasicTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicTexture.frag; sourceTree = "<group>"; };
-		3BD1627B190AC276002F057D /* Color.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Color.frag; sourceTree = "<group>"; };
-		3BD1627C190AC276002F057D /* Combine.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Combine.frag; sourceTree = "<group>"; };
-		3BD1627D190AC276002F057D /* Copy.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Copy.frag; sourceTree = "<group>"; };
-		3BD1627E190AC276002F057D /* CopyPixels.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CopyPixels.frag; sourceTree = "<group>"; };
-		3BD1627F190AC276002F057D /* CopyTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CopyTexture.frag; sourceTree = "<group>"; };
-		3BD16280190AC276002F057D /* Gaussian.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gaussian.frag; sourceTree = "<group>"; };
-		3BD16281190AC276002F057D /* Fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fragment.glsl; sourceTree = "<group>"; };
-		3BD16282190AC276002F057D /* Utilities.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Utilities.glsl; sourceTree = "<group>"; };
-		3BD16283190AC276002F057D /* Vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vertex.glsl; sourceTree = "<group>"; };
-		3BD16284190AC276002F057D /* Basic.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Basic.vert; sourceTree = "<group>"; };
-		3BD16285190AC276002F057D /* BasicTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BasicTexture.vert; sourceTree = "<group>"; };
-		3BD16286190AC276002F057D /* Color.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Color.vert; sourceTree = "<group>"; };
-		3BD16287190AC276002F057D /* Combine.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Combine.vert; sourceTree = "<group>"; };
-		3BD16288190AC276002F057D /* Copy.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Copy.vert; sourceTree = "<group>"; };
-		3BD16289190AC276002F057D /* CopyPixels.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CopyPixels.vert; sourceTree = "<group>"; };
-		3BD1628A190AC276002F057D /* CopyTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = CopyTexture.vert; sourceTree = "<group>"; };
-		3BD1628B190AC276002F057D /* Gaussian.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Gaussian.vert; sourceTree = "<group>"; };
-		3BD162B2190AC396002F057D /* Platform.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Platform.glsl; sourceTree = "<group>"; };
 		3BD162B5190C3633002F057D /* Plan.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Plan.txt; sourceTree = "<group>"; };
 		3BD162CB190F3980002F057D /* SGLMeshes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMeshes.h; sourceTree = "<group>"; };
 		3BD162CC190F3980002F057D /* SGLMeshes.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLMeshes.mm; sourceTree = "<group>"; };
 		3BDDA3FA1905C77300F47029 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		3BDDA3FC1905C77B00F47029 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		3BEF01451964F5EA0021E64C /* Basic.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Basic.frag; sourceTree = "<group>"; };
+		3BEF01461964F5EA0021E64C /* Basic.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Basic.vert; sourceTree = "<group>"; };
+		3BEF01471964F5EA0021E64C /* BasicTexture.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = BasicTexture.frag; sourceTree = "<group>"; };
+		3BEF01481964F5EA0021E64C /* BasicTexture.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = BasicTexture.vert; sourceTree = "<group>"; };
+		3BEF01491964F5EA0021E64C /* Color.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Color.frag; sourceTree = "<group>"; };
+		3BEF014A1964F5EA0021E64C /* Color.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Color.vert; sourceTree = "<group>"; };
+		3BEF014B1964F5EA0021E64C /* Combine.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Combine.frag; sourceTree = "<group>"; };
+		3BEF014C1964F5EA0021E64C /* Combine.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Combine.vert; sourceTree = "<group>"; };
+		3BEF014D1964F5EA0021E64C /* Copy.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Copy.frag; sourceTree = "<group>"; };
+		3BEF014E1964F5EA0021E64C /* Copy.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Copy.vert; sourceTree = "<group>"; };
+		3BEF014F1964F5EA0021E64C /* CopyPixels.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = CopyPixels.frag; sourceTree = "<group>"; };
+		3BEF01501964F5EA0021E64C /* CopyPixels.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = CopyPixels.vert; sourceTree = "<group>"; };
+		3BEF01511964F5EA0021E64C /* CopyTexture.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = CopyTexture.frag; sourceTree = "<group>"; };
+		3BEF01521964F5EA0021E64C /* CopyTexture.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = CopyTexture.vert; sourceTree = "<group>"; };
+		3BEF01531964F5EA0021E64C /* Fragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fragment.glsl; sourceTree = "<group>"; };
+		3BEF01541964F5EA0021E64C /* Gaussian.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Gaussian.frag; sourceTree = "<group>"; };
+		3BEF01551964F5EA0021E64C /* Gaussian.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Gaussian.vert; sourceTree = "<group>"; };
+		3BEF01561964F5EA0021E64C /* Platform.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Platform.glsl; sourceTree = "<group>"; };
+		3BEF01571964F5EA0021E64C /* Utilities.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Utilities.glsl; sourceTree = "<group>"; };
+		3BEF01581964F5EA0021E64C /* Vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Vertex.glsl; sourceTree = "<group>"; };
 		3BF53580191AC571003F4A4B /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		3BF53581191AC571003F4A4B /* View.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = View.mm; sourceTree = "<group>"; };
 		3BF53583191ADC1D003F4A4B /* SGLIosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLIosView.h; sourceTree = "<group>"; };
@@ -530,26 +530,26 @@
 		3BDDA3ED1905C24800F47029 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				3BD162B2190AC396002F057D /* Platform.glsl */,
-				3BD16282190AC276002F057D /* Utilities.glsl */,
-				3BD16283190AC276002F057D /* Vertex.glsl */,
-				3BD16281190AC276002F057D /* Fragment.glsl */,
-				3BD16284190AC276002F057D /* Basic.vert */,
-				3BD16279190AC276002F057D /* Basic.frag */,
-				3BD16285190AC276002F057D /* BasicTexture.vert */,
-				3BD1627A190AC276002F057D /* BasicTexture.frag */,
-				3BD16286190AC276002F057D /* Color.vert */,
-				3BD1627B190AC276002F057D /* Color.frag */,
-				3BD16287190AC276002F057D /* Combine.vert */,
-				3BD1627C190AC276002F057D /* Combine.frag */,
-				3BD16288190AC276002F057D /* Copy.vert */,
-				3BD1627D190AC276002F057D /* Copy.frag */,
-				3BD16289190AC276002F057D /* CopyPixels.vert */,
-				3BD1627E190AC276002F057D /* CopyPixels.frag */,
-				3BD1628A190AC276002F057D /* CopyTexture.vert */,
-				3BD1627F190AC276002F057D /* CopyTexture.frag */,
-				3BD1628B190AC276002F057D /* Gaussian.vert */,
-				3BD16280190AC276002F057D /* Gaussian.frag */,
+				3BEF01561964F5EA0021E64C /* Platform.glsl */,
+				3BEF01581964F5EA0021E64C /* Vertex.glsl */,
+				3BEF01531964F5EA0021E64C /* Fragment.glsl */,
+				3BEF01571964F5EA0021E64C /* Utilities.glsl */,
+				3BEF01461964F5EA0021E64C /* Basic.vert */,
+				3BEF01451964F5EA0021E64C /* Basic.frag */,
+				3BEF01481964F5EA0021E64C /* BasicTexture.vert */,
+				3BEF01471964F5EA0021E64C /* BasicTexture.frag */,
+				3BEF014A1964F5EA0021E64C /* Color.vert */,
+				3BEF01491964F5EA0021E64C /* Color.frag */,
+				3BEF014C1964F5EA0021E64C /* Combine.vert */,
+				3BEF014B1964F5EA0021E64C /* Combine.frag */,
+				3BEF014E1964F5EA0021E64C /* Copy.vert */,
+				3BEF014D1964F5EA0021E64C /* Copy.frag */,
+				3BEF01501964F5EA0021E64C /* CopyPixels.vert */,
+				3BEF014F1964F5EA0021E64C /* CopyPixels.frag */,
+				3BEF01521964F5EA0021E64C /* CopyTexture.vert */,
+				3BEF01511964F5EA0021E64C /* CopyTexture.frag */,
+				3BEF01551964F5EA0021E64C /* Gaussian.vert */,
+				3BEF01541964F5EA0021E64C /* Gaussian.frag */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -690,7 +690,7 @@
 				3BC5E6DE1913D3B000FCF32F /* Sources */,
 				3BC5E6DF1913D3B000FCF32F /* Frameworks */,
 				3BC5E6E01913D3B000FCF32F /* Resources */,
-				3BC5E6F01913D7C000FCF32F /* ShellScript */,
+				3BC5E6F01913D7C000FCF32F /* Build Shaders */,
 			);
 			buildRules = (
 			);
@@ -800,13 +800,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BC5E6F01913D7C000FCF32F /* ShellScript */ = {
+		3BC5E6F01913D7C000FCF32F /* Build Shaders */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Build Shaders";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
