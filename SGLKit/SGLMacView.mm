@@ -225,7 +225,9 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
 
 - (BOOL) isOpaque
 {
-    return NO;
+    // CJC temp:
+    //return NO;
+    return YES;
 }
 
 - (CGFloat) width

@@ -15,7 +15,10 @@
 @property (nonatomic) vec2 actualFrameOrigin;
 @property (nonatomic) vec2 actualFrameSize;
 
+- (void) addObservers;
+- (void) removeObservers;
 - (void) transformWasChanged;
+- (void) requestRedisplay;
 
 - (IBAction) resetCamera:(id)sender;
 

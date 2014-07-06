@@ -31,12 +31,11 @@
     self.scene.showAxes = YES;
     self.scene.objectDistance = 4000.0;
     
-    _shader = [[SGLShader alloc] initWithName:@"Basic"];
-    [_shader setVec4:vec4(vec3(0.5), 1.0) forName:@"color"];
-    [_shader setFloat:32.0 forName:@"shininess"];
-    [self.scene addSceneShader:_shader];
+    _cubeShader = [[SGLShader alloc] initWithName:@"Basic"];
+    [_cubeShader setVec4:vec4(vec3(0.5), 1.0) forName:@"color"];
+    [_cubeShader setFloat:32.0 forName:@"shininess"];
+    [self.scene addSceneShader:_cubeShader];
     
-    _axiiMesh = [SGLMeshes axiiMesh];
     _cubeMesh = [SGLMeshes cubeMesh];
 }
 
@@ -44,16 +43,13 @@
 {
     [super render];
     
-    [_shader activate];
-    
     switch (_shape)
     {
         case AXII:
-            [_axiiMesh render];
             break;
             
         case CUBE:
-            [_shader activate];
+            [_cubeShader activate];
             [_cubeMesh render];
             break;
         

@@ -28,8 +28,15 @@
     return self;
 }
 
+- (void) dealloc
+{
+    [self removeObservers];
+}
+
 - (void) openGLWasPrepared
 {
+    [self addObservers];
+    
     self.scene = [[SGLScene alloc] initWithContext:self.context]; // KVC safe!
     self.scene.renderingQuality = self.renderingQuality;
     
@@ -40,6 +47,29 @@
     [super openGLWasPrepared];
 }
 
+- (void) addObservers
+{
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(sceneChanged:) name:SGLSceneNeedsDisplayNotification object:nil];
+}
+
+- (void) removeObservers
+{
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self name:SGLSceneNeedsDisplayNotification object:nil];
+}
+
+- (void) requestRedisplay
+{
+    if (self.shouldRenderContinuously == NO)
+        self.forceNextFrameToRender = YES;
+}
+
+- (void) sceneChanged:(NSNotification*)note
+{
+    [self requestRedisplay];
+}
+
 - (void) transformWasChanged
 {
     NSWindow* window = self.window;
@@ -48,7 +78,7 @@
     NSRect windowFrame = [window respondsToSelector:@selector(actualFrame)] ? [(id)window actualFrame] : [window frame];
     NSRect actualFrame = [window contentRectForFrameRect:windowFrame];
     
-    vec2 screenOrigin = PointToVec2(screen.frame.origin);
+    //vec2 screenOrigin = PointToVec2(screen.frame.origin);
     vec2 screenSize = SizeToVec2(screen.frame.size);
     
     _actualFrameOrigin = PointToVec2(actualFrame.origin);
@@ -57,7 +87,7 @@
     _actualFrameOrigin.x -= screen.frame.origin.x;
     _actualFrameOrigin.y -= screen.frame.origin.y;
     
-    vec2 originOffset = _actualFrameOrigin - 0.5 * screenSize - screenOrigin;
+    vec2 originOffset = _actualFrameOrigin - 0.5 * screenSize; // - screenOrigin;
     vec2 centerOffset = originOffset + 0.5 * _actualFrameSize;
     vec2 viewSize = SizeToVec2(self.frame.size);
     

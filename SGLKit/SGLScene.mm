@@ -21,6 +21,7 @@ static const float DEFAULT_CAM_DIST = 5000.0f;
 const vec3 ABOVE_LIGHT_POS (0.0, 5000.0, 0.0);
 const vec3 ABOVE_BACK_LIGHT_POS (0.0, 5000.0, 5000.0);
 
+NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotification";
 
 @interface SGLScene ()
 
@@ -125,7 +126,7 @@ const vec3 ABOVE_BACK_LIGHT_POS (0.0, 5000.0, 5000.0);
     _centerOffset = centerOffset;
     _viewSize = viewSize;
     _viewPixelDensity = pixelDensity;
-
+    
     [self transformWasChanged];
 }
 
@@ -384,6 +385,13 @@ const vec3 ABOVE_BACK_LIGHT_POS (0.0, 5000.0, 5000.0);
     super.renderingQuality = quality;
     
     // Nothing else yet.
+}
+
+- (void) requestRedisplay
+{
+    [super requestRedisplay];
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:SGLSceneNeedsDisplayNotification object:self];
 }
 
 @end

@@ -55,7 +55,7 @@
     self.scene.renderingQuality = controller.renderingQuality;
     
     vec2 viewSize = SizeToVec2(self.bounds.size);
-    vec2 originOffset = - 0.5 * viewSize;
+    vec2 originOffset = -0.5 * viewSize;
     
     [self.scene setOriginOffset:originOffset
                    centerOffset:ORIGIN_2D
@@ -143,7 +143,7 @@
 - (void) transformWasChanged
 {
     vec2 viewSize = SizeToVec2(self.bounds.size);
-    vec2 originOffset = - 0.5 * viewSize;
+    vec2 originOffset = -0.5 * viewSize;
     
     [self.scene setOriginOffset:originOffset
                    centerOffset:ORIGIN_2D

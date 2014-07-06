@@ -57,18 +57,52 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
     
     _context = [[SGLContext alloc] initWithCocoaContext:_cocoaContext];
     
-    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(orientationChanged:) name:SGLOrientationChangedNotification object:nil];
-    //[center addObserver:self selector:@selector(accelerationChanged:) name:SGLAccelerationChangedNotification object:nil];
-    
     _motionManager = [SGLMotionManager shared];
     [_motionManager startMotionDetection];
 
     [self setupGL];
+    
+    [self addObservers];
+}
+
+- (void) viewDidUnload
+{
+    [self removeObservers];
+    
+    [super viewDidUnload];
+}
+
+- (void) addObservers
+{
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(sceneChanged:) name:SGLSceneNeedsDisplayNotification object:nil];
+    [center addObserver:self selector:@selector(orientationChanged:) name:SGLOrientationChangedNotification object:nil];
+    //[center addObserver:self selector:@selector(accelerationChanged:) name:SGLAccelerationChangedNotification object:nil];
+}
+
+- (void) removeObservers
+{
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self name:SGLSceneNeedsDisplayNotification object:nil];
+    [center removeObserver:self name:SGLOrientationChangedNotification object:nil];
+    //[center removeObserver:self name:SGLAccelerationChangedNotification object:nil];
+}
+
+- (void) requestRedisplay
+{
+    // CJC revisit: should setNeedsDisplay only be called for continuous rendering qualities?
+    //if (self.shouldRenderContinuously == NO)
+    [self.view setNeedsDisplay];
+}
+
+- (void) sceneChanged:(NSNotification*)note
+{
+    [self requestRedisplay];
 }
 
 - (void) dealloc
-{    
+{
+    [self removeObservers];
     [self tearDownGL];
     
     if (EAGLContext.currentContext == _cocoaContext)
@@ -190,7 +224,7 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
     SGLScene* scene = [(id)self.view scene];
     
     vec2 viewSize = SizeToVec2(self.view.bounds.size);
-    vec2 originOffset = - 0.5 * viewSize;
+    vec2 originOffset = -0.5 * viewSize;
     
     float pixelDensity = [(id)self.view pixelDensity];
     

@@ -16,6 +16,7 @@
 extern const vec3 ABOVE_LIGHT_POS;
 extern const vec3 ABOVE_BACK_LIGHT_POS;
 
+extern NSString* const SGLSceneNeedsDisplayNotification;
 
 @interface SGLScene : SGLRenderer
 

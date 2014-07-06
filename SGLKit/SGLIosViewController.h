@@ -19,8 +19,11 @@
 @property (nonatomic) BOOL dynamicOrientation;
 @property (readonly) BOOL isRotating;
 
+- (void) addObservers;
+- (void) removeObservers;
 - (void) setupGL;
 - (void) tearDownGL;
+- (void) requestRedisplay;
 - (void) render;
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation duration:(NSTimeInterval)duration;
 - (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)orientation;
