@@ -58,17 +58,17 @@ size_t GLDataTypeSize(GLenum dataType)
 //
 // Old Method
 //
-- (id) initWithAttributes:(SGLVertexAttributeList)attributes
+- (id) initWithAttributes:(NSArray*)attributes
                      data:(void*)data
                 byteCount:(size_t)byteCount
               vertexCount:(size_t)vertexCount
 {
     self = [super init];
     
-    SGL_ASSERT(attributes.size() > 0);
+    SGL_ASSERT(attributes.count > 0);
     SGL_ASSERT(data != NULL);
     SGL_ASSERT(byteCount > 0);
-    SGL_ASSERT(vertexCount * attributes.size() * 3 * sizeof(GLfloat) == byteCount);
+    SGL_ASSERT(vertexCount * attributes.count * 3 * sizeof(GLfloat) == byteCount);
     
     self.attributes = attributes;
     self.data = data;
@@ -80,16 +80,16 @@ size_t GLDataTypeSize(GLenum dataType)
     glBufferData(GL_ARRAY_BUFFER, GLsizeiptr(byteCount), data, GL_STATIC_DRAW);
     
     const uint8_t* offset = 0;
-    GLsizei stride = GLsizei(attributes.size() * 3 * sizeof(GLfloat));
+    GLsizei stride = GLsizei(attributes.count * 3 * sizeof(GLfloat));
     
-    for (size_t i = 0; i < attributes.size(); i++)
+    for (size_t i = 0; i < attributes.count; i++)
     {
-        SGLVertexAttribute attribute = attributes[i];
+        SGLVertexAttribute attribute = SGLVertexAttribute([attributes[i] intValue]);
         
         if (attribute == NORMALS)
             _hasNormals = YES;
         
-        else if (attribute == COLORS)
+        else if (attribute == RGBACOLORS)
             _hasColors = YES;
         
         else if (attribute == TEXCOORDS)

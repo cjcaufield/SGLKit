@@ -10,16 +10,8 @@ Features
 - Object rotation should continue when pan releases above a certain speed.
 - Gestures strength should be consistent across screen sizes.
 
-Build
-=====
-
-- Add shaders to resources build.
-- Replace buildshaders.py with encryptshaders.py.
-- Move SGLKitResources files into SGLKit folder?
-
 Future
 ======
 
-- Switch math to GLM?
 - Assign textures to samplers using a stack or index?
-- Take another stab at using the preprocessor to autogenerate uniforms in glsl and objc.
+- Take another stab at using the preprocessor to autogenerate uniforms in glsl and objc?

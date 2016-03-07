@@ -14,4 +14,5 @@
 #endif
 #ifdef SGL_IOS
     #import <OpenGLES/ES2/gl.h>
+    #import <OpenGLES/ES2/glext.h> // CJC revisit: needed for SGLMesh and SGLVertexAttribute.
 #endif

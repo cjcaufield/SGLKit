@@ -11,7 +11,10 @@
 #import "SGLTypes.h"
 #import "SGLMath.h"
 #import "SGLTexture.h"
-#include <vector>
+
+#ifdef __cplusplus
+    #include <vector>
+#endif
 
 void SGLCheckForErrors();
 
@@ -23,10 +26,14 @@ void SwapTextures(__strong SGLTexture** tex1, __strong SGLTexture** tex2);
 
 void DrawTexture(SGLTexture* tex, vec2 outputSize, SamplingType samplingType);
 
-bool operator==(const NSRange& a, const NSRange& b);
-bool operator==(const CGPoint& a, const CGPoint& b);
-bool operator==(const CGSize& a, const CGSize& b);
-bool operator==(const CGRect& a, const CGRect& b);
+#ifdef __cplusplus
+
+    bool operator==(const NSRange& a, const NSRange& b);
+    bool operator==(const CGPoint& a, const CGPoint& b);
+    bool operator==(const CGSize& a, const CGSize& b);
+    bool operator==(const CGRect& a, const CGRect& b);
+
+#endif
 
 CGPoint Vec2ToPoint(vec2 vec);
 vec2 PointToVec2(CGPoint point);
@@ -49,19 +56,23 @@ vec3 ColorToVec3(XXColor* color);
 XXColor* Vec4ToColor(vec4 vec);
 vec4 ColorToVec4(XXColor* color);
 
-template <typename T, int N>
-NSData* CArrayToData(T (&array)[N])
-{
-    unsigned long length = N * sizeof(T);
-    return [NSData dataWithBytesNoCopy:array length:length freeWhenDone:NO];
-}
+#ifdef __cplusplus
 
-template <typename T>
-NSData* VectorToData(std::vector<T>& vec)
-{
-    unsigned long length = vec.size() * sizeof(T);
-    return [NSData dataWithBytesNoCopy:&vec[0] length:length freeWhenDone:NO];
-}
+    template <typename T, int N>
+    NSData* CArrayToData(T (&array)[N])
+    {
+        unsigned long length = N * sizeof(T);
+        return [NSData dataWithBytesNoCopy:array length:length freeWhenDone:NO];
+    }
+
+    template <typename T>
+    NSData* VectorToData(std::vector<T>& vec)
+    {
+        unsigned long length = vec.size() * sizeof(T);
+        return [NSData dataWithBytesNoCopy:&vec[0] length:length freeWhenDone:NO];
+    }
+
+#endif
 
 @interface NSMutableArray (Unique)
 

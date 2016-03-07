@@ -6,18 +6,17 @@
 //  Copyright (c) 2014 Secret Geometry, Inc. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "SGLHeader.h"
-#include <vector>
 
 
-enum SGLVertexAttribute
+typedef enum SGLVertexAttribute
 {
-    POSITIONS = 0,
-    NORMALS   = 1,
-    COLORS    = 2,
-    TEXCOORDS = 3,
-};
+    POSITIONS  = 0,
+    NORMALS    = 1,
+    RGBACOLORS = 2,
+    TEXCOORDS  = 3,
+    
+} SGLVertexAttribute;
 
 struct SGLVertexAttributeInfo
 {
@@ -26,6 +25,3 @@ struct SGLVertexAttributeInfo
     size_t elementCount;
     size_t byteCount;
 };
-
-typedef std::vector<SGLVertexAttribute>     SGLVertexAttributeList;
-typedef std::vector<SGLVertexAttributeInfo> SGLVertexAttributeInfoList;

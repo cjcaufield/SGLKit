@@ -11,6 +11,7 @@
 #import "SGLShader.h"
 #import "SGLMeshes.h"
 #import "SGLUtilities.h"
+#import "SGLDefaults.h"
 
 #define DRAW_AXII
 
@@ -19,7 +20,7 @@ static const float FRUSTUM_FAR = 100000.0f;
 static const float DEFAULT_CAM_DIST = 5000.0f;
 
 const vec3 ABOVE_LIGHT_POS (0.0, 5000.0, 0.0);
-const vec3 ABOVE_BACK_LIGHT_POS (0.0, 5000.0, 5000.0);
+const vec3 ABOVE_BACK_LIGHT_POS (0.0, 5000.0, -3500.0);
 
 NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotification";
 
@@ -34,26 +35,14 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
 
 @implementation SGLScene
 
-+ (void) initialize
-{
-    id defaults =
-    @{
-        @"lightLevel"          : @(0.25),
-        @"renderingQuality"    : @(0),
-        @"userFramesPerSecond" : @(60.0)
-    };
-    
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
-}
-
 - (id) initWithContext:(SGLContext*)context;
 {
     self = [super initWithScene:nil];
     
     _context = context;
     
-    if ([NSUserDefaults.standardUserDefaults objectForKey:@"PositionalPerspective"] != nil)
-        _projectionType = [NSUserDefaults.standardUserDefaults boolForKey:@"PositionalPerspective"] ? PERSPECTIVE : ORTHOGRAPHIC;
+    if ([DEFAULTS objectForKey:PositionalPerspective] != nil)
+        _projectionType = [DEFAULTS boolForKey:PositionalPerspective] ? PERSPECTIVE : ORTHOGRAPHIC;
     else
         _projectionType = PERSPECTIVE;
     
@@ -76,12 +65,22 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     //}
     //else
     {
+        /*
+        #ifdef SGL_IOS
+            _lightPosition = ABOVE_BACK_LIGHT_POS;
+        #endif
+        #ifdef SGL_MAC
+            _lightPosition = ABOVE_LIGHT_POS;
+        #endif
+        */
+        
         _lightPosition = ABOVE_BACK_LIGHT_POS;
+        
         _inverseOrientationMatrix = mat3::identity();
     }
     
-    if ([NSUserDefaults.standardUserDefaults objectForKey:@"LightLevel"] != nil)
-        _lightLevel = [NSUserDefaults.standardUserDefaults floatForKey:@"LightLevel"];
+    if ([DEFAULTS objectForKey:LightLevel] != nil)
+        _lightLevel = [DEFAULTS floatForKey:LightLevel];
     else
         _lightLevel = 1.0;
     
@@ -204,8 +203,6 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
 
 - (void) lightingWasChanged
 {
-    _lightPosition = _inverseOrientationMatrix * ABOVE_LIGHT_POS;
-    
     for (SGLShader* shader in self.allSceneShaders)
         [self setSceneUniforms:shader];
     
@@ -233,6 +230,8 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
 
 - (void) setLightPosition:(vec3)pos
 {
+    //SGL_METHOD_LOG_ARGS(@"%.3f, %.3f, %.3f", pos.x, pos.y, pos.z);
+    
     _lightPosition = pos;
     [self lightingWasChanged];
 }
@@ -321,8 +320,8 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
         [shader setMat3:_normalMatrix forName:@"normalMatrix"];
     }
     
-    [shader setMat3:_inverseOrientationMatrix forName:@"inverseOrientationMatrix"];
     [shader setFloat:_cameraDistance forName:@"cameraDistance"];
+    [shader setMat3:_inverseOrientationMatrix forName:@"inverseOrientationMatrix"];
     [shader setVec3:_lightPosition forName:@"lightPosition"];
     [shader setVec3:_lightColor forName:@"lightColor"];
     [shader setFloat:_lightLevel forName:@"lightLevel"];
@@ -355,10 +354,17 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     
     [self recalculateAxiiMatrix];
     
+    #ifdef SGL_IOS
+        _lightPosition = _inverseOrientationMatrix * ABOVE_LIGHT_POS;
+    #endif
+    #ifdef SGL_MAC
+        _lightPosition = ABOVE_BACK_LIGHT_POS;
+    #endif
+    
     [self lightingWasChanged];
     
     // CJC temp.
-    [self transformWasChanged];
+    //[self transformWasChanged]; // CJC: needed?
 }
 
 - (void) recalculateAxiiMatrix

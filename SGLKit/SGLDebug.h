@@ -15,12 +15,17 @@
     #include "TargetConditionals.h"
 
     #if TARGET_OS_IPHONE
+
         #define SGL_IOS
+        #define SGL_IOS_DEVICE
 
     #elif TARGET_IPHONE_SIMULATOR
+
         #define SGL_IOS
+        #define SGL_IOS_SIMULATOR
 
     #elif TARGET_OS_MAC
+
         #define SGL_MAC
 
     #endif
@@ -53,17 +58,17 @@
         #if TARGET_OS_IPHONE
 
             #include <signal.h>
-            #define SGL_ASSERT(b) { if (!(b)) raise(SIGINT); /* kill(getpid(), SIGINT); */ }
+            #define SGL_ASSERT(b) { if (!(b)) raise(SIGINT); }
 
         #elif TARGET_IPHONE_SIMULATOR
 
             #include <signal.h>
-            #define SGL_ASSERT(b) { if (!(b)) raise(SIGINT); /* kill(getpid(), SIGINT); */ }
+            #define SGL_ASSERT(b) { if (!(b)) raise(SIGINT); }
 
         #elif TARGET_OS_MAC
 
             #include <MacTypes.h>
-            #define SGL_ASSERT(b) { if (!(b)) Debugger(); }
+            #define SGL_ASSERT(b) { if (!(b)) raise(SIGINT); }
 
         #endif
 

@@ -10,18 +10,19 @@
 #import "SGLVertexBuffer.h"
 #import "SGLIndexBuffer.h"
 
-enum MeshMode
+typedef enum MeshMode
 {
     MeshMode_Triangles,
     MeshMode_Lines
-};
+    
+} MeshMode;
 
 
 @interface SGLMesh : NSObject
 
 - (id) initWithMode:(MeshMode)mode
          vertexData:(GLfloat*)vertexData
-   vertexAttributes:(SGLVertexAttributeList)attributes
+   vertexAttributes:(NSArray*)attributes
         vertexCount:(size_t)vertexCount
           indexData:(GLushort*)indexData
          indexCount:(size_t)indexCount;

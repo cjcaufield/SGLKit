@@ -26,8 +26,7 @@
        -1.0f, -1.0f,  0.0f
     };
     
-    SGLVertexAttributeList attrs;
-    attrs.push_back(POSITIONS);
+    NSArray* attrs = @[ @(POSITIONS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Triangles
                               vertexData:vertexData
@@ -50,9 +49,7 @@
         -1.0f, -1.0f,  0.0f,        0.0f,  0.0f,  1.0f
     };
     
-    SGLVertexAttributeList attrs;
-    attrs.push_back(POSITIONS);
-    attrs.push_back(NORMALS);
+    NSArray* attrs = @[ @(POSITIONS), @(NORMALS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Triangles
                               vertexData:vertexData
@@ -75,9 +72,7 @@
        -1.0f, -1.0f,  0.0f,     0.0f,  0.0f,  0.0f
     };
     
-    SGLVertexAttributeList attrs;
-    attrs.push_back(POSITIONS);
-    attrs.push_back(TEXCOORDS);
+    NSArray* attrs = @[ @(POSITIONS), @(TEXCOORDS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Triangles
                               vertexData:vertexData
@@ -100,10 +95,7 @@
        -1.0f, -1.0f,  0.0f,     0.0f,  0.0f,  1.0f,     0.0f,  0.0f,  0.0f
     };
     
-    SGLVertexAttributeList attrs;
-    attrs.push_back(POSITIONS);
-    attrs.push_back(NORMALS);
-    attrs.push_back(TEXCOORDS);
+    NSArray* attrs = @[ @(POSITIONS), @(NORMALS), @(TEXCOORDS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Triangles
                               vertexData:vertexData
@@ -161,9 +153,7 @@
         -0.5f,  0.5f, -0.5f,         0.0f,  0.0f, -1.0f
     };
     
-    SGLVertexAttributeList attrs;
-    attrs.push_back(POSITIONS);
-    attrs.push_back(NORMALS);
+    NSArray* attrs = @[ @(POSITIONS), @(NORMALS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Triangles
                               vertexData:vertexData
@@ -189,9 +179,7 @@
         0.0f, 0.0f, 1.0f,   0.0f,  0.0f,  1.0f,
     };
     
-    SGLVertexAttributeList attrs;
-    attrs.push_back(POSITIONS);
-    attrs.push_back(COLORS);
+    NSArray* attrs = @[ @(POSITIONS), @(RGBACOLORS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Lines
                               vertexData:vertexData
@@ -211,9 +199,7 @@
         1.0f, 1.0f, 1.0f,   1.0f,  1.0f,  1.0f,
     };
     
-    SGLVertexAttributeList attrs;
-    attrs.push_back(POSITIONS);
-    attrs.push_back(COLORS);
+    NSArray* attrs = @[ @(POSITIONS), @(RGBACOLORS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Lines
                               vertexData:vertexData

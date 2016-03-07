@@ -27,7 +27,7 @@
 
 - (id) initWithMode:(MeshMode)mode
          vertexData:(GLfloat*)vertexData
-   vertexAttributes:(SGLVertexAttributeList)attributes
+   vertexAttributes:(NSArray*)attributes
         vertexCount:(size_t)vertexCount
           indexData:(GLushort*)indexData
          indexCount:(size_t)indexCount
@@ -53,7 +53,7 @@
     
     glDisableVertexAttribArray(POSITIONS);
     glDisableVertexAttribArray(NORMALS);
-    glDisableVertexAttribArray(COLORS);
+    glDisableVertexAttribArray(RGBACOLORS);
     glDisableVertexAttribArray(TEXCOORDS);
     
     //NSLog(@"Disabling all vertex attrib arrays");
@@ -72,7 +72,7 @@
     SGLVertexBuffer* vertexBuffer =
         [[SGLVertexBuffer alloc] initWithAttributes:attributes
                                                data:vertexData
-                                          byteCount:vertexCount * attributes.size() * 3 * sizeof(GLfloat)
+                                          byteCount:vertexCount * attributes.count * 3 * sizeof(GLfloat)
                                         vertexCount:vertexCount];
     
     _hasNormals = vertexBuffer.hasNormals;
@@ -193,7 +193,7 @@
     // CJC: remove later?
     glDisableVertexAttribArray(POSITIONS);
     glDisableVertexAttribArray(NORMALS);
-    glDisableVertexAttribArray(COLORS);
+    glDisableVertexAttribArray(RGBACOLORS);
     glDisableVertexAttribArray(TEXCOORDS);
     
     #ifdef SGL_MAC
@@ -217,7 +217,7 @@
     SGL_ASSERT(_hasColors == shaderHasColors);
     SGL_ASSERT(_hasTexCoords == shaderHasTexCoords);
     SGL_ASSERT(!shaderHasNormals || shader.program.normalLoc == NORMALS);
-    SGL_ASSERT(!shaderHasColors || shader.program.colorLoc == COLORS);
+    SGL_ASSERT(!shaderHasColors || shader.program.colorLoc == RGBACOLORS);
     SGL_ASSERT(!shaderHasTexCoords || shader.program.texCoordLoc == TEXCOORDS);
     
     if (_indexBuffer != nil)

@@ -7,16 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B0197121940B9B600DCFF36 /* SGLMacWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0197101940B9B600DCFF36 /* SGLMacWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B0197131940B9B600DCFF36 /* SGLMacWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B0197111940B9B600DCFF36 /* SGLMacWindowController.mm */; };
-		3B12B6A719071D1F00C13154 /* Document.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B6A219071D1F00C13154 /* Document.mm */; };
-		3B12B6A819071D1F00C13154 /* View.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B6A419071D1F00C13154 /* View.mm */; };
-		3B12B6A919071D1F00C13154 /* WindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B6A619071D1F00C13154 /* WindowController.mm */; };
+		24D4C2F3B0FC12F785E2034F /* Pods_SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */; };
+		3B12B6A719071D1F00C13154 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B6A219071D1F00C13154 /* Document.m */; };
+		3B12B6A819071D1F00C13154 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B6A419071D1F00C13154 /* View.m */; };
 		3B12B6AE19071DC900C13154 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B12B6AA19071DC900C13154 /* MainMenu.xib */; };
 		3B12B6AF19071DC900C13154 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B12B6AC19071DC900C13154 /* Window.xib */; };
 		3B12B6B8190742E800C13154 /* SGLHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B12B6B61907426100C13154 /* SGLHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B481C8B192DCF68008D22CC /* SGLMotionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B481C8A192DCF68008D22CC /* SGLMotionManager.mm */; };
-		3B481C8D192DD497008D22CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B481C8C192DD497008D22CC /* CoreMotion.framework */; };
+		3B2268251C7D02C700F793E4 /* Conversions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2268241C7D02C700F793E4 /* Conversions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B2268261C7D02C700F793E4 /* Conversions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2268241C7D02C700F793E4 /* Conversions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B2268291C7D02D500F793E4 /* Functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2268271C7D02D500F793E4 /* Functions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B22682A1C7D02D500F793E4 /* Functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2268271C7D02D500F793E4 /* Functions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B22682B1C7D02D500F793E4 /* Functions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268281C7D02D500F793E4 /* Functions.mm */; };
+		3B22682C1C7D02D500F793E4 /* Functions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268281C7D02D500F793E4 /* Functions.mm */; };
+		3B22682E1C7D048100F793E4 /* Constants.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B22682D1C7D048100F793E4 /* Constants.mm */; };
+		3B22682F1C7D048100F793E4 /* Constants.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B22682D1C7D048100F793E4 /* Constants.mm */; };
+		3B2268311C7D101400F793E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268301C7D101400F793E4 /* Constants.swift */; };
+		3B2268321C7D101400F793E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268301C7D101400F793E4 /* Constants.swift */; };
+		3B2268341C7D10A200F793E4 /* IVec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268331C7D10A200F793E4 /* IVec2.swift */; };
+		3B2268351C7D10A200F793E4 /* IVec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268331C7D10A200F793E4 /* IVec2.swift */; };
+		3B22683A1C7D11C700F793E4 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268391C7D11C700F793E4 /* Vec2.swift */; };
+		3B22683B1C7D11C700F793E4 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268391C7D11C700F793E4 /* Vec2.swift */; };
+		3B2268491C7D11DD00F793E4 /* AABB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683C1C7D11DD00F793E4 /* AABB.swift */; };
+		3B22684A1C7D11DD00F793E4 /* AABB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683C1C7D11DD00F793E4 /* AABB.swift */; };
+		3B22684D1C7D11DD00F793E4 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683E1C7D11DD00F793E4 /* Conversions.swift */; };
+		3B22684E1C7D11DD00F793E4 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683E1C7D11DD00F793E4 /* Conversions.swift */; };
+		3B22684F1C7D11DD00F793E4 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683F1C7D11DD00F793E4 /* Functions.swift */; };
+		3B2268501C7D11DD00F793E4 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683F1C7D11DD00F793E4 /* Functions.swift */; };
+		3B2268511C7D11DD00F793E4 /* Mat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268401C7D11DD00F793E4 /* Mat3.swift */; };
+		3B2268521C7D11DD00F793E4 /* Mat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268401C7D11DD00F793E4 /* Mat3.swift */; };
+		3B2268531C7D11DD00F793E4 /* Mat4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268411C7D11DD00F793E4 /* Mat4.swift */; };
+		3B2268541C7D11DD00F793E4 /* Mat4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268411C7D11DD00F793E4 /* Mat4.swift */; };
+		3B2268551C7D11DD00F793E4 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268421C7D11DD00F793E4 /* Plane.swift */; };
+		3B2268561C7D11DD00F793E4 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268421C7D11DD00F793E4 /* Plane.swift */; };
+		3B2268571C7D11DD00F793E4 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268431C7D11DD00F793E4 /* Quad.swift */; };
+		3B2268581C7D11DD00F793E4 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268431C7D11DD00F793E4 /* Quad.swift */; };
+		3B2268591C7D11DD00F793E4 /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268441C7D11DD00F793E4 /* Ray.swift */; };
+		3B22685A1C7D11DD00F793E4 /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268441C7D11DD00F793E4 /* Ray.swift */; };
+		3B22685B1C7D11DD00F793E4 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268451C7D11DD00F793E4 /* Sphere.swift */; };
+		3B22685C1C7D11DD00F793E4 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268451C7D11DD00F793E4 /* Sphere.swift */; };
+		3B22685D1C7D11DD00F793E4 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268461C7D11DD00F793E4 /* Tri.swift */; };
+		3B22685E1C7D11DD00F793E4 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268461C7D11DD00F793E4 /* Tri.swift */; };
+		3B22685F1C7D11DD00F793E4 /* Vec3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268471C7D11DD00F793E4 /* Vec3.swift */; };
+		3B2268601C7D11DD00F793E4 /* Vec3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268471C7D11DD00F793E4 /* Vec3.swift */; };
+		3B2268611C7D11DD00F793E4 /* Vec4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268481C7D11DD00F793E4 /* Vec4.swift */; };
+		3B2268621C7D11DD00F793E4 /* Vec4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268481C7D11DD00F793E4 /* Vec4.swift */; };
+		3B3513D51C5E66FD0090A2EB /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3513D41C5E66FD0090A2EB /* Document.swift */; };
+		3B3513D81C5E66FD0090A2EB /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3513D61C5E66FD0090A2EB /* Window.xib */; };
+		3B3513DA1C5E66FD0090A2EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3513D91C5E66FD0090A2EB /* Assets.xcassets */; };
+		3B3513DD1C5E66FD0090A2EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3513DB1C5E66FD0090A2EB /* MainMenu.xib */; };
+		3B3513E21C5E67CB0090A2EB /* SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BEE421905C0D40008D382 /* SGLKit.framework */; };
+		3B3C1DE91C5E764000D56F44 /* WindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DE81C5E764000D56F44 /* WindowController.mm */; };
+		3B3C1DEB1C5E765900D56F44 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DEA1C5E765900D56F44 /* WindowController.swift */; };
+		3B3C1DF21C5EFE0700D56F44 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DF11C5EECE700D56F44 /* View.swift */; };
+		3B45AF111C5FD63A002CCBE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45AF101C5FD63A002CCBE6 /* AppDelegate.swift */; };
 		3B481C8E192DD4A1008D22CC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B481C8C192DD497008D22CC /* CoreMotion.framework */; };
 		3B4BEE461905C0D40008D382 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BEE451905C0D40008D382 /* Cocoa.framework */; };
 		3B4BEE501905C0D40008D382 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BEE4E1905C0D40008D382 /* InfoPlist.strings */; };
@@ -25,18 +68,36 @@
 		3B4BEE7D1905C1090008D382 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BEE7C1905C1090008D382 /* main.m */; };
 		3B4BEE811905C1090008D382 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BEE7F1905C1090008D382 /* Credits.rtf */; };
 		3B4BEE8C1905C1090008D382 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4BEE8B1905C1090008D382 /* Images.xcassets */; };
+		3B4D2DCB1C7C595B00E8ED77 /* IVec2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCA1C7C595B00E8ED77 /* IVec2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DCC1C7C595B00E8ED77 /* IVec2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCA1C7C595B00E8ED77 /* IVec2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD01C7C5B2000E8ED77 /* Vec2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCD1C7C5B2000E8ED77 /* Vec2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD11C7C5B2000E8ED77 /* Vec2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCD1C7C5B2000E8ED77 /* Vec2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD21C7C5B2000E8ED77 /* Vec3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCE1C7C5B2000E8ED77 /* Vec3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD31C7C5B2000E8ED77 /* Vec3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCE1C7C5B2000E8ED77 /* Vec3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD41C7C5B2000E8ED77 /* Vec4.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCF1C7C5B2000E8ED77 /* Vec4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD51C7C5B2000E8ED77 /* Vec4.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DCF1C7C5B2000E8ED77 /* Vec4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD71C7C75DE00E8ED77 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DD61C7C75DE00E8ED77 /* Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DD81C7C75DE00E8ED77 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DD61C7C75DE00E8ED77 /* Constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE11C7C790B00E8ED77 /* AABB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DD91C7C790B00E8ED77 /* AABB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE21C7C790B00E8ED77 /* AABB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DD91C7C790B00E8ED77 /* AABB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE31C7C790B00E8ED77 /* Mat3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDA1C7C790B00E8ED77 /* Mat3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE41C7C790B00E8ED77 /* Mat3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDA1C7C790B00E8ED77 /* Mat3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE51C7C790B00E8ED77 /* Mat4.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDB1C7C790B00E8ED77 /* Mat4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE61C7C790B00E8ED77 /* Mat4.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDB1C7C790B00E8ED77 /* Mat4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE71C7C790B00E8ED77 /* Plane.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDC1C7C790B00E8ED77 /* Plane.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE81C7C790B00E8ED77 /* Plane.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDC1C7C790B00E8ED77 /* Plane.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DE91C7C790B00E8ED77 /* Quad.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDD1C7C790B00E8ED77 /* Quad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DEA1C7C790B00E8ED77 /* Quad.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDD1C7C790B00E8ED77 /* Quad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DEB1C7C790B00E8ED77 /* Ray.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDE1C7C790B00E8ED77 /* Ray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DEC1C7C790B00E8ED77 /* Ray.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDE1C7C790B00E8ED77 /* Ray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DED1C7C790B00E8ED77 /* Sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDF1C7C790B00E8ED77 /* Sphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DEE1C7C790B00E8ED77 /* Sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDF1C7C790B00E8ED77 /* Sphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DEF1C7C790B00E8ED77 /* Tri.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DE01C7C790B00E8ED77 /* Tri.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4D2DF01C7C790B00E8ED77 /* Tri.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DE01C7C790B00E8ED77 /* Tri.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698C51905F8FA00781FC4 /* InvisibleCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */; };
-		3B7698E31905F98D00781FC4 /* SGLMacSceneView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698DC1905F98D00781FC4 /* SGLMacSceneView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B7698E51905F98D00781FC4 /* SGLMacView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698DE1905F98D00781FC4 /* SGLMacView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B7698E61905F98D00781FC4 /* SGLMacWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698DF1905F98D00781FC4 /* SGLMacWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B7698E71905F98D00781FC4 /* SGLMacSceneView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698E01905F98D00781FC4 /* SGLMacSceneView.mm */; };
-		3B7698E81905F98D00781FC4 /* SGLMacView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698E11905F98D00781FC4 /* SGLMacView.mm */; };
-		3B7698E91905F98D00781FC4 /* SGLMacWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698E21905F98D00781FC4 /* SGLMacWindow.mm */; };
-		3B7698F21905F9D600781FC4 /* AQDataExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EA1905F9D600781FC4 /* AQDataExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698F31905F9D600781FC4 /* AQDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */; };
 		3B7698F41905F9D600781FC4 /* SGLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EC1905F9D600781FC4 /* SGLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698F51905F9D600781FC4 /* SGLMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698ED1905F9D600781FC4 /* SGLMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B7698F61905F9D600781FC4 /* SGLMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EE1905F9D600781FC4 /* SGLMath.mm */; };
 		3B7698F71905F9D600781FC4 /* SGLTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EF1905F9D600781FC4 /* SGLTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698F81905F9D600781FC4 /* SGLUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698F01905F9D600781FC4 /* SGLUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698F91905F9D600781FC4 /* SGLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698F11905F9D600781FC4 /* SGLUtilities.mm */; };
@@ -59,7 +120,6 @@
 		3B76991D1905FA1400781FC4 /* SGLVertexAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B76990A1905FA1400781FC4 /* SGLVertexAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B76991E1905FA1400781FC4 /* SGLVertexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B76990B1905FA1400781FC4 /* SGLVertexBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B76991F1905FA1400781FC4 /* SGLVertexBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B76990C1905FA1400781FC4 /* SGLVertexBuffer.mm */; };
-		3B9574491921795C00F04121 /* SGLKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5E6E21913D3B000FCF32F /* SGLKitResources.bundle */; };
 		3B9ADF571914A9F300B14F9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD161CE190881EC002F057D /* Foundation.framework */; };
 		3B9ADF5B1914A9F300B14F9C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDDA3FA1905C77300F47029 /* GLKit.framework */; };
 		3B9ADF631914A9F300B14F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B9ADF611914A9F300B14F9C /* InfoPlist.strings */; };
@@ -69,55 +129,156 @@
 		3B9ADF6F1914A9F300B14F9C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9ADF6D1914A9F300B14F9C /* Main_iPad.storyboard */; };
 		3B9ADF761914A9F300B14F9C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B9ADF751914A9F300B14F9C /* ViewController.mm */; };
 		3B9ADF781914A9F300B14F9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9ADF771914A9F300B14F9C /* Images.xcassets */; };
-		3B9ADF951914ACA400B14F9C /* libSGLKitTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD161F619088204002F057D /* libSGLKitTouch.a */; };
-		3B9ADF981914AD6400B14F9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9ADF971914AD6300B14F9C /* UIKit.framework */; };
-		3B9ADF9A1914AD7A00B14F9C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9ADF991914AD7A00B14F9C /* GLKit.framework */; };
 		3B9ADF9E1914E5D600B14F9C /* SGLScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9ADF9C1914E5D600B14F9C /* SGLScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B9ADF9F1914E5D600B14F9C /* SGLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */; };
-		3B9ADFA01914E5D600B14F9C /* SGLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */; };
-		3BC5E6EF1913D48700FCF32F /* InvisibleCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */; };
-		3BD161F719088204002F057D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD161CE190881EC002F057D /* Foundation.framework */; };
-		3BD16219190883ED002F057D /* SGLIndexBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FD1905FA1400781FC4 /* SGLIndexBuffer.mm */; };
-		3BD1621A190883ED002F057D /* SGLMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FF1905FA1400781FC4 /* SGLMesh.mm */; };
-		3BD1621C190883ED002F057D /* SGLProgram.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699011905FA1400781FC4 /* SGLProgram.mm */; };
-		3BD1621D190883ED002F057D /* SGLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699031905FA1400781FC4 /* SGLRenderer.mm */; };
-		3BD1621E190883ED002F057D /* SGLShader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699051905FA1400781FC4 /* SGLShader.mm */; };
-		3BD1621F190883ED002F057D /* SGLTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699071905FA1400781FC4 /* SGLTexture.mm */; };
-		3BD16220190883ED002F057D /* SGLUniform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699091905FA1400781FC4 /* SGLUniform.mm */; };
-		3BD16221190883ED002F057D /* SGLVertexBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B76990C1905FA1400781FC4 /* SGLVertexBuffer.mm */; };
-		3BD1622219088403002F057D /* AQDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */; };
-		3BD1622319088403002F057D /* SGLMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EE1905F9D600781FC4 /* SGLMath.mm */; };
-		3BD1622419088403002F057D /* SGLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698F11905F9D600781FC4 /* SGLUtilities.mm */; };
+		3BD042131C78EC90003E74B2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267111C658EB6002271F3 /* OpenGLES.framework */; };
 		3BD162411909940C002F057D /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD162401909940C002F057D /* CoreServices.framework */; };
-		3BD162B7190DED61002F057D /* SGLKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BEE421905C0D40008D382 /* SGLKit.framework */; };
+		3BD162B7190DED61002F057D /* SGLKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BEE421905C0D40008D382 /* SGLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3BD162CD190F3980002F057D /* SGLMeshes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD162CB190F3980002F057D /* SGLMeshes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BD162CE190F3980002F057D /* SGLMeshes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BD162CC190F3980002F057D /* SGLMeshes.mm */; };
-		3BD162CF190F3980002F057D /* SGLMeshes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BD162CC190F3980002F057D /* SGLMeshes.mm */; };
+		3BD403A61C798C6E007C1D26 /* SGLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C1DF91C5FB78A00D56F44 /* SGLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BD403AB1C799818007C1D26 /* SGLMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; };
+		3BD403AC1C799A99007C1D26 /* SGLMath.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BD403AD1C799D00007C1D26 /* SGLMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; };
+		3BD403AE1C799D0B007C1D26 /* SGLMath.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BDA7AA3197C72DB00F85A99 /* SGLDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BDA7AA1197C72DB00F85A99 /* SGLDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BDA7AA4197C72DB00F85A99 /* SGLDefaults.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA7AA2197C72DB00F85A99 /* SGLDefaults.mm */; };
 		3BDDA3FB1905C77400F47029 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDDA3FA1905C77300F47029 /* GLKit.framework */; };
 		3BDDA3FD1905C77B00F47029 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDDA3FC1905C77B00F47029 /* GLUT.framework */; };
 		3BDDA3FE1905C90500F47029 /* SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BEE421905C0D40008D382 /* SGLKit.framework */; };
+		3BE266E81C62E9AB002271F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE266E71C62E9AB002271F3 /* AppDelegate.swift */; };
+		3BE266EA1C62E9AB002271F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE266E91C62E9AB002271F3 /* ViewController.swift */; };
+		3BE266ED1C62E9AB002271F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE266EB1C62E9AB002271F3 /* Main.storyboard */; };
+		3BE266EF1C62E9AB002271F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE266EE1C62E9AB002271F3 /* Assets.xcassets */; };
+		3BE266F21C62E9AB002271F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE266F01C62E9AB002271F3 /* LaunchScreen.storyboard */; };
+		3BE266F81C62F273002271F3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE266F71C62F273002271F3 /* View.swift */; };
+		3BE267051C642B5A002271F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267041C642B5A002271F3 /* CoreMotion.framework */; };
+		3BE267071C643849002271F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267061C643849002271F3 /* CoreGraphics.framework */; };
+		3BE267091C643861002271F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267081C643861002271F3 /* UIKit.framework */; };
+		3BE2670A1C643897002271F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267081C643861002271F3 /* UIKit.framework */; };
+		3BE2670C1C6438A7002271F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2670B1C6438A7002271F3 /* Foundation.framework */; };
+		3BE2670D1C6438AD002271F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267061C643849002271F3 /* CoreGraphics.framework */; };
+		3BE2670F1C643960002271F3 /* Empty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2670E1C643960002271F3 /* Empty.mm */; };
+		3BE267121C658EB6002271F3 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267101C658EB6002271F3 /* GLKit.framework */; };
+		3BE267131C658EB6002271F3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267111C658EB6002271F3 /* OpenGLES.framework */; };
+		3BE36C661BF0144A00E0A93F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE36C651BF0144A00E0A93F /* OpenGL.framework */; };
+		3BE36C681BF015FD00E0A93F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE36C671BF015FD00E0A93F /* CoreVideo.framework */; };
+		3BE89AAD1C87666500BCC1D4 /* Basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A991C87666500BCC1D4 /* Basic.frag */; };
+		3BE89AAE1C87666500BCC1D4 /* Basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A991C87666500BCC1D4 /* Basic.frag */; };
+		3BE89AAF1C87666500BCC1D4 /* Basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9A1C87666500BCC1D4 /* Basic.vert */; };
+		3BE89AB01C87666500BCC1D4 /* Basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9A1C87666500BCC1D4 /* Basic.vert */; };
+		3BE89AB11C87666500BCC1D4 /* BasicTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9B1C87666500BCC1D4 /* BasicTexture.frag */; };
+		3BE89AB21C87666500BCC1D4 /* BasicTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9B1C87666500BCC1D4 /* BasicTexture.frag */; };
+		3BE89AB31C87666500BCC1D4 /* BasicTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9C1C87666500BCC1D4 /* BasicTexture.vert */; };
+		3BE89AB41C87666500BCC1D4 /* BasicTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9C1C87666500BCC1D4 /* BasicTexture.vert */; };
+		3BE89AB51C87666500BCC1D4 /* Color.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9D1C87666500BCC1D4 /* Color.frag */; };
+		3BE89AB61C87666500BCC1D4 /* Color.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9D1C87666500BCC1D4 /* Color.frag */; };
+		3BE89AB71C87666500BCC1D4 /* Color.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9E1C87666500BCC1D4 /* Color.vert */; };
+		3BE89AB81C87666500BCC1D4 /* Color.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9E1C87666500BCC1D4 /* Color.vert */; };
+		3BE89AB91C87666500BCC1D4 /* Combine.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9F1C87666500BCC1D4 /* Combine.frag */; };
+		3BE89ABA1C87666500BCC1D4 /* Combine.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9F1C87666500BCC1D4 /* Combine.frag */; };
+		3BE89ABB1C87666500BCC1D4 /* Combine.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA01C87666500BCC1D4 /* Combine.vert */; };
+		3BE89ABC1C87666500BCC1D4 /* Combine.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA01C87666500BCC1D4 /* Combine.vert */; };
+		3BE89ABD1C87666500BCC1D4 /* Copy.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA11C87666500BCC1D4 /* Copy.frag */; };
+		3BE89ABE1C87666500BCC1D4 /* Copy.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA11C87666500BCC1D4 /* Copy.frag */; };
+		3BE89ABF1C87666500BCC1D4 /* Copy.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA21C87666500BCC1D4 /* Copy.vert */; };
+		3BE89AC01C87666500BCC1D4 /* Copy.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA21C87666500BCC1D4 /* Copy.vert */; };
+		3BE89AC11C87666500BCC1D4 /* CopyPixels.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA31C87666500BCC1D4 /* CopyPixels.frag */; };
+		3BE89AC21C87666500BCC1D4 /* CopyPixels.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA31C87666500BCC1D4 /* CopyPixels.frag */; };
+		3BE89AC31C87666500BCC1D4 /* CopyPixels.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA41C87666500BCC1D4 /* CopyPixels.vert */; };
+		3BE89AC41C87666500BCC1D4 /* CopyPixels.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA41C87666500BCC1D4 /* CopyPixels.vert */; };
+		3BE89AC51C87666500BCC1D4 /* CopyTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA51C87666500BCC1D4 /* CopyTexture.frag */; };
+		3BE89AC61C87666500BCC1D4 /* CopyTexture.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA51C87666500BCC1D4 /* CopyTexture.frag */; };
+		3BE89AC71C87666500BCC1D4 /* CopyTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA61C87666500BCC1D4 /* CopyTexture.vert */; };
+		3BE89AC81C87666500BCC1D4 /* CopyTexture.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA61C87666500BCC1D4 /* CopyTexture.vert */; };
+		3BE89AC91C87666500BCC1D4 /* Fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA71C87666500BCC1D4 /* Fragment.glsl */; };
+		3BE89ACA1C87666500BCC1D4 /* Fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA71C87666500BCC1D4 /* Fragment.glsl */; };
+		3BE89ACB1C87666500BCC1D4 /* Gaussian.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA81C87666500BCC1D4 /* Gaussian.frag */; };
+		3BE89ACC1C87666500BCC1D4 /* Gaussian.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA81C87666500BCC1D4 /* Gaussian.frag */; };
+		3BE89ACD1C87666500BCC1D4 /* Gaussian.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA91C87666500BCC1D4 /* Gaussian.vert */; };
+		3BE89ACE1C87666500BCC1D4 /* Gaussian.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AA91C87666500BCC1D4 /* Gaussian.vert */; };
+		3BE89ACF1C87666500BCC1D4 /* Platform.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AAA1C87666500BCC1D4 /* Platform.glsl */; };
+		3BE89AD01C87666500BCC1D4 /* Platform.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AAA1C87666500BCC1D4 /* Platform.glsl */; };
+		3BE89AD11C87666500BCC1D4 /* Utilities.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AAB1C87666500BCC1D4 /* Utilities.glsl */; };
+		3BE89AD21C87666500BCC1D4 /* Utilities.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AAB1C87666500BCC1D4 /* Utilities.glsl */; };
+		3BE89AD31C87666500BCC1D4 /* Vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AAC1C87666500BCC1D4 /* Vertex.glsl */; };
+		3BE89AD41C87666500BCC1D4 /* Vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AAC1C87666500BCC1D4 /* Vertex.glsl */; };
+		3BE89ADA1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */; };
+		3BE89ADB1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */; };
+		3BF415B91C78D17E008C1814 /* SGLMacSceneView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415B11C78D17E008C1814 /* SGLMacSceneView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF415BA1C78D17E008C1814 /* SGLMacSceneView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415B21C78D17E008C1814 /* SGLMacSceneView.mm */; };
+		3BF415BB1C78D17E008C1814 /* SGLMacView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415B31C78D17E008C1814 /* SGLMacView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF415BC1C78D17E008C1814 /* SGLMacView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415B41C78D17E008C1814 /* SGLMacView.mm */; };
+		3BF415BD1C78D17E008C1814 /* SGLMacWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415B51C78D17E008C1814 /* SGLMacWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF415BE1C78D17E008C1814 /* SGLMacWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415B61C78D17E008C1814 /* SGLMacWindow.mm */; };
+		3BF415BF1C78D17E008C1814 /* SGLMacWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415B71C78D17E008C1814 /* SGLMacWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF415C01C78D17E008C1814 /* SGLMacWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415B81C78D17E008C1814 /* SGLMacWindowController.mm */; };
+		3BF4E30D19F1105200A0E560 /* WhiteIBeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */; };
+		3BF4E30E19F1105200A0E560 /* WhiteIBeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */; };
 		3BF53582191AC571003F4A4B /* View.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53581191AC571003F4A4B /* View.mm */; };
-		3BF53587191ADC1D003F4A4B /* SGLIosView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53585191ADC1D003F4A4B /* SGLIosView.mm */; };
-		3BF53588191ADC1D003F4A4B /* SGLIosViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53586191ADC1D003F4A4B /* SGLIosViewController.mm */; };
-		3BF5358B191ADD9F003F4A4B /* SGLIosSceneView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5358A191ADD9F003F4A4B /* SGLIosSceneView.mm */; };
 		3BF5358D191AEB7C003F4A4B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF5358C191AEB7C003F4A4B /* OpenGLES.framework */; };
-		3BF5358E191C7BAD003F4A4B /* SGLContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FB1905FA1400781FC4 /* SGLContext.mm */; };
+		3BF56E2B1C78E2FB00303970 /* SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF56E241C78E2FB00303970 /* SGLKit.framework */; };
+		3BF56E2C1C78E2FB00303970 /* SGLKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF56E241C78E2FB00303970 /* SGLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BF56E331C78E3E800303970 /* SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF56E241C78E2FB00303970 /* SGLKit.framework */; };
+		3BF56E351C78E40B00303970 /* SGLKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF56E241C78E2FB00303970 /* SGLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BF56E381C78E45300303970 /* SGLDefaults.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA7AA2197C72DB00F85A99 /* SGLDefaults.mm */; };
+		3BF56E391C78E45400303970 /* SGLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698F11905F9D600781FC4 /* SGLUtilities.mm */; };
+		3BF56E3A1C78E45400303970 /* SGLMeshes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BD162CC190F3980002F057D /* SGLMeshes.mm */; };
+		3BF56E3B1C78E45400303970 /* AQDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */; };
+		3BF56E3D1C78E46100303970 /* SGLContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FB1905FA1400781FC4 /* SGLContext.mm */; };
+		3BF56E3F1C78E46100303970 /* SGLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699031905FA1400781FC4 /* SGLRenderer.mm */; };
+		3BF56E411C78E46100303970 /* SGLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */; };
+		3BF56E431C78E46100303970 /* SGLMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FF1905FA1400781FC4 /* SGLMesh.mm */; };
+		3BF56E451C78E46100303970 /* SGLProgram.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699011905FA1400781FC4 /* SGLProgram.mm */; };
+		3BF56E471C78E46100303970 /* SGLShader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699051905FA1400781FC4 /* SGLShader.mm */; };
+		3BF56E491C78E46100303970 /* SGLTexture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699071905FA1400781FC4 /* SGLTexture.mm */; };
+		3BF56E4B1C78E46100303970 /* SGLUniform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699091905FA1400781FC4 /* SGLUniform.mm */; };
+		3BF56E4E1C78E46100303970 /* SGLVertexBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B76990C1905FA1400781FC4 /* SGLVertexBuffer.mm */; };
+		3BF56E501C78E46100303970 /* SGLIndexBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FD1905FA1400781FC4 /* SGLIndexBuffer.mm */; };
+		3BF56E511C78E47E00303970 /* SGLIosSceneView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415A61C78D173008C1814 /* SGLIosSceneView.mm */; };
+		3BF56E521C78E47E00303970 /* SGLIosView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415A81C78D173008C1814 /* SGLIosView.mm */; };
+		3BF56E531C78E47E00303970 /* SGLIosViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415AA1C78D173008C1814 /* SGLIosViewController.mm */; };
+		3BF56E541C78E47E00303970 /* SGLMotionManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415AC1C78D173008C1814 /* SGLMotionManager.mm */; };
+		3BF56E561C78E4B700303970 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267061C643849002271F3 /* CoreGraphics.framework */; };
+		3BF56E571C78E4B700303970 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267041C642B5A002271F3 /* CoreMotion.framework */; };
+		3BF56E581C78E4B700303970 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267101C658EB6002271F3 /* GLKit.framework */; };
+		3BF56E591C78E4C100303970 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267081C643861002271F3 /* UIKit.framework */; };
+		3BF56E5A1C78E81300303970 /* SGLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C1DF91C5FB78A00D56F44 /* SGLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E5B1C78E81300303970 /* SGLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EC1905F9D600781FC4 /* SGLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E5C1C78E81300303970 /* SGLHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B12B6B61907426100C13154 /* SGLHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E5D1C78E81300303970 /* SGLMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698ED1905F9D600781FC4 /* SGLMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E5E1C78E81300303970 /* SGLTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EF1905F9D600781FC4 /* SGLTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E5F1C78E81300303970 /* SGLDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BDA7AA1197C72DB00F85A99 /* SGLDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E601C78E81300303970 /* SGLUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698F01905F9D600781FC4 /* SGLUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E611C78E81300303970 /* SGLMeshes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD162CB190F3980002F057D /* SGLMeshes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E621C78E81300303970 /* SGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698FA1905FA1400781FC4 /* SGLContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E631C78E81300303970 /* SGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699021905FA1400781FC4 /* SGLRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E641C78E81300303970 /* SGLScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9ADF9C1914E5D600B14F9C /* SGLScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E651C78E81300303970 /* SGLMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698FE1905FA1400781FC4 /* SGLMesh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E661C78E81300303970 /* SGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699001905FA1400781FC4 /* SGLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E671C78E81300303970 /* SGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699041905FA1400781FC4 /* SGLShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E681C78E81300303970 /* SGLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699061905FA1400781FC4 /* SGLTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E691C78E81300303970 /* SGLUniform.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699081905FA1400781FC4 /* SGLUniform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E6A1C78E81300303970 /* SGLVertexAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B76990A1905FA1400781FC4 /* SGLVertexAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E6B1C78E81300303970 /* SGLVertexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B76990B1905FA1400781FC4 /* SGLVertexBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E6C1C78E81300303970 /* SGLIndexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698FC1905FA1400781FC4 /* SGLIndexBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E6D1C78E81300303970 /* SGLIosSceneView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415A51C78D173008C1814 /* SGLIosSceneView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E6E1C78E81300303970 /* SGLIosView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415A71C78D173008C1814 /* SGLIosView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E6F1C78E81300303970 /* SGLIosViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415A91C78D173008C1814 /* SGLIosViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E701C78E81300303970 /* SGLMotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415AB1C78D173008C1814 /* SGLMotionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BF56E851C78E84600303970 /* InvisibleCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */; };
+		3BF56E861C78E84600303970 /* WhiteIBeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */; };
+		3BF56E871C78E84600303970 /* WhiteIBeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */; };
+		F9B013120924C61481822BB8 /* Pods_SGLKitTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B9ADF911914AC8600B14F9C /* PBXContainerItemProxy */ = {
+		3BD042111C78EAF0003E74B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3BD161F519088204002F057D;
-			remoteInfo = SGLKitTouch;
-		};
-		3B9ADF931914AC8A00B14F9C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BC5E6E11913D3B000FCF32F;
-			remoteInfo = SGLKitResources;
+			remoteGlobalIDString = 3B4BEE411905C0D40008D382;
+			remoteInfo = SGLKit;
 		};
 		3BDDA4071905D52F00F47029 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -126,25 +287,23 @@
 			remoteGlobalIDString = 3B4BEE411905C0D40008D382;
 			remoteInfo = SGLKit;
 		};
-		3BF5358F191C9C64003F4A4B /* PBXContainerItemProxy */ = {
+		3BF56E291C78E2FB00303970 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3BC5E6E11913D3B000FCF32F;
-			remoteInfo = SGLKitResources;
+			remoteGlobalIDString = 3BF56E231C78E2FB00303970;
+			remoteInfo = SGLKitTouch;
+		};
+		3BF56E311C78E31100303970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BF56E231C78E2FB00303970;
+			remoteInfo = SGLKitTouch;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3BD161F419088204002F057D /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3BD162B6190DED36002F057D /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,22 +315,76 @@
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BF56E301C78E2FB00303970 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3BF56E2C1C78E2FB00303970 /* SGLKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BF56E361C78E40B00303970 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3BF56E351C78E40B00303970 /* SGLKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B0197101940B9B600DCFF36 /* SGLMacWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMacWindowController.h; sourceTree = "<group>"; };
-		3B0197111940B9B600DCFF36 /* SGLMacWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLMacWindowController.mm; sourceTree = "<group>"; };
+		218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.release.xcconfig"; sourceTree = "<group>"; };
+		37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.debug.xcconfig"; sourceTree = "<group>"; };
 		3B12B6A119071D1F00C13154 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
-		3B12B6A219071D1F00C13154 /* Document.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Document.mm; sourceTree = "<group>"; };
+		3B12B6A219071D1F00C13154 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		3B12B6A319071D1F00C13154 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
-		3B12B6A419071D1F00C13154 /* View.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = View.mm; sourceTree = "<group>"; };
+		3B12B6A419071D1F00C13154 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		3B12B6A519071D1F00C13154 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
-		3B12B6A619071D1F00C13154 /* WindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WindowController.mm; sourceTree = "<group>"; };
 		3B12B6AB19071DC900C13154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3B12B6AD19071DC900C13154 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Window.xib; sourceTree = "<group>"; };
 		3B12B6B61907426100C13154 /* SGLHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLHeader.h; sourceTree = "<group>"; };
-		3B481C89192DCF68008D22CC /* SGLMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMotionManager.h; sourceTree = "<group>"; };
-		3B481C8A192DCF68008D22CC /* SGLMotionManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = SGLMotionManager.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		3B2268241C7D02C700F793E4 /* Conversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversions.h; sourceTree = "<group>"; };
+		3B2268271C7D02D500F793E4 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		3B2268281C7D02D500F793E4 /* Functions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Functions.mm; sourceTree = "<group>"; };
+		3B22682D1C7D048100F793E4 /* Constants.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Constants.mm; sourceTree = "<group>"; };
+		3B2268301C7D101400F793E4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3B2268331C7D10A200F793E4 /* IVec2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IVec2.swift; sourceTree = "<group>"; };
+		3B2268391C7D11C700F793E4 /* Vec2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec2.swift; sourceTree = "<group>"; };
+		3B22683C1C7D11DD00F793E4 /* AABB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AABB.swift; sourceTree = "<group>"; };
+		3B22683E1C7D11DD00F793E4 /* Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
+		3B22683F1C7D11DD00F793E4 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		3B2268401C7D11DD00F793E4 /* Mat3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mat3.swift; sourceTree = "<group>"; };
+		3B2268411C7D11DD00F793E4 /* Mat4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mat4.swift; sourceTree = "<group>"; };
+		3B2268421C7D11DD00F793E4 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		3B2268431C7D11DD00F793E4 /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		3B2268441C7D11DD00F793E4 /* Ray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ray.swift; sourceTree = "<group>"; };
+		3B2268451C7D11DD00F793E4 /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
+		3B2268461C7D11DD00F793E4 /* Tri.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tri.swift; sourceTree = "<group>"; };
+		3B2268471C7D11DD00F793E4 /* Vec3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec3.swift; sourceTree = "<group>"; };
+		3B2268481C7D11DD00F793E4 /* Vec4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec4.swift; sourceTree = "<group>"; };
+		3B2AE0621C66F93A003478D6 /* Instructions.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
+		3B3513D01C5E66FD0090A2EB /* SGLKitTestSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGLKitTestSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3513D41C5E66FD0090A2EB /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		3B3513D71C5E66FD0090A2EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Window.xib; sourceTree = "<group>"; };
+		3B3513D91C5E66FD0090A2EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B3513DC1C5E66FD0090A2EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3B3513DE1C5E66FD0090A2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B3C1DE81C5E764000D56F44 /* WindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WindowController.mm; sourceTree = "<group>"; };
+		3B3C1DEA1C5E765900D56F44 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		3B3C1DF01C5E7ACA00D56F44 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3B3C1DF11C5EECE700D56F44 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3B3C1DF31C5F98F300D56F44 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGLMath.swift; sourceTree = "<group>"; };
+		3B3C1DF91C5FB78A00D56F44 /* SGLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLKit.h; sourceTree = "<group>"; };
+		3B45AF101C5FD63A002CCBE6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B481C8C192DD497008D22CC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		3B4BEE421905C0D40008D382 /* SGLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4BEE451905C0D40008D382 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -187,19 +400,24 @@
 		3B4BEE7E1905C1090008D382 /* SGLKitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SGLKitTest-Prefix.pch"; sourceTree = "<group>"; };
 		3B4BEE801905C1090008D382 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		3B4BEE8B1905C1090008D382 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3B7698C21905F8FA00781FC4 /* buildshaders.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = buildshaders.py; sourceTree = "<group>"; };
+		3B4D2DCA1C7C595B00E8ED77 /* IVec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVec2.h; sourceTree = "<group>"; };
+		3B4D2DCD1C7C5B2000E8ED77 /* Vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec2.h; sourceTree = "<group>"; };
+		3B4D2DCE1C7C5B2000E8ED77 /* Vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3.h; sourceTree = "<group>"; };
+		3B4D2DCF1C7C5B2000E8ED77 /* Vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec4.h; sourceTree = "<group>"; };
+		3B4D2DD61C7C75DE00E8ED77 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3B4D2DD91C7C790B00E8ED77 /* AABB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABB.h; sourceTree = "<group>"; };
+		3B4D2DDA1C7C790B00E8ED77 /* Mat3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mat3.h; sourceTree = "<group>"; };
+		3B4D2DDB1C7C790B00E8ED77 /* Mat4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mat4.h; sourceTree = "<group>"; };
+		3B4D2DDC1C7C790B00E8ED77 /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		3B4D2DDD1C7C790B00E8ED77 /* Quad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quad.h; sourceTree = "<group>"; };
+		3B4D2DDE1C7C790B00E8ED77 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
+		3B4D2DDF1C7C790B00E8ED77 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		3B4D2DE01C7C790B00E8ED77 /* Tri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tri.h; sourceTree = "<group>"; };
 		3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvisibleCursor.png; sourceTree = "<group>"; };
-		3B7698DC1905F98D00781FC4 /* SGLMacSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMacSceneView.h; sourceTree = "<group>"; };
-		3B7698DE1905F98D00781FC4 /* SGLMacView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMacView.h; sourceTree = "<group>"; };
-		3B7698DF1905F98D00781FC4 /* SGLMacWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMacWindow.h; sourceTree = "<group>"; };
-		3B7698E01905F98D00781FC4 /* SGLMacSceneView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLMacSceneView.mm; sourceTree = "<group>"; };
-		3B7698E11905F98D00781FC4 /* SGLMacView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLMacView.mm; sourceTree = "<group>"; };
-		3B7698E21905F98D00781FC4 /* SGLMacWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLMacWindow.mm; sourceTree = "<group>"; };
 		3B7698EA1905F9D600781FC4 /* AQDataExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQDataExtensions.h; sourceTree = "<group>"; };
 		3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQDataExtensions.m; sourceTree = "<group>"; };
 		3B7698EC1905F9D600781FC4 /* SGLDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLDebug.h; sourceTree = "<group>"; };
 		3B7698ED1905F9D600781FC4 /* SGLMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMath.h; sourceTree = "<group>"; };
-		3B7698EE1905F9D600781FC4 /* SGLMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLMath.mm; sourceTree = "<group>"; };
 		3B7698EF1905F9D600781FC4 /* SGLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLTypes.h; sourceTree = "<group>"; };
 		3B7698F01905F9D600781FC4 /* SGLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLUtilities.h; sourceTree = "<group>"; };
 		3B7698F11905F9D600781FC4 /* SGLUtilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLUtilities.mm; sourceTree = "<group>"; };
@@ -239,58 +457,105 @@
 		3B9ADF991914AD7A00B14F9C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
 		3B9ADF9C1914E5D600B14F9C /* SGLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLScene.h; sourceTree = "<group>"; };
 		3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLScene.mm; sourceTree = "<group>"; };
-		3BC5E6E21913D3B000FCF32F /* SGLKitResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGLKitResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAAC85B1B329CC300E29C19 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../External/libssh2-for-iOS-master/lib/libcrypto.a"; sourceTree = "<group>"; };
 		3BC5E6E31913D3B000FCF32F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		3BC5E6E71913D3B000FCF32F /* SGLKitResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SGLKitResources-Info.plist"; sourceTree = "<group>"; };
+		3BD042181C78EE09003E74B2 /* SGLKitTouch-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SGLKitTouch-Info.plist"; sourceTree = "<group>"; };
 		3BD161CE190881EC002F057D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3BD161F619088204002F057D /* libSGLKitTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGLKitTouch.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD1622719089902002F057D /* SGLKitTouch-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SGLKitTouch-Prefix.pch"; sourceTree = "<group>"; };
 		3BD162401909940C002F057D /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		3BD162B5190C3633002F057D /* Plan.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Plan.txt; sourceTree = "<group>"; };
 		3BD162CB190F3980002F057D /* SGLMeshes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLMeshes.h; sourceTree = "<group>"; };
 		3BD162CC190F3980002F057D /* SGLMeshes.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLMeshes.mm; sourceTree = "<group>"; };
+		3BDA7AA1197C72DB00F85A99 /* SGLDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLDefaults.h; sourceTree = "<group>"; };
+		3BDA7AA2197C72DB00F85A99 /* SGLDefaults.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLDefaults.mm; sourceTree = "<group>"; };
 		3BDDA3FA1905C77300F47029 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		3BDDA3FC1905C77B00F47029 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		3BE603BF1967529400E2044A /* Basic.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Basic.frag; path = ../Shaders/Basic.frag; sourceTree = "<group>"; };
-		3BE603C01967529400E2044A /* Basic.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Basic.vert; path = ../Shaders/Basic.vert; sourceTree = "<group>"; };
-		3BE603C11967529400E2044A /* BasicTexture.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = BasicTexture.frag; path = ../Shaders/BasicTexture.frag; sourceTree = "<group>"; };
-		3BE603C21967529400E2044A /* BasicTexture.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = BasicTexture.vert; path = ../Shaders/BasicTexture.vert; sourceTree = "<group>"; };
-		3BE603C31967529400E2044A /* Color.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Color.frag; path = ../Shaders/Color.frag; sourceTree = "<group>"; };
-		3BE603C41967529400E2044A /* Color.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Color.vert; path = ../Shaders/Color.vert; sourceTree = "<group>"; };
-		3BE603C51967529400E2044A /* Combine.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Combine.frag; path = ../Shaders/Combine.frag; sourceTree = "<group>"; };
-		3BE603C61967529400E2044A /* Combine.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Combine.vert; path = ../Shaders/Combine.vert; sourceTree = "<group>"; };
-		3BE603C71967529400E2044A /* Copy.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Copy.frag; path = ../Shaders/Copy.frag; sourceTree = "<group>"; };
-		3BE603C81967529400E2044A /* Copy.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Copy.vert; path = ../Shaders/Copy.vert; sourceTree = "<group>"; };
-		3BE603C91967529400E2044A /* CopyPixels.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = CopyPixels.frag; path = ../Shaders/CopyPixels.frag; sourceTree = "<group>"; };
-		3BE603CA1967529400E2044A /* CopyPixels.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = CopyPixels.vert; path = ../Shaders/CopyPixels.vert; sourceTree = "<group>"; };
-		3BE603CB1967529400E2044A /* CopyTexture.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = CopyTexture.frag; path = ../Shaders/CopyTexture.frag; sourceTree = "<group>"; };
-		3BE603CC1967529400E2044A /* CopyTexture.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = CopyTexture.vert; path = ../Shaders/CopyTexture.vert; sourceTree = "<group>"; };
-		3BE603CD1967529400E2044A /* Fragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Fragment.glsl; path = ../Shaders/Fragment.glsl; sourceTree = "<group>"; };
-		3BE603CE1967529400E2044A /* Gaussian.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Gaussian.frag; path = ../Shaders/Gaussian.frag; sourceTree = "<group>"; };
-		3BE603CF1967529400E2044A /* Gaussian.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Gaussian.vert; path = ../Shaders/Gaussian.vert; sourceTree = "<group>"; };
-		3BE603D01967529400E2044A /* Utilities.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Utilities.glsl; path = ../Shaders/Utilities.glsl; sourceTree = "<group>"; };
-		3BE603D11967529400E2044A /* Vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Vertex.glsl; path = ../Shaders/Vertex.glsl; sourceTree = "<group>"; };
-		3BEF01561964F5EA0021E64C /* Platform.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = Platform.glsl; path = ../Shaders/Platform.glsl; sourceTree = "<group>"; };
+		3BE266E51C62E9AB002271F3 /* SGLKitTouchTestSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGLKitTouchTestSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE266E71C62E9AB002271F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BE266E91C62E9AB002271F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BE266EC1C62E9AB002271F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BE266EE1C62E9AB002271F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BE266F11C62E9AB002271F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BE266F31C62E9AB002271F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE266F71C62F273002271F3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3BE266FB1C641D6D002271F3 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3BE267041C642B5A002271F3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		3BE267061C643849002271F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		3BE267081C643861002271F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3BE2670B1C6438A7002271F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3BE2670E1C643960002271F3 /* Empty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Empty.mm; sourceTree = "<group>"; };
+		3BE267101C658EB6002271F3 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		3BE267111C658EB6002271F3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		3BE36C651BF0144A00E0A93F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		3BE36C671BF015FD00E0A93F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3BE89A991C87666500BCC1D4 /* Basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Basic.frag; path = Shaders/Basic.frag; sourceTree = "<group>"; };
+		3BE89A9A1C87666500BCC1D4 /* Basic.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Basic.vert; path = Shaders/Basic.vert; sourceTree = "<group>"; };
+		3BE89A9B1C87666500BCC1D4 /* BasicTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = BasicTexture.frag; path = Shaders/BasicTexture.frag; sourceTree = "<group>"; };
+		3BE89A9C1C87666500BCC1D4 /* BasicTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = BasicTexture.vert; path = Shaders/BasicTexture.vert; sourceTree = "<group>"; };
+		3BE89A9D1C87666500BCC1D4 /* Color.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Color.frag; path = Shaders/Color.frag; sourceTree = "<group>"; };
+		3BE89A9E1C87666500BCC1D4 /* Color.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Color.vert; path = Shaders/Color.vert; sourceTree = "<group>"; };
+		3BE89A9F1C87666500BCC1D4 /* Combine.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Combine.frag; path = Shaders/Combine.frag; sourceTree = "<group>"; };
+		3BE89AA01C87666500BCC1D4 /* Combine.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Combine.vert; path = Shaders/Combine.vert; sourceTree = "<group>"; };
+		3BE89AA11C87666500BCC1D4 /* Copy.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Copy.frag; path = Shaders/Copy.frag; sourceTree = "<group>"; };
+		3BE89AA21C87666500BCC1D4 /* Copy.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Copy.vert; path = Shaders/Copy.vert; sourceTree = "<group>"; };
+		3BE89AA31C87666500BCC1D4 /* CopyPixels.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = CopyPixels.frag; path = Shaders/CopyPixels.frag; sourceTree = "<group>"; };
+		3BE89AA41C87666500BCC1D4 /* CopyPixels.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = CopyPixels.vert; path = Shaders/CopyPixels.vert; sourceTree = "<group>"; };
+		3BE89AA51C87666500BCC1D4 /* CopyTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = CopyTexture.frag; path = Shaders/CopyTexture.frag; sourceTree = "<group>"; };
+		3BE89AA61C87666500BCC1D4 /* CopyTexture.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = CopyTexture.vert; path = Shaders/CopyTexture.vert; sourceTree = "<group>"; };
+		3BE89AA71C87666500BCC1D4 /* Fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Fragment.glsl; path = Shaders/Fragment.glsl; sourceTree = "<group>"; };
+		3BE89AA81C87666500BCC1D4 /* Gaussian.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Gaussian.frag; path = Shaders/Gaussian.frag; sourceTree = "<group>"; };
+		3BE89AA91C87666500BCC1D4 /* Gaussian.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Gaussian.vert; path = Shaders/Gaussian.vert; sourceTree = "<group>"; };
+		3BE89AAA1C87666500BCC1D4 /* Platform.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Platform.glsl; path = Shaders/Platform.glsl; sourceTree = "<group>"; };
+		3BE89AAB1C87666500BCC1D4 /* Utilities.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Utilities.glsl; path = Shaders/Utilities.glsl; sourceTree = "<group>"; };
+		3BE89AAC1C87666500BCC1D4 /* Vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Vertex.glsl; path = Shaders/Vertex.glsl; sourceTree = "<group>"; };
+		3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = encrypt_shaders.py; sourceTree = "<group>"; };
+		3BF415A51C78D173008C1814 /* SGLIosSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLIosSceneView.h; path = ios/SGLIosSceneView.h; sourceTree = "<group>"; };
+		3BF415A61C78D173008C1814 /* SGLIosSceneView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLIosSceneView.mm; path = ios/SGLIosSceneView.mm; sourceTree = "<group>"; };
+		3BF415A71C78D173008C1814 /* SGLIosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLIosView.h; path = ios/SGLIosView.h; sourceTree = "<group>"; };
+		3BF415A81C78D173008C1814 /* SGLIosView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLIosView.mm; path = ios/SGLIosView.mm; sourceTree = "<group>"; };
+		3BF415A91C78D173008C1814 /* SGLIosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLIosViewController.h; path = ios/SGLIosViewController.h; sourceTree = "<group>"; };
+		3BF415AA1C78D173008C1814 /* SGLIosViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLIosViewController.mm; path = ios/SGLIosViewController.mm; sourceTree = "<group>"; };
+		3BF415AB1C78D173008C1814 /* SGLMotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLMotionManager.h; path = ios/SGLMotionManager.h; sourceTree = "<group>"; };
+		3BF415AC1C78D173008C1814 /* SGLMotionManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLMotionManager.mm; path = ios/SGLMotionManager.mm; sourceTree = "<group>"; };
+		3BF415B11C78D17E008C1814 /* SGLMacSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLMacSceneView.h; path = osx/SGLMacSceneView.h; sourceTree = "<group>"; };
+		3BF415B21C78D17E008C1814 /* SGLMacSceneView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLMacSceneView.mm; path = osx/SGLMacSceneView.mm; sourceTree = "<group>"; };
+		3BF415B31C78D17E008C1814 /* SGLMacView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLMacView.h; path = osx/SGLMacView.h; sourceTree = "<group>"; };
+		3BF415B41C78D17E008C1814 /* SGLMacView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLMacView.mm; path = osx/SGLMacView.mm; sourceTree = "<group>"; };
+		3BF415B51C78D17E008C1814 /* SGLMacWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLMacWindow.h; path = osx/SGLMacWindow.h; sourceTree = "<group>"; };
+		3BF415B61C78D17E008C1814 /* SGLMacWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLMacWindow.mm; path = osx/SGLMacWindow.mm; sourceTree = "<group>"; };
+		3BF415B71C78D17E008C1814 /* SGLMacWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLMacWindowController.h; path = osx/SGLMacWindowController.h; sourceTree = "<group>"; };
+		3BF415B81C78D17E008C1814 /* SGLMacWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLMacWindowController.mm; path = osx/SGLMacWindowController.mm; sourceTree = "<group>"; };
+		3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteIBeam.png; sourceTree = "<group>"; };
+		3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteIBeam@2x.png"; sourceTree = "<group>"; };
 		3BF53580191AC571003F4A4B /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		3BF53581191AC571003F4A4B /* View.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = View.mm; sourceTree = "<group>"; };
-		3BF53583191ADC1D003F4A4B /* SGLIosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLIosView.h; sourceTree = "<group>"; };
-		3BF53584191ADC1D003F4A4B /* SGLIosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLIosViewController.h; sourceTree = "<group>"; };
-		3BF53585191ADC1D003F4A4B /* SGLIosView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLIosView.mm; sourceTree = "<group>"; };
-		3BF53586191ADC1D003F4A4B /* SGLIosViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLIosViewController.mm; sourceTree = "<group>"; };
-		3BF53589191ADD5C003F4A4B /* SGLIosSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLIosSceneView.h; sourceTree = "<group>"; };
-		3BF5358A191ADD9F003F4A4B /* SGLIosSceneView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLIosSceneView.mm; sourceTree = "<group>"; };
 		3BF5358C191AEB7C003F4A4B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		3BF56E241C78E2FB00303970 /* SGLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.debug.xcconfig"; sourceTree = "<group>"; };
+		84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.release.xcconfig"; sourceTree = "<group>"; };
+		89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGLKitTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B3513CD1C5E66FD0090A2EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3513E21C5E67CB0090A2EB /* SGLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B4BEE3E1905C0D40008D382 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE36C681BF015FD00E0A93F /* CoreVideo.framework in Frameworks */,
+				3BE36C661BF0144A00E0A93F /* OpenGL.framework in Frameworks */,
 				3B4BEE461905C0D40008D382 /* Cocoa.framework in Frameworks */,
 				3BD162411909940C002F057D /* CoreServices.framework in Frameworks */,
 				3BDDA3FD1905C77B00F47029 /* GLUT.framework in Frameworks */,
 				3BDDA3FB1905C77400F47029 /* GLKit.framework in Frameworks */,
+				24D4C2F3B0FC12F785E2034F /* Pods_SGLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,29 +572,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE267091C643861002271F3 /* UIKit.framework in Frameworks */,
+				3BE267071C643849002271F3 /* CoreGraphics.framework in Frameworks */,
+				3BF56E2B1C78E2FB00303970 /* SGLKit.framework in Frameworks */,
 				3B481C8E192DD4A1008D22CC /* CoreMotion.framework in Frameworks */,
 				3BF5358D191AEB7C003F4A4B /* OpenGLES.framework in Frameworks */,
-				3B9ADF951914ACA400B14F9C /* libSGLKitTouch.a in Frameworks */,
 				3B9ADF5B1914A9F300B14F9C /* GLKit.framework in Frameworks */,
 				3B9ADF571914A9F300B14F9C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BC5E6DF1913D3B000FCF32F /* Frameworks */ = {
+		3BE266E21C62E9AB002271F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF56E331C78E3E800303970 /* SGLKit.framework in Frameworks */,
+				3BE267121C658EB6002271F3 /* GLKit.framework in Frameworks */,
+				3BE267131C658EB6002271F3 /* OpenGLES.framework in Frameworks */,
+				3BE267051C642B5A002271F3 /* CoreMotion.framework in Frameworks */,
+				3BE2670D1C6438AD002271F3 /* CoreGraphics.framework in Frameworks */,
+				3BE2670C1C6438A7002271F3 /* Foundation.framework in Frameworks */,
+				3BE2670A1C643897002271F3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BD161F319088204002F057D /* Frameworks */ = {
+		3BF56E201C78E2FB00303970 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B481C8D192DD497008D22CC /* CoreMotion.framework in Frameworks */,
-				3B9ADF9A1914AD7A00B14F9C /* GLKit.framework in Frameworks */,
-				3B9ADF981914AD6400B14F9C /* UIKit.framework in Frameworks */,
-				3BD161F719088204002F057D /* Foundation.framework in Frameworks */,
+				3BD042131C78EC90003E74B2 /* OpenGLES.framework in Frameworks */,
+				3BF56E591C78E4C100303970 /* UIKit.framework in Frameworks */,
+				3BF56E561C78E4B700303970 /* CoreGraphics.framework in Frameworks */,
+				3BF56E571C78E4B700303970 /* CoreMotion.framework in Frameworks */,
+				3BF56E581C78E4B700303970 /* GLKit.framework in Frameworks */,
+				F9B013120924C61481822BB8 /* Pods_SGLKitTouch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +615,14 @@
 		3B12B69F19071BCD00C13154 /* Cocoa */ = {
 			isa = PBXGroup;
 			children = (
-				3B7698DC1905F98D00781FC4 /* SGLMacSceneView.h */,
-				3B7698E01905F98D00781FC4 /* SGLMacSceneView.mm */,
-				3B7698DE1905F98D00781FC4 /* SGLMacView.h */,
-				3B7698E11905F98D00781FC4 /* SGLMacView.mm */,
-				3B7698DF1905F98D00781FC4 /* SGLMacWindow.h */,
-				3B7698E21905F98D00781FC4 /* SGLMacWindow.mm */,
-				3B0197101940B9B600DCFF36 /* SGLMacWindowController.h */,
-				3B0197111940B9B600DCFF36 /* SGLMacWindowController.mm */,
+				3BF415B11C78D17E008C1814 /* SGLMacSceneView.h */,
+				3BF415B21C78D17E008C1814 /* SGLMacSceneView.mm */,
+				3BF415B31C78D17E008C1814 /* SGLMacView.h */,
+				3BF415B41C78D17E008C1814 /* SGLMacView.mm */,
+				3BF415B51C78D17E008C1814 /* SGLMacWindow.h */,
+				3BF415B61C78D17E008C1814 /* SGLMacWindow.mm */,
+				3BF415B71C78D17E008C1814 /* SGLMacWindowController.h */,
+				3BF415B81C78D17E008C1814 /* SGLMacWindowController.mm */,
 			);
 			name = Cocoa;
 			sourceTree = "<group>";
@@ -354,27 +630,45 @@
 		3B12B6A019071BE400C13154 /* CocoaTouch */ = {
 			isa = PBXGroup;
 			children = (
-				3BF53589191ADD5C003F4A4B /* SGLIosSceneView.h */,
-				3BF5358A191ADD9F003F4A4B /* SGLIosSceneView.mm */,
-				3BF53583191ADC1D003F4A4B /* SGLIosView.h */,
-				3BF53585191ADC1D003F4A4B /* SGLIosView.mm */,
-				3BF53584191ADC1D003F4A4B /* SGLIosViewController.h */,
-				3BF53586191ADC1D003F4A4B /* SGLIosViewController.mm */,
-				3B481C89192DCF68008D22CC /* SGLMotionManager.h */,
-				3B481C8A192DCF68008D22CC /* SGLMotionManager.mm */,
+				3BF415A51C78D173008C1814 /* SGLIosSceneView.h */,
+				3BF415A61C78D173008C1814 /* SGLIosSceneView.mm */,
+				3BF415A71C78D173008C1814 /* SGLIosView.h */,
+				3BF415A81C78D173008C1814 /* SGLIosView.mm */,
+				3BF415A91C78D173008C1814 /* SGLIosViewController.h */,
+				3BF415AA1C78D173008C1814 /* SGLIosViewController.mm */,
+				3BF415AB1C78D173008C1814 /* SGLMotionManager.h */,
+				3BF415AC1C78D173008C1814 /* SGLMotionManager.mm */,
 			);
 			name = CocoaTouch;
+			sourceTree = "<group>";
+		};
+		3B3513D11C5E66FD0090A2EB /* SGLKitTestSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3B3513DB1C5E66FD0090A2EB /* MainMenu.xib */,
+				3B3513D61C5E66FD0090A2EB /* Window.xib */,
+				3B45AF101C5FD63A002CCBE6 /* AppDelegate.swift */,
+				3B3513D41C5E66FD0090A2EB /* Document.swift */,
+				3B3C1DEA1C5E765900D56F44 /* WindowController.swift */,
+				3B3C1DF11C5EECE700D56F44 /* View.swift */,
+				3B3513D91C5E66FD0090A2EB /* Assets.xcassets */,
+				3B3513DE1C5E66FD0090A2EB /* Info.plist */,
+				3B3C1DF01C5E7ACA00D56F44 /* Bridging-Header.h */,
+			);
+			path = SGLKitTestSwift;
 			sourceTree = "<group>";
 		};
 		3B4BEE381905C0D40008D382 = {
 			isa = PBXGroup;
 			children = (
 				3B4BEE4B1905C0D40008D382 /* SGLKit */,
-				3BC5E6E51913D3B000FCF32F /* SGLKitResources */,
 				3B4BEE761905C1090008D382 /* SGLKitTest */,
+				3B3513D11C5E66FD0090A2EB /* SGLKitTestSwift */,
 				3B9ADF5E1914A9F300B14F9C /* SGLKitTouchTest */,
+				3BE266E61C62E9AB002271F3 /* SGLKitTouchTestSwift */,
 				3B4BEE441905C0D40008D382 /* Frameworks */,
 				3B4BEE431905C0D40008D382 /* Products */,
+				9A5243A77F39051AEC1F0763 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,9 +677,10 @@
 			children = (
 				3B4BEE421905C0D40008D382 /* SGLKit.framework */,
 				3B4BEE741905C1090008D382 /* SGLKitTest.app */,
-				3BD161F619088204002F057D /* libSGLKitTouch.a */,
-				3BC5E6E21913D3B000FCF32F /* SGLKitResources.bundle */,
 				3B9ADF561914A9F300B14F9C /* SGLKitTouchTest.app */,
+				3B3513D01C5E66FD0090A2EB /* SGLKitTestSwift.app */,
+				3BE266E51C62E9AB002271F3 /* SGLKitTouchTestSwift.app */,
+				3BF56E241C78E2FB00303970 /* SGLKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +688,15 @@
 		3B4BEE441905C0D40008D382 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BE267101C658EB6002271F3 /* GLKit.framework */,
+				3BE267111C658EB6002271F3 /* OpenGLES.framework */,
+				3BE2670B1C6438A7002271F3 /* Foundation.framework */,
+				3BE267081C643861002271F3 /* UIKit.framework */,
+				3BE267061C643849002271F3 /* CoreGraphics.framework */,
+				3BE267041C642B5A002271F3 /* CoreMotion.framework */,
+				3BE36C671BF015FD00E0A93F /* CoreVideo.framework */,
+				3BE36C651BF0144A00E0A93F /* OpenGL.framework */,
+				3BAAC85B1B329CC300E29C19 /* libcrypto.a */,
 				3B4BEE481905C0D40008D382 /* Foundation.framework */,
 				3B4BEE4A1905C0D40008D382 /* AppKit.framework */,
 				3B481C8C192DD497008D22CC /* CoreMotion.framework */,
@@ -406,6 +710,8 @@
 				3BD161CE190881EC002F057D /* Foundation.framework */,
 				3BC5E6E31913D3B000FCF32F /* CoreFoundation.framework */,
 				3B9ADF581914A9F300B14F9C /* CoreGraphics.framework */,
+				218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */,
+				89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -414,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5C5B34191088A100EA2E29 /* General */,
+				3B4D2DC91C7C595B00E8ED77 /* Math */,
 				3BDDA3F01905C2BC00F47029 /* Objects */,
 				3BDDA3EE1905C26900F47029 /* Views */,
 				3BDDA3ED1905C24800F47029 /* Shaders */,
@@ -426,12 +733,17 @@
 			isa = PBXGroup;
 			children = (
 				3BD162B5190C3633002F057D /* Plan.txt */,
+				3B2AE0621C66F93A003478D6 /* Instructions.txt */,
 				3B4BEE4D1905C0D40008D382 /* SGLKit-Info.plist */,
+				3BD042181C78EE09003E74B2 /* SGLKitTouch-Info.plist */,
 				3B4BEE4E1905C0D40008D382 /* InfoPlist.strings */,
 				3B4BEE511905C0D40008D382 /* SGLKit-Prefix.pch */,
 				3BD1622719089902002F057D /* SGLKitTouch-Prefix.pch */,
-				3B7698C21905F8FA00781FC4 /* buildshaders.py */,
 				3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */,
+				3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */,
+				3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */,
+				3B3C1DF31C5F98F300D56F44 /* Bridging-Header.h */,
+				3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -442,11 +754,11 @@
 				3B12B6AA19071DC900C13154 /* MainMenu.xib */,
 				3B12B6AC19071DC900C13154 /* Window.xib */,
 				3B12B6A119071D1F00C13154 /* Document.h */,
-				3B12B6A219071D1F00C13154 /* Document.mm */,
+				3B12B6A219071D1F00C13154 /* Document.m */,
 				3B12B6A519071D1F00C13154 /* WindowController.h */,
-				3B12B6A619071D1F00C13154 /* WindowController.mm */,
+				3B3C1DE81C5E764000D56F44 /* WindowController.mm */,
 				3B12B6A319071D1F00C13154 /* View.h */,
-				3B12B6A419071D1F00C13154 /* View.mm */,
+				3B12B6A419071D1F00C13154 /* View.m */,
 				3B4BEE8B1905C1090008D382 /* Images.xcassets */,
 				3B4BEE771905C1090008D382 /* Supporting Files */,
 			);
@@ -465,14 +777,56 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3B4D2DC91C7C595B00E8ED77 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				3B4D2DD61C7C75DE00E8ED77 /* Constants.h */,
+				3B22682D1C7D048100F793E4 /* Constants.mm */,
+				3B2268301C7D101400F793E4 /* Constants.swift */,
+				3B4D2DCA1C7C595B00E8ED77 /* IVec2.h */,
+				3B2268331C7D10A200F793E4 /* IVec2.swift */,
+				3B4D2DCD1C7C5B2000E8ED77 /* Vec2.h */,
+				3B2268391C7D11C700F793E4 /* Vec2.swift */,
+				3B4D2DCE1C7C5B2000E8ED77 /* Vec3.h */,
+				3B2268471C7D11DD00F793E4 /* Vec3.swift */,
+				3B4D2DCF1C7C5B2000E8ED77 /* Vec4.h */,
+				3B2268481C7D11DD00F793E4 /* Vec4.swift */,
+				3B4D2DDA1C7C790B00E8ED77 /* Mat3.h */,
+				3B2268401C7D11DD00F793E4 /* Mat3.swift */,
+				3B4D2DDB1C7C790B00E8ED77 /* Mat4.h */,
+				3B2268411C7D11DD00F793E4 /* Mat4.swift */,
+				3B4D2DE01C7C790B00E8ED77 /* Tri.h */,
+				3B2268461C7D11DD00F793E4 /* Tri.swift */,
+				3B4D2DDD1C7C790B00E8ED77 /* Quad.h */,
+				3B2268431C7D11DD00F793E4 /* Quad.swift */,
+				3B4D2DDE1C7C790B00E8ED77 /* Ray.h */,
+				3B2268441C7D11DD00F793E4 /* Ray.swift */,
+				3B4D2DDC1C7C790B00E8ED77 /* Plane.h */,
+				3B2268421C7D11DD00F793E4 /* Plane.swift */,
+				3B4D2DDF1C7C790B00E8ED77 /* Sphere.h */,
+				3B2268451C7D11DD00F793E4 /* Sphere.swift */,
+				3B4D2DD91C7C790B00E8ED77 /* AABB.h */,
+				3B22683C1C7D11DD00F793E4 /* AABB.swift */,
+				3B2268241C7D02C700F793E4 /* Conversions.h */,
+				3B22683E1C7D11DD00F793E4 /* Conversions.swift */,
+				3B2268271C7D02D500F793E4 /* Functions.h */,
+				3B2268281C7D02D500F793E4 /* Functions.mm */,
+				3B22683F1C7D11DD00F793E4 /* Functions.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
 		3B5C5B34191088A100EA2E29 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				3B3C1DF91C5FB78A00D56F44 /* SGLKit.h */,
 				3B7698EC1905F9D600781FC4 /* SGLDebug.h */,
 				3B12B6B61907426100C13154 /* SGLHeader.h */,
 				3B7698ED1905F9D600781FC4 /* SGLMath.h */,
-				3B7698EE1905F9D600781FC4 /* SGLMath.mm */,
+				3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */,
 				3B7698EF1905F9D600781FC4 /* SGLTypes.h */,
+				3BDA7AA1197C72DB00F85A99 /* SGLDefaults.h */,
+				3BDA7AA2197C72DB00F85A99 /* SGLDefaults.mm */,
 				3B7698F01905F9D600781FC4 /* SGLUtilities.h */,
 				3B7698F11905F9D600781FC4 /* SGLUtilities.mm */,
 				3BD162CB190F3980002F057D /* SGLMeshes.h */,
@@ -511,45 +865,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3BC5E6E51913D3B000FCF32F /* SGLKitResources */ = {
-			isa = PBXGroup;
-			children = (
-				3BC5E6E61913D3B000FCF32F /* Supporting Files */,
-			);
-			path = SGLKitResources;
-			sourceTree = "<group>";
-		};
-		3BC5E6E61913D3B000FCF32F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3BC5E6E71913D3B000FCF32F /* SGLKitResources-Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		3BDDA3ED1905C24800F47029 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				3BEF01561964F5EA0021E64C /* Platform.glsl */,
-				3BE603BF1967529400E2044A /* Basic.frag */,
-				3BE603C01967529400E2044A /* Basic.vert */,
-				3BE603C11967529400E2044A /* BasicTexture.frag */,
-				3BE603C21967529400E2044A /* BasicTexture.vert */,
-				3BE603C31967529400E2044A /* Color.frag */,
-				3BE603C41967529400E2044A /* Color.vert */,
-				3BE603C51967529400E2044A /* Combine.frag */,
-				3BE603C61967529400E2044A /* Combine.vert */,
-				3BE603C71967529400E2044A /* Copy.frag */,
-				3BE603C81967529400E2044A /* Copy.vert */,
-				3BE603C91967529400E2044A /* CopyPixels.frag */,
-				3BE603CA1967529400E2044A /* CopyPixels.vert */,
-				3BE603CB1967529400E2044A /* CopyTexture.frag */,
-				3BE603CC1967529400E2044A /* CopyTexture.vert */,
-				3BE603CD1967529400E2044A /* Fragment.glsl */,
-				3BE603CE1967529400E2044A /* Gaussian.frag */,
-				3BE603CF1967529400E2044A /* Gaussian.vert */,
-				3BE603D01967529400E2044A /* Utilities.glsl */,
-				3BE603D11967529400E2044A /* Vertex.glsl */,
+				3BE89A991C87666500BCC1D4 /* Basic.frag */,
+				3BE89A9A1C87666500BCC1D4 /* Basic.vert */,
+				3BE89A9B1C87666500BCC1D4 /* BasicTexture.frag */,
+				3BE89A9C1C87666500BCC1D4 /* BasicTexture.vert */,
+				3BE89A9D1C87666500BCC1D4 /* Color.frag */,
+				3BE89A9E1C87666500BCC1D4 /* Color.vert */,
+				3BE89A9F1C87666500BCC1D4 /* Combine.frag */,
+				3BE89AA01C87666500BCC1D4 /* Combine.vert */,
+				3BE89AA11C87666500BCC1D4 /* Copy.frag */,
+				3BE89AA21C87666500BCC1D4 /* Copy.vert */,
+				3BE89AA31C87666500BCC1D4 /* CopyPixels.frag */,
+				3BE89AA41C87666500BCC1D4 /* CopyPixels.vert */,
+				3BE89AA51C87666500BCC1D4 /* CopyTexture.frag */,
+				3BE89AA61C87666500BCC1D4 /* CopyTexture.vert */,
+				3BE89AA71C87666500BCC1D4 /* Fragment.glsl */,
+				3BE89AA81C87666500BCC1D4 /* Gaussian.frag */,
+				3BE89AA91C87666500BCC1D4 /* Gaussian.vert */,
+				3BE89AAA1C87666500BCC1D4 /* Platform.glsl */,
+				3BE89AAB1C87666500BCC1D4 /* Utilities.glsl */,
+				3BE89AAC1C87666500BCC1D4 /* Vertex.glsl */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -591,6 +929,33 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		3BE266E61C62E9AB002271F3 /* SGLKitTouchTestSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3BE266F01C62E9AB002271F3 /* LaunchScreen.storyboard */,
+				3BE266EB1C62E9AB002271F3 /* Main.storyboard */,
+				3BE266E71C62E9AB002271F3 /* AppDelegate.swift */,
+				3BE266E91C62E9AB002271F3 /* ViewController.swift */,
+				3BE266F71C62F273002271F3 /* View.swift */,
+				3BE2670E1C643960002271F3 /* Empty.mm */,
+				3BE266EE1C62E9AB002271F3 /* Assets.xcassets */,
+				3BE266F31C62E9AB002271F3 /* Info.plist */,
+				3BE266FB1C641D6D002271F3 /* Bridging-Header.h */,
+			);
+			path = SGLKitTouchTestSwift;
+			sourceTree = "<group>";
+		};
+		9A5243A77F39051AEC1F0763 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */,
+				291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */,
+				70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */,
+				84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -598,43 +963,125 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4D2DD01C7C5B2000E8ED77 /* Vec2.h in Headers */,
 				3B7699151905FA1400781FC4 /* SGLRenderer.h in Headers */,
+				3B4D2DE31C7C790B00E8ED77 /* Mat3.h in Headers */,
+				3B4D2DD41C7C5B2000E8ED77 /* Vec4.h in Headers */,
+				3B4D2DD71C7C75DE00E8ED77 /* Constants.h in Headers */,
 				3B9ADF9E1914E5D600B14F9C /* SGLScene.h in Headers */,
 				3B7699171905FA1400781FC4 /* SGLShader.h in Headers */,
 				3B7698F51905F9D600781FC4 /* SGLMath.h in Headers */,
-				3B7698E31905F98D00781FC4 /* SGLMacSceneView.h in Headers */,
 				3B76991E1905FA1400781FC4 /* SGLVertexBuffer.h in Headers */,
+				3B4D2DE71C7C790B00E8ED77 /* Plane.h in Headers */,
 				3B7698F71905F9D600781FC4 /* SGLTypes.h in Headers */,
 				3B76990D1905FA1400781FC4 /* SGLContext.h in Headers */,
+				3B4D2DEF1C7C790B00E8ED77 /* Tri.h in Headers */,
 				3B76991B1905FA1400781FC4 /* SGLUniform.h in Headers */,
-				3B7698E51905F98D00781FC4 /* SGLMacView.h in Headers */,
+				3B2268251C7D02C700F793E4 /* Conversions.h in Headers */,
 				3B7699111905FA1400781FC4 /* SGLMesh.h in Headers */,
 				3BD162CD190F3980002F057D /* SGLMeshes.h in Headers */,
 				3B7699191905FA1400781FC4 /* SGLTexture.h in Headers */,
 				3B7699131905FA1400781FC4 /* SGLProgram.h in Headers */,
-				3B7698E61905F98D00781FC4 /* SGLMacWindow.h in Headers */,
-				3B0197121940B9B600DCFF36 /* SGLMacWindowController.h in Headers */,
 				3B7698F81905F9D600781FC4 /* SGLUtilities.h in Headers */,
+				3B4D2DD21C7C5B2000E8ED77 /* Vec3.h in Headers */,
+				3B4D2DE51C7C790B00E8ED77 /* Mat4.h in Headers */,
 				3B76990F1905FA1400781FC4 /* SGLIndexBuffer.h in Headers */,
 				3B76991D1905FA1400781FC4 /* SGLVertexAttribute.h in Headers */,
+				3B2268291C7D02D500F793E4 /* Functions.h in Headers */,
 				3B7698F41905F9D600781FC4 /* SGLDebug.h in Headers */,
+				3B4D2DE11C7C790B00E8ED77 /* AABB.h in Headers */,
+				3B4D2DEB1C7C790B00E8ED77 /* Ray.h in Headers */,
+				3BF415BD1C78D17E008C1814 /* SGLMacWindow.h in Headers */,
+				3BF415BF1C78D17E008C1814 /* SGLMacWindowController.h in Headers */,
+				3BF415BB1C78D17E008C1814 /* SGLMacView.h in Headers */,
+				3B4D2DE91C7C790B00E8ED77 /* Quad.h in Headers */,
+				3B4D2DED1C7C790B00E8ED77 /* Sphere.h in Headers */,
+				3BF415B91C78D17E008C1814 /* SGLMacSceneView.h in Headers */,
+				3BD403A61C798C6E007C1D26 /* SGLKit.h in Headers */,
 				3B12B6B8190742E800C13154 /* SGLHeader.h in Headers */,
-				3B7698F21905F9D600781FC4 /* AQDataExtensions.h in Headers */,
+				3B4D2DCB1C7C595B00E8ED77 /* IVec2.h in Headers */,
+				3BDA7AA3197C72DB00F85A99 /* SGLDefaults.h in Headers */,
+				3BD403AE1C799D0B007C1D26 /* SGLMath.swift in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BF56E211C78E2FB00303970 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4D2DD11C7C5B2000E8ED77 /* Vec2.h in Headers */,
+				3BF56E5A1C78E81300303970 /* SGLKit.h in Headers */,
+				3B4D2DE41C7C790B00E8ED77 /* Mat3.h in Headers */,
+				3B4D2DD51C7C5B2000E8ED77 /* Vec4.h in Headers */,
+				3B4D2DD81C7C75DE00E8ED77 /* Constants.h in Headers */,
+				3BF56E5B1C78E81300303970 /* SGLDebug.h in Headers */,
+				3BF56E5C1C78E81300303970 /* SGLHeader.h in Headers */,
+				3BF56E5D1C78E81300303970 /* SGLMath.h in Headers */,
+				3BF56E5E1C78E81300303970 /* SGLTypes.h in Headers */,
+				3B4D2DE81C7C790B00E8ED77 /* Plane.h in Headers */,
+				3BF56E5F1C78E81300303970 /* SGLDefaults.h in Headers */,
+				3BF56E601C78E81300303970 /* SGLUtilities.h in Headers */,
+				3B4D2DF01C7C790B00E8ED77 /* Tri.h in Headers */,
+				3BF56E611C78E81300303970 /* SGLMeshes.h in Headers */,
+				3B2268261C7D02C700F793E4 /* Conversions.h in Headers */,
+				3BF56E621C78E81300303970 /* SGLContext.h in Headers */,
+				3BF56E631C78E81300303970 /* SGLRenderer.h in Headers */,
+				3BF56E641C78E81300303970 /* SGLScene.h in Headers */,
+				3BF56E651C78E81300303970 /* SGLMesh.h in Headers */,
+				3BF56E661C78E81300303970 /* SGLProgram.h in Headers */,
+				3B4D2DD31C7C5B2000E8ED77 /* Vec3.h in Headers */,
+				3B4D2DE61C7C790B00E8ED77 /* Mat4.h in Headers */,
+				3BF56E671C78E81300303970 /* SGLShader.h in Headers */,
+				3BF56E681C78E81300303970 /* SGLTexture.h in Headers */,
+				3B22682A1C7D02D500F793E4 /* Functions.h in Headers */,
+				3BF56E691C78E81300303970 /* SGLUniform.h in Headers */,
+				3B4D2DE21C7C790B00E8ED77 /* AABB.h in Headers */,
+				3B4D2DEC1C7C790B00E8ED77 /* Ray.h in Headers */,
+				3BF56E6A1C78E81300303970 /* SGLVertexAttribute.h in Headers */,
+				3BF56E6B1C78E81300303970 /* SGLVertexBuffer.h in Headers */,
+				3BF56E6C1C78E81300303970 /* SGLIndexBuffer.h in Headers */,
+				3B4D2DEA1C7C790B00E8ED77 /* Quad.h in Headers */,
+				3B4D2DEE1C7C790B00E8ED77 /* Sphere.h in Headers */,
+				3BF56E6D1C78E81300303970 /* SGLIosSceneView.h in Headers */,
+				3BF56E6E1C78E81300303970 /* SGLIosView.h in Headers */,
+				3BF56E6F1C78E81300303970 /* SGLIosViewController.h in Headers */,
+				3B4D2DCC1C7C595B00E8ED77 /* IVec2.h in Headers */,
+				3BF56E701C78E81300303970 /* SGLMotionManager.h in Headers */,
+				3BD403AC1C799A99007C1D26 /* SGLMath.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3B3513CF1C5E66FD0090A2EB /* SGLKitTestSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B3513DF1C5E66FD0090A2EB /* Build configuration list for PBXNativeTarget "SGLKitTestSwift" */;
+			buildPhases = (
+				3B3513CC1C5E66FD0090A2EB /* Sources */,
+				3B3513CD1C5E66FD0090A2EB /* Frameworks */,
+				3B3513CE1C5E66FD0090A2EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BD042121C78EAF0003E74B2 /* PBXTargetDependency */,
+			);
+			name = SGLKitTestSwift;
+			productName = SGLKitTestSwift;
+			productReference = 3B3513D01C5E66FD0090A2EB /* SGLKitTestSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3B4BEE411905C0D40008D382 /* SGLKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B4BEE6A1905C0D40008D382 /* Build configuration list for PBXNativeTarget "SGLKit" */;
 			buildPhases = (
+				933D73C2046426200AD26C71 /* Check Pods Manifest.lock */,
 				3B4BEE3D1905C0D40008D382 /* Sources */,
 				3B4BEE3E1905C0D40008D382 /* Frameworks */,
 				3B4BEE3F1905C0D40008D382 /* Headers */,
 				3B4BEE401905C0D40008D382 /* Resources */,
-				3BD162BE190DF1BB002F057D /* Build Shaders */,
+				D43AC63F186F6187ACDCDF20 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,53 +1118,56 @@
 				3B9ADF521914A9F300B14F9C /* Sources */,
 				3B9ADF531914A9F300B14F9C /* Frameworks */,
 				3B9ADF541914A9F300B14F9C /* Resources */,
+				3BF56E301C78E2FB00303970 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3B9ADF941914AC8A00B14F9C /* PBXTargetDependency */,
-				3B9ADF921914AC8600B14F9C /* PBXTargetDependency */,
+				3BF56E2A1C78E2FB00303970 /* PBXTargetDependency */,
 			);
 			name = SGLKitTouchTest;
 			productName = SGLKitTouchTest;
 			productReference = 3B9ADF561914A9F300B14F9C /* SGLKitTouchTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3BC5E6E11913D3B000FCF32F /* SGLKitResources */ = {
+		3BE266E41C62E9AB002271F3 /* SGLKitTouchTestSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BC5E6EE1913D3B000FCF32F /* Build configuration list for PBXNativeTarget "SGLKitResources" */;
+			buildConfigurationList = 3BE266F61C62E9AB002271F3 /* Build configuration list for PBXNativeTarget "SGLKitTouchTestSwift" */;
 			buildPhases = (
-				3BC5E6DE1913D3B000FCF32F /* Sources */,
-				3BC5E6DF1913D3B000FCF32F /* Frameworks */,
-				3BC5E6E01913D3B000FCF32F /* Resources */,
-				3BC5E6F01913D7C000FCF32F /* Build Shaders */,
+				3BE266E11C62E9AB002271F3 /* Sources */,
+				3BE266E21C62E9AB002271F3 /* Frameworks */,
+				3BE266E31C62E9AB002271F3 /* Resources */,
+				3BF56E361C78E40B00303970 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3BF56E321C78E31100303970 /* PBXTargetDependency */,
 			);
-			name = SGLKitResources;
-			productName = SGLKitResources;
-			productReference = 3BC5E6E21913D3B000FCF32F /* SGLKitResources.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = SGLKitTouchTestSwift;
+			productName = SGLKitTouchTestSwift;
+			productReference = 3BE266E51C62E9AB002271F3 /* SGLKitTouchTestSwift.app */;
+			productType = "com.apple.product-type.application";
 		};
-		3BD161F519088204002F057D /* SGLKitTouch */ = {
+		3BF56E231C78E2FB00303970 /* SGLKitTouch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BD1621219088205002F057D /* Build configuration list for PBXNativeTarget "SGLKitTouch" */;
+			buildConfigurationList = 3BF56E2D1C78E2FB00303970 /* Build configuration list for PBXNativeTarget "SGLKitTouch" */;
 			buildPhases = (
-				3BD161F219088204002F057D /* Sources */,
-				3BD161F319088204002F057D /* Frameworks */,
-				3BD161F419088204002F057D /* CopyFiles */,
+				AEF5341BC860C3FA70FC4931 /* Check Pods Manifest.lock */,
+				3BF56E1F1C78E2FB00303970 /* Sources */,
+				3BF56E201C78E2FB00303970 /* Frameworks */,
+				3BF56E211C78E2FB00303970 /* Headers */,
+				3BF56E221C78E2FB00303970 /* Resources */,
+				66ACF3944257DC1461D19B28 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BF53590191C9C64003F4A4B /* PBXTargetDependency */,
 			);
 			name = SGLKitTouch;
 			productName = SGLKitTouch;
-			productReference = 3BD161F619088204002F057D /* libSGLKitTouch.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 3BF56E241C78E2FB00303970 /* SGLKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -725,11 +1175,21 @@
 		3B4BEE391905C0D40008D382 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Secret Geometry, Inc.";
 				TargetAttributes = {
+					3B3513CF1C5E66FD0090A2EB = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					3B9ADF551914A9F300B14F9C = {
 						DevelopmentTeam = B55ZL2Y7PW;
+					};
+					3BE266E41C62E9AB002271F3 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					3BF56E231C78E2FB00303970 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
@@ -748,20 +1208,54 @@
 			targets = (
 				3B4BEE411905C0D40008D382 /* SGLKit */,
 				3B4BEE731905C1090008D382 /* SGLKitTest */,
-				3BD161F519088204002F057D /* SGLKitTouch */,
+				3B3513CF1C5E66FD0090A2EB /* SGLKitTestSwift */,
+				3BF56E231C78E2FB00303970 /* SGLKitTouch */,
 				3B9ADF551914A9F300B14F9C /* SGLKitTouchTest */,
-				3BC5E6E11913D3B000FCF32F /* SGLKitResources */,
+				3BE266E41C62E9AB002271F3 /* SGLKitTouchTestSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B3513CE1C5E66FD0090A2EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3513DA1C5E66FD0090A2EB /* Assets.xcassets in Resources */,
+				3B3513D81C5E66FD0090A2EB /* Window.xib in Resources */,
+				3B3513DD1C5E66FD0090A2EB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B4BEE401905C0D40008D382 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE89ACD1C87666500BCC1D4 /* Gaussian.vert in Resources */,
+				3BE89AC51C87666500BCC1D4 /* CopyTexture.frag in Resources */,
 				3B7698C51905F8FA00781FC4 /* InvisibleCursor.png in Resources */,
+				3BE89AC91C87666500BCC1D4 /* Fragment.glsl in Resources */,
+				3BE89ABF1C87666500BCC1D4 /* Copy.vert in Resources */,
+				3BE89AD11C87666500BCC1D4 /* Utilities.glsl in Resources */,
+				3BE89AB91C87666500BCC1D4 /* Combine.frag in Resources */,
+				3BF4E30E19F1105200A0E560 /* WhiteIBeam@2x.png in Resources */,
+				3BE89AAD1C87666500BCC1D4 /* Basic.frag in Resources */,
+				3BE89AB31C87666500BCC1D4 /* BasicTexture.vert in Resources */,
+				3BE89AC71C87666500BCC1D4 /* CopyTexture.vert in Resources */,
+				3BE89ABD1C87666500BCC1D4 /* Copy.frag in Resources */,
+				3BF4E30D19F1105200A0E560 /* WhiteIBeam.png in Resources */,
+				3BE89ADA1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */,
 				3B4BEE501905C0D40008D382 /* InfoPlist.strings in Resources */,
+				3BE89AC11C87666500BCC1D4 /* CopyPixels.frag in Resources */,
+				3BE89ACF1C87666500BCC1D4 /* Platform.glsl in Resources */,
+				3BE89AB11C87666500BCC1D4 /* BasicTexture.frag in Resources */,
+				3BE89AD31C87666500BCC1D4 /* Vertex.glsl in Resources */,
+				3BE89ACB1C87666500BCC1D4 /* Gaussian.frag in Resources */,
+				3BE89ABB1C87666500BCC1D4 /* Combine.vert in Resources */,
+				3BE89AAF1C87666500BCC1D4 /* Basic.vert in Resources */,
+				3BE89AB71C87666500BCC1D4 /* Color.vert in Resources */,
+				3BE89AC31C87666500BCC1D4 /* CopyPixels.vert in Resources */,
+				3BE89AB51C87666500BCC1D4 /* Color.frag in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,7 +1275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9574491921795C00F04121 /* SGLKitResources.bundle in Resources */,
 				3B9ADF631914A9F300B14F9C /* InfoPlist.strings in Resources */,
 				3B9ADF6F1914A9F300B14F9C /* Main_iPad.storyboard in Resources */,
 				3B9ADF6C1914A9F300B14F9C /* Main_iPhone.storyboard in Resources */,
@@ -789,70 +1282,164 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BC5E6E01913D3B000FCF32F /* Resources */ = {
+		3BE266E31C62E9AB002271F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BC5E6EF1913D48700FCF32F /* InvisibleCursor.png in Resources */,
+				3BE266F21C62E9AB002271F3 /* LaunchScreen.storyboard in Resources */,
+				3BE266EF1C62E9AB002271F3 /* Assets.xcassets in Resources */,
+				3BE266ED1C62E9AB002271F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BF56E221C78E2FB00303970 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE89AB21C87666500BCC1D4 /* BasicTexture.frag in Resources */,
+				3BE89ACC1C87666500BCC1D4 /* Gaussian.frag in Resources */,
+				3BE89AB41C87666500BCC1D4 /* BasicTexture.vert in Resources */,
+				3BE89ACE1C87666500BCC1D4 /* Gaussian.vert in Resources */,
+				3BF56E851C78E84600303970 /* InvisibleCursor.png in Resources */,
+				3BF56E861C78E84600303970 /* WhiteIBeam.png in Resources */,
+				3BE89AB01C87666500BCC1D4 /* Basic.vert in Resources */,
+				3BE89ABA1C87666500BCC1D4 /* Combine.frag in Resources */,
+				3BE89AD41C87666500BCC1D4 /* Vertex.glsl in Resources */,
+				3BE89AC41C87666500BCC1D4 /* CopyPixels.vert in Resources */,
+				3BE89AC01C87666500BCC1D4 /* Copy.vert in Resources */,
+				3BE89AC81C87666500BCC1D4 /* CopyTexture.vert in Resources */,
+				3BE89AAE1C87666500BCC1D4 /* Basic.frag in Resources */,
+				3BF56E871C78E84600303970 /* WhiteIBeam@2x.png in Resources */,
+				3BE89AC61C87666500BCC1D4 /* CopyTexture.frag in Resources */,
+				3BE89ADB1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */,
+				3BE89AD01C87666500BCC1D4 /* Platform.glsl in Resources */,
+				3BE89AB61C87666500BCC1D4 /* Color.frag in Resources */,
+				3BE89AD21C87666500BCC1D4 /* Utilities.glsl in Resources */,
+				3BE89ABC1C87666500BCC1D4 /* Combine.vert in Resources */,
+				3BE89ABE1C87666500BCC1D4 /* Copy.frag in Resources */,
+				3BE89AB81C87666500BCC1D4 /* Color.vert in Resources */,
+				3BE89AC21C87666500BCC1D4 /* CopyPixels.frag in Resources */,
+				3BE89ACA1C87666500BCC1D4 /* Fragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BC5E6F01913D7C000FCF32F /* Build Shaders */ = {
+		66ACF3944257DC1461D19B28 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Build Shaders";
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Touching SGLKitResources\"\ntouch ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\necho \"Building SGLKitResources\"\npython SGLKit/buildshaders.py ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		3BD162BE190DF1BB002F057D /* Build Shaders */ = {
+		933D73C2046426200AD26C71 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Build Shaders";
+			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "python SGLKit/buildshaders.py ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AEF5341BC860C3FA70FC4931 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D43AC63F186F6187ACDCDF20 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B3513CC1C5E66FD0090A2EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B45AF111C5FD63A002CCBE6 /* AppDelegate.swift in Sources */,
+				3B3C1DF21C5EFE0700D56F44 /* View.swift in Sources */,
+				3B3513D51C5E66FD0090A2EB /* Document.swift in Sources */,
+				3B3C1DEB1C5E765900D56F44 /* WindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B4BEE3D1905C0D40008D382 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B22685B1C7D11DD00F793E4 /* Sphere.swift in Sources */,
+				3B22682B1C7D02D500F793E4 /* Functions.mm in Sources */,
+				3B2268311C7D101400F793E4 /* Constants.swift in Sources */,
+				3BD403AD1C799D00007C1D26 /* SGLMath.swift in Sources */,
 				3B9ADF9F1914E5D600B14F9C /* SGLScene.mm in Sources */,
 				3B76991F1905FA1400781FC4 /* SGLVertexBuffer.mm in Sources */,
-				3B7698E71905F98D00781FC4 /* SGLMacSceneView.mm in Sources */,
+				3B2268531C7D11DD00F793E4 /* Mat4.swift in Sources */,
 				3B7699181905FA1400781FC4 /* SGLShader.mm in Sources */,
 				3BD162CE190F3980002F057D /* SGLMeshes.mm in Sources */,
+				3B2268611C7D11DD00F793E4 /* Vec4.swift in Sources */,
+				3B22684F1C7D11DD00F793E4 /* Functions.swift in Sources */,
+				3B2268491C7D11DD00F793E4 /* AABB.swift in Sources */,
 				3B7699121905FA1400781FC4 /* SGLMesh.mm in Sources */,
+				3B22684D1C7D11DD00F793E4 /* Conversions.swift in Sources */,
 				3B7699101905FA1400781FC4 /* SGLIndexBuffer.mm in Sources */,
+				3B2268341C7D10A200F793E4 /* IVec2.swift in Sources */,
+				3B22685D1C7D11DD00F793E4 /* Tri.swift in Sources */,
 				3B76990E1905FA1400781FC4 /* SGLContext.mm in Sources */,
+				3B2268511C7D11DD00F793E4 /* Mat3.swift in Sources */,
 				3B7698F31905F9D600781FC4 /* AQDataExtensions.m in Sources */,
+				3B22683A1C7D11C700F793E4 /* Vec2.swift in Sources */,
+				3B22685F1C7D11DD00F793E4 /* Vec3.swift in Sources */,
 				3B7699141905FA1400781FC4 /* SGLProgram.mm in Sources */,
 				3B76991C1905FA1400781FC4 /* SGLUniform.mm in Sources */,
-				3B7698E91905F98D00781FC4 /* SGLMacWindow.mm in Sources */,
-				3B7698F61905F9D600781FC4 /* SGLMath.mm in Sources */,
+				3BF415BA1C78D17E008C1814 /* SGLMacSceneView.mm in Sources */,
+				3B2268551C7D11DD00F793E4 /* Plane.swift in Sources */,
+				3BDA7AA4197C72DB00F85A99 /* SGLDefaults.mm in Sources */,
+				3B2268571C7D11DD00F793E4 /* Quad.swift in Sources */,
 				3B76991A1905FA1400781FC4 /* SGLTexture.mm in Sources */,
-				3B7698E81905F98D00781FC4 /* SGLMacView.mm in Sources */,
 				3B7698F91905F9D600781FC4 /* SGLUtilities.mm in Sources */,
 				3B7699161905FA1400781FC4 /* SGLRenderer.mm in Sources */,
-				3B0197131940B9B600DCFF36 /* SGLMacWindowController.mm in Sources */,
+				3BF415C01C78D17E008C1814 /* SGLMacWindowController.mm in Sources */,
+				3BF415BE1C78D17E008C1814 /* SGLMacWindow.mm in Sources */,
+				3BF415BC1C78D17E008C1814 /* SGLMacView.mm in Sources */,
+				3B22682E1C7D048100F793E4 /* Constants.mm in Sources */,
+				3B2268591C7D11DD00F793E4 /* Ray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,10 +1447,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B12B6A819071D1F00C13154 /* View.mm in Sources */,
-				3B12B6A719071D1F00C13154 /* Document.mm in Sources */,
+				3B12B6A819071D1F00C13154 /* View.m in Sources */,
+				3B12B6A719071D1F00C13154 /* Document.m in Sources */,
 				3B4BEE7D1905C1090008D382 /* main.m in Sources */,
-				3B12B6A919071D1F00C13154 /* WindowController.mm in Sources */,
+				3B3C1DE91C5E764000D56F44 /* WindowController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,60 +1465,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BC5E6DE1913D3B000FCF32F /* Sources */ = {
+		3BE266E11C62E9AB002271F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE266EA1C62E9AB002271F3 /* ViewController.swift in Sources */,
+				3BE2670F1C643960002271F3 /* Empty.mm in Sources */,
+				3BE266E81C62E9AB002271F3 /* AppDelegate.swift in Sources */,
+				3BE266F81C62F273002271F3 /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BD161F219088204002F057D /* Sources */ = {
+		3BF56E1F1C78E2FB00303970 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BF5358E191C7BAD003F4A4B /* SGLContext.mm in Sources */,
-				3BD1622219088403002F057D /* AQDataExtensions.m in Sources */,
-				3BD1622319088403002F057D /* SGLMath.mm in Sources */,
-				3BD1622419088403002F057D /* SGLUtilities.mm in Sources */,
-				3BF53587191ADC1D003F4A4B /* SGLIosView.mm in Sources */,
-				3BF5358B191ADD9F003F4A4B /* SGLIosSceneView.mm in Sources */,
-				3B481C8B192DCF68008D22CC /* SGLMotionManager.mm in Sources */,
-				3BD16219190883ED002F057D /* SGLIndexBuffer.mm in Sources */,
-				3BD1621A190883ED002F057D /* SGLMesh.mm in Sources */,
-				3BD1621C190883ED002F057D /* SGLProgram.mm in Sources */,
-				3BD1621D190883ED002F057D /* SGLRenderer.mm in Sources */,
-				3BD1621E190883ED002F057D /* SGLShader.mm in Sources */,
-				3BD1621F190883ED002F057D /* SGLTexture.mm in Sources */,
-				3BD16220190883ED002F057D /* SGLUniform.mm in Sources */,
-				3BD162CF190F3980002F057D /* SGLMeshes.mm in Sources */,
-				3BD16221190883ED002F057D /* SGLVertexBuffer.mm in Sources */,
-				3BF53588191ADC1D003F4A4B /* SGLIosViewController.mm in Sources */,
-				3B9ADFA01914E5D600B14F9C /* SGLScene.mm in Sources */,
+				3B22685C1C7D11DD00F793E4 /* Sphere.swift in Sources */,
+				3B22682C1C7D02D500F793E4 /* Functions.mm in Sources */,
+				3B2268321C7D101400F793E4 /* Constants.swift in Sources */,
+				3BF56E511C78E47E00303970 /* SGLIosSceneView.mm in Sources */,
+				3BF56E521C78E47E00303970 /* SGLIosView.mm in Sources */,
+				3BF56E531C78E47E00303970 /* SGLIosViewController.mm in Sources */,
+				3B2268541C7D11DD00F793E4 /* Mat4.swift in Sources */,
+				3BF56E541C78E47E00303970 /* SGLMotionManager.mm in Sources */,
+				3BF56E3D1C78E46100303970 /* SGLContext.mm in Sources */,
+				3B2268621C7D11DD00F793E4 /* Vec4.swift in Sources */,
+				3B2268501C7D11DD00F793E4 /* Functions.swift in Sources */,
+				3B22684A1C7D11DD00F793E4 /* AABB.swift in Sources */,
+				3BF56E3F1C78E46100303970 /* SGLRenderer.mm in Sources */,
+				3B22684E1C7D11DD00F793E4 /* Conversions.swift in Sources */,
+				3BF56E411C78E46100303970 /* SGLScene.mm in Sources */,
+				3B2268351C7D10A200F793E4 /* IVec2.swift in Sources */,
+				3B22685E1C7D11DD00F793E4 /* Tri.swift in Sources */,
+				3BF56E431C78E46100303970 /* SGLMesh.mm in Sources */,
+				3B2268521C7D11DD00F793E4 /* Mat3.swift in Sources */,
+				3BF56E451C78E46100303970 /* SGLProgram.mm in Sources */,
+				3B22683B1C7D11C700F793E4 /* Vec2.swift in Sources */,
+				3B2268601C7D11DD00F793E4 /* Vec3.swift in Sources */,
+				3BF56E471C78E46100303970 /* SGLShader.mm in Sources */,
+				3BF56E491C78E46100303970 /* SGLTexture.mm in Sources */,
+				3BF56E4B1C78E46100303970 /* SGLUniform.mm in Sources */,
+				3B2268561C7D11DD00F793E4 /* Plane.swift in Sources */,
+				3BD403AB1C799818007C1D26 /* SGLMath.swift in Sources */,
+				3B2268581C7D11DD00F793E4 /* Quad.swift in Sources */,
+				3BF56E4E1C78E46100303970 /* SGLVertexBuffer.mm in Sources */,
+				3BF56E501C78E46100303970 /* SGLIndexBuffer.mm in Sources */,
+				3BF56E381C78E45300303970 /* SGLDefaults.mm in Sources */,
+				3BF56E391C78E45400303970 /* SGLUtilities.mm in Sources */,
+				3BF56E3A1C78E45400303970 /* SGLMeshes.mm in Sources */,
+				3BF56E3B1C78E45400303970 /* AQDataExtensions.m in Sources */,
+				3B22682F1C7D048100F793E4 /* Constants.mm in Sources */,
+				3B22685A1C7D11DD00F793E4 /* Ray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B9ADF921914AC8600B14F9C /* PBXTargetDependency */ = {
+		3BD042121C78EAF0003E74B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3BD161F519088204002F057D /* SGLKitTouch */;
-			targetProxy = 3B9ADF911914AC8600B14F9C /* PBXContainerItemProxy */;
-		};
-		3B9ADF941914AC8A00B14F9C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3BC5E6E11913D3B000FCF32F /* SGLKitResources */;
-			targetProxy = 3B9ADF931914AC8A00B14F9C /* PBXContainerItemProxy */;
+			target = 3B4BEE411905C0D40008D382 /* SGLKit */;
+			targetProxy = 3BD042111C78EAF0003E74B2 /* PBXContainerItemProxy */;
 		};
 		3BDDA4081905D52F00F47029 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B4BEE411905C0D40008D382 /* SGLKit */;
 			targetProxy = 3BDDA4071905D52F00F47029 /* PBXContainerItemProxy */;
 		};
-		3BF53590191C9C64003F4A4B /* PBXTargetDependency */ = {
+		3BF56E2A1C78E2FB00303970 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3BC5E6E11913D3B000FCF32F /* SGLKitResources */;
-			targetProxy = 3BF5358F191C9C64003F4A4B /* PBXContainerItemProxy */;
+			target = 3BF56E231C78E2FB00303970 /* SGLKitTouch */;
+			targetProxy = 3BF56E291C78E2FB00303970 /* PBXContainerItemProxy */;
+		};
+		3BF56E321C78E31100303970 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BF56E231C78E2FB00303970 /* SGLKitTouch */;
+			targetProxy = 3BF56E311C78E31100303970 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -950,6 +1559,22 @@
 				3B12B6AD19071DC900C13154 /* en */,
 			);
 			name = Window.xib;
+			sourceTree = "<group>";
+		};
+		3B3513D61C5E66FD0090A2EB /* Window.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B3513D71C5E66FD0090A2EB /* Base */,
+			);
+			name = Window.xib;
+			sourceTree = "<group>";
+		};
+		3B3513DB1C5E66FD0090A2EB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B3513DC1C5E66FD0090A2EB /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		3B4BEE4E1905C0D40008D382 /* InfoPlist.strings */ = {
@@ -1000,15 +1625,81 @@
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
+		3BE266EB1C62E9AB002271F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BE266EC1C62E9AB002271F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BE266F01C62E9AB002271F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BE266F11C62E9AB002271F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B3513E01C5E66FD0090A2EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SGLKitTestSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTestSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTestSwift/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B3513E11C5E66FD0090A2EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SGLKitTestSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTestSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTestSwift/Bridging-Header.h";
+			};
+			name = Release;
+		};
 		3B4BEE681905C0D40008D382 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1019,6 +1710,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -1044,7 +1736,6 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -1071,51 +1762,62 @@
 		};
 		3B4BEE6B1905C0D40008D382 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKit/SGLKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/opt/local/include/,
+					"COCOAPODS=1",
 				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SGLKit/SGLKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lcrypto",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_MODULE_NAME = SGLKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
 		3B4BEE6C1905C0D40008D382 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKit/SGLKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/opt/local/include/,
+					"COCOAPODS=1",
 				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SGLKit/SGLKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lcrypto",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_MODULE_NAME = SGLKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1126,8 +1828,12 @@
 		3B4BEE9F1905C1090008D382 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTest/SGLKitTest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1135,6 +1841,8 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SGLKitTest/SGLKitTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -1144,11 +1852,17 @@
 		3B4BEEA01905C1090008D382 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTest/SGLKitTest-Prefix.pch";
 				INFOPLIST_FILE = "SGLKitTest/SGLKitTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -1161,26 +1875,22 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTouchTest/SGLKitTouchTest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					../SGLKit/,
-				);
 				INFOPLIST_FILE = "SGLKitTouchTest/SGLKitTouchTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1195,22 +1905,18 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTouchTest/SGLKitTouchTest-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					../SGLKit/,
-				);
 				INFOPLIST_FILE = "SGLKitTouchTest/SGLKitTouchTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -1220,98 +1926,153 @@
 			};
 			name = Release;
 		};
-		3BC5E6EC1913D3B000FCF32F /* Debug */ = {
+		3BE266F41C62E9AB002271F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SGLKitResources/SGLKitResources-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SGLKitResources/SGLKitResources-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SGLKitTouchTestSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouchTestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = bundle;
+				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTouchTestSwift/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3BC5E6ED1913D3B000FCF32F /* Release */ = {
+		3BE266F51C62E9AB002271F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SGLKitResources/SGLKitResources-Prefix.pch";
-				INFOPLIST_FILE = "SGLKitResources/SGLKitResources-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SGLKitTouchTestSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouchTestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = bundle;
+				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTouchTestSwift/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		3BD1621319088205002F057D /* Debug */ = {
+		3BF56E2E1C78E2FB00303970 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				DSTROOT = /tmp/SGLKitTouch.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SGLKit/SGLKitTouch-Prefix.pch";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"COCOAPODS=1",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/opt/local/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../External/libssh2-for-iOS-master/lib\"";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lcrypto",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SGLKit/SGLKitTouch-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouch;
+				PRODUCT_MODULE_NAME = SGLKit;
+				PRODUCT_NAME = SGLKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		3BD1621419088205002F057D /* Release */ = {
+		3BF56E2F1C78E2FB00303970 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				DSTROOT = /tmp/SGLKitTouch.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SGLKit/SGLKitTouch-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/opt/local/include,
+					"COCOAPODS=1",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../External/libssh2-for-iOS-master/lib\"";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lcrypto",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SGLKit/SGLKitTouch-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouch;
+				PRODUCT_MODULE_NAME = SGLKit;
+				PRODUCT_NAME = SGLKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B3513DF1C5E66FD0090A2EB /* Build configuration list for PBXNativeTarget "SGLKitTestSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B3513E01C5E66FD0090A2EB /* Debug */,
+				3B3513E11C5E66FD0090A2EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B4BEE3C1905C0D40008D382 /* Build configuration list for PBXProject "SGLKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1348,20 +2109,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BC5E6EE1913D3B000FCF32F /* Build configuration list for PBXNativeTarget "SGLKitResources" */ = {
+		3BE266F61C62E9AB002271F3 /* Build configuration list for PBXNativeTarget "SGLKitTouchTestSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BC5E6EC1913D3B000FCF32F /* Debug */,
-				3BC5E6ED1913D3B000FCF32F /* Release */,
+				3BE266F41C62E9AB002271F3 /* Debug */,
+				3BE266F51C62E9AB002271F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BD1621219088205002F057D /* Build configuration list for PBXNativeTarget "SGLKitTouch" */ = {
+		3BF56E2D1C78E2FB00303970 /* Build configuration list for PBXNativeTarget "SGLKitTouch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BD1621319088205002F057D /* Debug */,
-				3BD1621419088205002F057D /* Release */,
+				3BF56E2E1C78E2FB00303970 /* Debug */,
+				3BF56E2F1C78E2FB00303970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

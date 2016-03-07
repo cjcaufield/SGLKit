@@ -266,7 +266,7 @@
 
 - (void) setValue:(mat3)m
 {
-    memcpy(value, m.array(), 9 * sizeof(float));
+    memcpy(value, m.pointerToElements(), 9 * sizeof(float));
     self.modificationCount++;
 }
 
@@ -316,7 +316,7 @@
 
 - (void) setValue:(mat4)m
 {
-    memcpy(value, m.array(), 16 * sizeof(float));
+    memcpy(value, m.pointerToElements(), 16 * sizeof(float));
     self.modificationCount++;
 }
 

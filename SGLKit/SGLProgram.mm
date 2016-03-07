@@ -15,10 +15,12 @@
 #import "SGLDebug.h"
 #import "SGLHeader.h"
 
-static NSMutableArray* gOtherResourceBundles = [NSMutableArray array];
-static NSMutableArray* gSourcePaths = [NSMutableArray array];
 static NSMutableDictionary* sharedPrograms = nil;
 static NSMutableDictionary* sharedSources = nil;
+static NSMutableArray* gOtherBundles = [NSMutableArray array];
+static NSMutableArray* gSourcePaths = [NSMutableArray array];
+static NSString* gShaderEncryptionPassword = nil;
+static BOOL gShouldLoadShadersFromProject = NO;
 
 #ifdef DEBUG
     #define LOAD_SHADERS_FROM_PROJECT
@@ -34,12 +36,12 @@ static NSMutableDictionary* sharedSources = nil;
 
 @implementation SGLProgram
 
-+ (void) registerResourceBundle:(NSBundle*)bundle
++ (void) registerBundle:(NSBundle*)bundle
 {
-    if ([gOtherResourceBundles containsObject:bundle])
+    if ([gOtherBundles containsObject:bundle])
         return;
     
-    [gOtherResourceBundles addObject:bundle];
+    [gOtherBundles addObject:bundle];
 }
 
 + (void) registerSourcePath:(NSString*)path
@@ -48,6 +50,13 @@ static NSMutableDictionary* sharedSources = nil;
         return;
     
     [gSourcePaths addObject:path];
+}
+
++ (void) registerDecryptionPassword:(NSString*)password
+{
+    SGL_ASSERT(gShaderEncryptionPassword == nil);
+    
+    gShaderEncryptionPassword = password;
 }
 
 + (SGLProgram*) programNamed:(NSString*)name
@@ -100,21 +109,24 @@ static NSMutableDictionary* sharedSources = nil;
     BOOL encrypted = NO;
     
     //
-    // Try to load from documents folder.
+    // Try to load from the project.
     //
     
     #ifdef LOAD_SHADERS_FROM_PROJECT
     
-        for (NSString* path in gSourcePaths)
+        if (gShouldLoadShadersFromProject)
         {
-            filepath = [NSString stringWithFormat:@"%@/%@", path, filename];
-        
-            data = [NSData dataWithContentsOfURL:[NSURL URLWithString:filepath]];
-        
-            if (data != nil)
-                break;
-            else
-                filepath = nil;
+            for (NSString* path in gSourcePaths)
+            {
+                filepath = [NSString stringWithFormat:@"%@/%@", path, filename];
+                
+                data = [NSData dataWithContentsOfURL:[NSURL URLWithString:filepath]];
+            
+                if (data != nil)
+                    break;
+                else
+                    filepath = nil;
+            }
         }
     
     #endif
@@ -123,25 +135,28 @@ static NSMutableDictionary* sharedSources = nil;
     // Look for an encrypted shader in the app's bundles.
     //
     
-    if (filepath == nil)
+    if (gShaderEncryptionPassword != nil)
     {
-        filepath = [appBundle pathForResource:name ofType:encryptedExtension];
-        
         if (filepath == nil)
         {
-            for (NSBundle* bundle in gOtherResourceBundles)
+            filepath = [appBundle pathForResource:name ofType:encryptedExtension];
+            
+            if (filepath == nil)
             {
-                filepath = [bundle pathForResource:name ofType:encryptedExtension];
-                
-                if (filepath != nil)
-                    break;
+                for (NSBundle* bundle in gOtherBundles)
+                {
+                    filepath = [bundle pathForResource:name ofType:encryptedExtension];
+                    
+                    if (filepath != nil)
+                        break;
+                }
             }
-        }
+            
+            if (filepath == nil)
+                filepath = [sglKitBundle pathForResource:name ofType:encryptedExtension];
         
-        if (filepath == nil)
-            filepath = [sglKitBundle pathForResource:name ofType:encryptedExtension];
-    
-        encrypted = (filepath != nil);
+            encrypted = (filepath != nil);
+        }
     }
     
     //
@@ -154,7 +169,7 @@ static NSMutableDictionary* sharedSources = nil;
         
         if (filepath == nil)
         {
-            for (NSBundle* bundle in gOtherResourceBundles)
+            for (NSBundle* bundle in gOtherBundles)
             {
                 filepath = [bundle pathForResource:name ofType:extension];
                 
@@ -172,22 +187,17 @@ static NSMutableDictionary* sharedSources = nil;
     //
     
     if (filepath != nil && data == nil)
-    {
         data = [NSData dataWithContentsOfFile:filepath];
-    }
     
     if (encrypted)
     {
-        NSMutableString* password = [@"Int" mutableCopy];
-        [password appendString:@"er"];
-        [password appendString:@"lace"];
-        
-        data = [data dataDecryptedWithPassword:password];
+        SGL_ASSERT(gShaderEncryptionPassword != nil);
+        data = [data dataDecryptedWithPassword:gShaderEncryptionPassword];
     }
     
     if (data == nil || data.length == 0)
     {
-        SGL_ASSERT(0);
+        SGL_ASSERT(false);
         NSLog(@"The shader %@.%@ could not be loaded.", name, extension);
     }
     
@@ -285,6 +295,8 @@ static NSMutableDictionary* sharedSources = nil;
 + (void) reloadAll
 {
     [sharedSources removeAllObjects];
+    
+    gShouldLoadShadersFromProject = YES;
     
     for (SGLProgram* program in sharedPrograms.allValues)
         [program reload];
@@ -389,10 +401,10 @@ static NSMutableDictionary* sharedSources = nil;
     glAttachShader(_glName, _vertexShader);
     glAttachShader(_glName, _fragmentShader);
     
-    glBindAttribLocation(_glName, POSITIONS, "position");
-    glBindAttribLocation(_glName, NORMALS,   "normal");
-    glBindAttribLocation(_glName, COLORS,    "color");
-    glBindAttribLocation(_glName, TEXCOORDS, "texCoord");
+    glBindAttribLocation(_glName, POSITIONS,  "position");
+    glBindAttribLocation(_glName, NORMALS,    "normal");
+    glBindAttribLocation(_glName, RGBACOLORS, "color");
+    glBindAttribLocation(_glName, TEXCOORDS,  "texCoord");
     
     glLinkProgram(_glName);
     
@@ -420,6 +432,8 @@ static NSMutableDictionary* sharedSources = nil;
     _normalLoc   = glGetAttribLocation(_glName, "normal");
     _colorLoc    = glGetAttribLocation(_glName, "color");
     _texCoordLoc = glGetAttribLocation(_glName, "texCoord");
+    
+    SGL_ASSERT(_positionLoc != -1);
     
     return (linkStatus > 0);
 }

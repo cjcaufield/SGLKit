@@ -13,6 +13,8 @@
 #endif
 
 static NSRecursiveLock* glLock = nil;
+//static int lockDepth = 0;
+//static NSTimeInterval lockTimes[128] = {0.0};
 
 
 @interface SGLContext ()
@@ -27,8 +29,6 @@ static NSRecursiveLock* glLock = nil;
 
 + (void) initialize
 {
-    //NSLog(@"SGLKit D");
-          
     #ifdef DEBUG
         NSLog(@"SGLKit running in DEBUG mode.");
     #else
@@ -37,27 +37,14 @@ static NSRecursiveLock* glLock = nil;
     
     glLock = [[NSRecursiveLock alloc] init];
     
-    #ifdef SGL_MAC
-    
-        NSBundle* sglResourcesBundle = [NSBundle bundleForClass:[self class]];
-        NSString* sglResourcesBundlePath = sglResourcesBundle.resourcePath;
-        NSString* sglSourcePath = @"file:///Users/colin/Work/SGLKit/SGLKit";
-    
+    /*
+    #ifndef SGL_IOS_SIMULATOR
+        NSString* sglSourcePath = [@__FILE__ stringByDeletingLastPathComponent];
+        sglSourcePath = [sglSourcePath stringByAppendingPathComponent:@"Shaders"];
+        sglSourcePath = [@"file://" stringByAppendingString:sglSourcePath];
+        [SGLProgram registerSourcePath:sglSourcePath];
     #endif
-    
-    #ifdef SGL_IOS
-    
-        NSString* sglResourcesBundlePath = [NSBundle.mainBundle pathForResource:@"SGLKitResources" ofType:@"bundle"];
-        NSBundle* sglResourcesBundle = [NSBundle bundleWithPath:sglResourcesBundlePath];
-        NSString* sglSourcePath = @"http://MacBookPro.local/~colin/SGLKit"; // CJC revisit
-    
-    #endif
-    
-    NSLog(@"SGLKit path: %@", sglResourcesBundle.bundlePath);
-    NSLog(@"SGLKit resources path: %@", sglResourcesBundlePath);
-    
-    [SGLProgram registerSourcePath:sglSourcePath];
-    [SGLProgram registerResourceBundle:sglResourcesBundle];
+    */
 }
 
 + (void) checkForErrors
@@ -74,12 +61,20 @@ static NSRecursiveLock* glLock = nil;
 
 + (void) lockGL
 {
+    //lockTimes[lockDepth] = NSDate.timeIntervalSinceReferenceDate;
+    //SGL_METHOD_LOG_ARGS(@"%d", lockDepth);
+    //lockDepth++;
+    
     SGL_ASSERT(glLock != nil);
     [glLock lock];
 }
 
 + (void) unlockGL
 {
+    //lockDepth--;
+    //NSTimeInterval duration = NSDate.timeIntervalSinceReferenceDate - lockTimes[lockDepth];
+    //SGL_METHOD_LOG_ARGS(@"%d, %.3f", lockDepth, duration);
+    
     SGL_ASSERT(glLock != nil);
     [glLock unlock];
 }
@@ -107,12 +102,12 @@ static NSRecursiveLock* glLock = nil;
     return self;
 }
 
-- (const mat4&) modelViewMatrix
+- (const mat4) modelViewMatrix
 {   
     return _modelViewStack.back();
 }
 
-- (void) setModelViewMatrix:(const mat4&)matrix
+- (void) setModelViewMatrix:(const mat4)matrix
 {
     _modelViewStack.back() = matrix;
 }

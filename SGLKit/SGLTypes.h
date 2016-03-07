@@ -15,11 +15,22 @@
     #import <UIKit/UIKit.h>
 #endif
 
-enum ProjectionType
+typedef enum RenderingQuality
+{
+    RenderingQuality_Minimal,
+    RenderingQuality_Low,
+    RenderingQuality_Medium,
+    RenderingQuality_High,
+    RenderingQuality_Maximal
+    
+} RenderingQuality;
+
+typedef enum ProjectionType
 {
     PERSPECTIVE,
     ORTHOGRAPHIC
-};
+    
+} ProjectionType;
 
 #ifdef SGL_MAC
 

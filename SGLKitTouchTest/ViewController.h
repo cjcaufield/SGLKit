@@ -11,7 +11,7 @@
 
 @class SGLShader, SGLMesh;
 
-enum Shape
+typedef enum Shape
 {
     SPHERE = 0,
     TORUS = 1,
@@ -23,7 +23,8 @@ enum Shape
     DODECAHEDRON = 12,
     ICOSAHEDRON = 20,
     TEAPOT = 100
-};
+    
+} Shape;
 
 @interface ViewController : SGLIosViewController
 

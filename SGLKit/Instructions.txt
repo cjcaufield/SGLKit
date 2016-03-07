@@ -1,0 +1,174 @@
+INSTALLATION
+============
+
+About CocoaPods
+---------------
+
+- SGLKit uses CocoaPods to simplify project setup.  If you're new to this, check out www.cocoapods.org.
+- To install CocoaPods on your machine, enter the following in Terminal.app:
+
+    sudo gem install cocoapods
+
+- This is only required once per development machine.
+
+Create a Project
+----------------
+
+- Create a Mac or iOS project.
+- Close Xcode (important), open Terminal.app, and go to the top-level folder for your project.
+- Enter the following command to create a Podile and an xcworkspace to wrap your project:
+
+    sudo pod init
+
+- Open the generated Podfile with your preferred editor.
+- Add the following line to your target entry:
+
+    target MyTarget
+        pod 'SGLKit', '~> 4.0' # Add this line
+    end
+
+- Save and close.
+- Enter the following in Terminal.app:
+
+    sudo pod install
+
+- Now open the xcworkspace (not the xcodeproj), and follow the instructions for your platform below.
+
+Compiler Issues
+---------------
+
+- If not using Objective-C++, add an empty .mm file to force the app to link with the C++ stdlib.  STILL?
+- If using Swift, create a Swift bridging header and set it in the build settings.  STILL?
+
+Mac
+---
+
+- In IB, add a Custom View, and change its class to SGLMacView, SGLMacSceneView, or your own custom view subclass.
+- If using a custom view subclass, make it inherit from SGLMacView or SGLMacSceneView.
+- See SGLKit's Mac TestApps for setup and coding examples.
+
+iOS
+---
+
+- In IB, create a ViewController.
+- Make your ViewController a subclass of SGLIosViewController.
+- Make your View a subclass of SGLIosView, or SGLIosSceneView.
+- See SGLKit's iOS TestApps for setup and coding examples.
+- Connect ViewController and View???
+
+
+USAGE
+=====
+
+Scene
+-----
+
+Renderer
+--------
+
+Meshes
+------
+
+Textures
+--------
+
+Shaders
+-------
+
+Math
+----
+
+
+SHADERS
+=======
+
+Adding Shaders
+--------------
+
+- You can create your own shaders (SHADER_NAME.vert/frag) and add them to your app or frameworks's resources.
+- You can also create utility files to include in your shaders (FILE.glsl).
+- SGLKit will automatically handle these files when you create a new SGLShader with SHADER_NAME.
+- See SGLKit/Shaders for examples of universal Mac/iOS (GL/GLES) shaders.
+
+- If you're creating a framework that uses SGLKit and has it's own shaders, you'll need to register them.
+- Before any of your framework's shaders are created, use the following code inside one of your classes:
+
+    NSBundle* myBundle = [NSBundle bundleForClass:[self class]];
+    [SGLProgram registerBundle:myBundle]
+
+Live-Reloading Shaders
+----------------------
+
+- During debug sessions you can edit shaders and live-reload them, which is great for iterating.
+- SGLKit shaders are automatically reloadable when edited, as long as you are building SGLKit on your dev machine.
+
+- For your app or framework's shaders to be live-reloadable, you need to register their paths.
+- Before any of your shaders are created, use code similar to the following inside one of your classes:
+
+[SGLProgram registerSourcePath:@"file:///Path/To/Your/Project/Shaders"];
+
+- or, more generically, something like:
+
+    NSString* sourcePath = [@__FILE__ stringByDeletingLastPathComponent];
+    sourcePath = [sourcePath stringByAppendingPathComponent:@"Shaders"];
+    sourcePath = [@"file://" stringByAppendingString:sourcePath];
+    [SGLProgram registerSourcePath:sourcePath];
+
+iOS Device Live-Reloading Shaders
+---------------------------------
+
+- For iOS device debug sessions, shader reloading requires more setup.
+- You need to enable a webserver on your development machine, and then make all your shader paths reachable.
+- Follow the steps below (last tested on OS X 10.11):
+
+1) Turn on apache
+
+    sudo apachectl start
+
+2) Make aliases
+
+- Create an alias to the top level SGLKit directory.
+- Copy the alias to /Library/Webserver/Documents.
+- You might need to change permissions to 644 or 755.
+- Repeat these steps for any other Frameworks or Apps with shaders.
+
+3) Allow http connections on iOS by adding the following to your Info.plist
+
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+
+4) Restart apache
+
+    sudo apachectl restart
+
+5) Register shader directories
+
+- Register all shader project directories, eg. SGLKit/Shaders, YourFramework/Shaders, and YourApp/Shaders.
+- Before any shaders are created, use the following code inside one of your classes:
+
+    #include <SGLDebug.h>
+
+    #ifdef SGL_IOS_DEVICE
+
+        NSString* path = @"http://MACHINE_NAME/path/to/project/Shaders"
+        [SGLProgram registerSourcePath:@"http://MACHINE_NAME.local/"]
+
+    #endif
+
+Encrypting Shaders
+------------------
+
+- SGLKit supports shader encryption, so you can hide your shader implementations.
+- You can encrypt shaders in a build phase before publishing your framework or app.
+- You use the EncryptFile app to encrypt your shaders with a password.
+- Add the following to a Script Build Phase to do this:
+
+    python /Path/To/SGLKit/encrypt_shaders.py ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH} PASSWORD
+
+- At runtime, give SGLKit this password and it will decrypt your shaders on the fly as they're loaded.
+- To do this, use the following code before any shaders are created:
+
+    [SGLProgram registerDecryptionPassword:PASSWORD];

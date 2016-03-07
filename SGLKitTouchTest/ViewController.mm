@@ -50,7 +50,6 @@
     switch (_shape)
     {
         case AXII:
-            [_axiiMesh render];
             break;
             
         case CUBE:

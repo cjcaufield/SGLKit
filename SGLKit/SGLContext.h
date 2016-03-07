@@ -27,8 +27,8 @@
 - (void) scale:(vec3)scale;
 - (void) clear;
 - (void) clear:(vec4)color;
-- (const mat4&) modelViewMatrix;
-- (void) setModelViewMatrix:(const mat4&)matrix;
+- (const mat4) modelViewMatrix;
+- (void) setModelViewMatrix:(const mat4)matrix;
 
 + (void) lockGL;
 + (void) unlockGL;

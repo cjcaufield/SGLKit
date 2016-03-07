@@ -28,7 +28,7 @@ enum Shape
 
 @interface View : SGLMacSceneView
 
-@property (nonatomic) Shape shape;
+@property (nonatomic) enum Shape shape;
 @property (nonatomic, strong) SGLMesh* cubeMesh;
 @property (nonatomic, strong) SGLShader* cubeShader;
 

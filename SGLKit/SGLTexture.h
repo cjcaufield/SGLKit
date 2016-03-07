@@ -11,33 +11,37 @@
 #import "SGLMath.h"
 #import "SGLHeader.h"
 
-enum TextureType
+typedef enum TextureType
 {
     RECTANGLE,
     CUBEMAP
-};
 
-enum ColorType
+} TextureType;
+
+typedef enum ColorType
 {
     RGBA,
     LUMINANCE
-};
+    
+} ColorType;
 
-enum SamplingType
+typedef enum SamplingType
 {
     NEAREST,
     BILINEAR,
     TRILINEAR
-};
+    
+} SamplingType;
 
-enum WrappingType
+typedef enum WrappingType
 {
     CLAMP,
     REPEAT,
     MIRRORED_REPEAT
-};
+    
+} WrappingType;
 
-struct TextureOptions
+typedef struct TextureOptions
 {
     TextureType textureType;
     GLint width;
@@ -47,7 +51,8 @@ struct TextureOptions
     SamplingType samplingType;
     WrappingType wrappingType;
     BOOL canBeRenderTarget;
-};
+    
+} TextureOptions;
 
 //
 // GLTexture

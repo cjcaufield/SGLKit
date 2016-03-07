@@ -28,8 +28,9 @@
 + (SGLProgram*) programNamed:(NSString*)name;
 + (SGLProgram*) programNamed:(NSString*)name defines:(NSArray*)defs;
 
-+ (void) registerResourceBundle:(NSBundle*)bundle;
++ (void) registerBundle:(NSBundle*)bundle;
 + (void) registerSourcePath:(NSString*)path;
++ (void) registerDecryptionPassword:(NSString*)password;
 
 - (void) activate;
 - (void) validate;

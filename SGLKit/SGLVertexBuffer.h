@@ -12,8 +12,8 @@
 
 @interface SGLVertexBuffer : NSObject
 
-@property (nonatomic) SGLVertexAttributeList attributes;
-@property (nonatomic) SGLVertexAttributeInfoList attributeInfoList;
+@property (nonatomic) NSArray* attributes;
+@property (nonatomic) NSArray* attributeInfoList;
 @property (nonatomic) void* data;
 @property (nonatomic) size_t byteCount;
 @property (nonatomic) size_t vertexCount;
@@ -24,7 +24,7 @@
 //
 // Old Method
 //
-- (id) initWithAttributes:(SGLVertexAttributeList)attributes
+- (id) initWithAttributes:(NSArray*)attributes
                      data:(void*)data
                 byteCount:(size_t)byteCount
               vertexCount:(size_t)vertexCount;
