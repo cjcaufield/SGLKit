@@ -166,9 +166,11 @@ Encrypting Shaders
 - You use the EncryptFile app to encrypt your shaders with a password.
 - Add the following to a Script Build Phase to do this:
 
-    python /Path/To/SGLKit/encrypt_shaders.py ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH} PASSWORD
+    python /Path/To/SGLKit/encrypt_shaders.py PASSWORD PATH_TO_ENCRYPTOR SHADER_DIRECTORY
 
-- At runtime, give SGLKit this password and it will decrypt your shaders on the fly as they're loaded.
+- PATH_TO_ENCRYPTOR is optional.  It will default to ${TARGET_BUILD_DIR}/EncryptFile
+- SHADER_DIRECTORY is optional.  It will default to ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}
+- At runtime, give SGLKit your password and it will decrypt your shaders during loading.
 - To do this, use the following code before any shaders are created:
 
     [SGLProgram registerDecryptionPassword:PASSWORD];

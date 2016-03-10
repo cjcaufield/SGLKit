@@ -16,12 +16,11 @@
     // If using a device (as opposed to the simulator), register a shader reloading URL.
     // This is only required if you'd like to live-reload shaders during development.
     // For this to work, you have to enable a webserver and make SGLKit (and other projects) visible.
-    // See 
+    // See Instructions.txt for detailed instructions.
     
-    //#ifdef SGL_IOS_SIMULATOR
-        NSString* sglHttpSourcePath = @"http://localhost/SGLKit/Shaders";
-        [SGLProgram registerSourcePath:sglHttpSourcePath];
-    //#endif
+    #if SGL_IOS_DEVICE
+        [SGLProgram registerSourcePath:@"http://localhost/SGLKit/Shaders"];
+    #endif
     
     return YES;
 }

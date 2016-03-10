@@ -18,8 +18,5 @@ class View: SGLIosSceneView {
         self.scene.showAxes = true
         self.scene.floatingOrientation = true
         self.scene.objectDistance = 4000.0
-        
-        let y = ivec2(1, 2)
-        print(y)
     }
 }

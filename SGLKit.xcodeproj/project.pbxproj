@@ -205,6 +205,7 @@
 		3BE89AD41C87666500BCC1D4 /* Vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AAC1C87666500BCC1D4 /* Vertex.glsl */; };
 		3BE89ADA1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */; };
 		3BE89ADB1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */; };
+		3BEFFCDC1C910ACE00E666E5 /* AQDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */; };
 		3BF415B91C78D17E008C1814 /* SGLMacSceneView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415B11C78D17E008C1814 /* SGLMacSceneView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BF415BA1C78D17E008C1814 /* SGLMacSceneView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415B21C78D17E008C1814 /* SGLMacSceneView.mm */; };
 		3BF415BB1C78D17E008C1814 /* SGLMacView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415B31C78D17E008C1814 /* SGLMacView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -269,6 +270,10 @@
 		3BF56E851C78E84600303970 /* InvisibleCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */; };
 		3BF56E861C78E84600303970 /* WhiteIBeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */; };
 		3BF56E871C78E84600303970 /* WhiteIBeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */; };
+		3BFEC2321C8E60EA006B36EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2311C8E60EA006B36EF /* main.m */; };
+		3BFEC2371C8F8EBA006B36EF /* SGLDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */; };
+		3BFEC2381C8F8EBA006B36EF /* SGLDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */; };
+		B38EF4A2BBDC27AA7854A688 /* Pods_EncryptFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964D751683458D44B00B2705 /* Pods_EncryptFile.framework */; };
 		F9B013120924C61481822BB8 /* Pods_SGLKitTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */; };
 /* End PBXBuildFile section */
 
@@ -300,6 +305,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3BF56E231C78E2FB00303970;
 			remoteInfo = SGLKitTouch;
+		};
+		3BFEC2391C8F98C0006B36EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BFEC22E1C8E60EA006B36EF;
+			remoteInfo = EncryptFile;
+		};
+		3BFEC23B1C8F98C7006B36EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BFEC22E1C8E60EA006B36EF;
+			remoteInfo = EncryptFile;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -337,9 +356,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BFEC22D1C8E60EA006B36EF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02DBCD19C64A3211891C8728 /* Pods-EncryptFile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptFile.release.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile.release.xcconfig"; sourceTree = "<group>"; };
 		218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.release.xcconfig"; sourceTree = "<group>"; };
 		37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -531,9 +560,14 @@
 		3BF53581191AC571003F4A4B /* View.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = View.mm; sourceTree = "<group>"; };
 		3BF5358C191AEB7C003F4A4B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		3BF56E241C78E2FB00303970 /* SGLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BFEC22F1C8E60EA006B36EF /* EncryptFile */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EncryptFile; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BFEC2311C8E60EA006B36EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGLDebug.swift; sourceTree = "<group>"; };
 		70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.debug.xcconfig"; sourceTree = "<group>"; };
 		84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.release.xcconfig"; sourceTree = "<group>"; };
 		89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGLKitTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CB1774399AFE8BEFF450CD /* Pods-EncryptFile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptFile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile.debug.xcconfig"; sourceTree = "<group>"; };
+		964D751683458D44B00B2705 /* Pods_EncryptFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EncryptFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -609,6 +643,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BFEC22C1C8E60EA006B36EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38EF4A2BBDC27AA7854A688 /* Pods_EncryptFile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -666,6 +708,7 @@
 				3B3513D11C5E66FD0090A2EB /* SGLKitTestSwift */,
 				3B9ADF5E1914A9F300B14F9C /* SGLKitTouchTest */,
 				3BE266E61C62E9AB002271F3 /* SGLKitTouchTestSwift */,
+				3BFEC2301C8E60EA006B36EF /* EncryptFile */,
 				3B4BEE441905C0D40008D382 /* Frameworks */,
 				3B4BEE431905C0D40008D382 /* Products */,
 				9A5243A77F39051AEC1F0763 /* Pods */,
@@ -681,6 +724,7 @@
 				3B3513D01C5E66FD0090A2EB /* SGLKitTestSwift.app */,
 				3BE266E51C62E9AB002271F3 /* SGLKitTouchTestSwift.app */,
 				3BF56E241C78E2FB00303970 /* SGLKit.framework */,
+				3BFEC22F1C8E60EA006B36EF /* EncryptFile */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -712,6 +756,7 @@
 				3B9ADF581914A9F300B14F9C /* CoreGraphics.framework */,
 				218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */,
 				89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */,
+				964D751683458D44B00B2705 /* Pods_EncryptFile.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -821,6 +866,7 @@
 			children = (
 				3B3C1DF91C5FB78A00D56F44 /* SGLKit.h */,
 				3B7698EC1905F9D600781FC4 /* SGLDebug.h */,
+				3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */,
 				3B12B6B61907426100C13154 /* SGLHeader.h */,
 				3B7698ED1905F9D600781FC4 /* SGLMath.h */,
 				3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */,
@@ -945,6 +991,14 @@
 			path = SGLKitTouchTestSwift;
 			sourceTree = "<group>";
 		};
+		3BFEC2301C8E60EA006B36EF /* EncryptFile */ = {
+			isa = PBXGroup;
+			children = (
+				3BFEC2311C8E60EA006B36EF /* main.m */,
+			);
+			path = EncryptFile;
+			sourceTree = "<group>";
+		};
 		9A5243A77F39051AEC1F0763 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,6 +1006,8 @@
 				291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */,
 				70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */,
 				84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */,
+				89CB1774399AFE8BEFF450CD /* Pods-EncryptFile.debug.xcconfig */,
+				02DBCD19C64A3211891C8728 /* Pods-EncryptFile.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1086,6 +1142,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3BFEC23A1C8F98C0006B36EF /* PBXTargetDependency */,
 			);
 			name = SGLKit;
 			productName = SGLKit;
@@ -1163,11 +1220,31 @@
 			buildRules = (
 			);
 			dependencies = (
+				3BFEC23C1C8F98C7006B36EF /* PBXTargetDependency */,
 			);
 			name = SGLKitTouch;
 			productName = SGLKitTouch;
 			productReference = 3BF56E241C78E2FB00303970 /* SGLKit.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		3BFEC22E1C8E60EA006B36EF /* EncryptFile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BFEC2351C8E60EA006B36EF /* Build configuration list for PBXNativeTarget "EncryptFile" */;
+			buildPhases = (
+				0314A5B2218FAD15C99487FB /* Check Pods Manifest.lock */,
+				3BFEC22B1C8E60EA006B36EF /* Sources */,
+				3BFEC22C1C8E60EA006B36EF /* Frameworks */,
+				3BFEC22D1C8E60EA006B36EF /* CopyFiles */,
+				6D718940F736D1880C818524 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EncryptFile;
+			productName = EncryptFile;
+			productReference = 3BFEC22F1C8E60EA006B36EF /* EncryptFile */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -1191,6 +1268,9 @@
 					3BF56E231C78E2FB00303970 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					3BFEC22E1C8E60EA006B36EF = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 3B4BEE3C1905C0D40008D382 /* Build configuration list for PBXProject "SGLKit" */;
@@ -1212,6 +1292,7 @@
 				3BF56E231C78E2FB00303970 /* SGLKitTouch */,
 				3B9ADF551914A9F300B14F9C /* SGLKitTouchTest */,
 				3BE266E41C62E9AB002271F3 /* SGLKitTouchTestSwift */,
+				3BFEC22E1C8E60EA006B36EF /* EncryptFile */,
 			);
 		};
 /* End PBXProject section */
@@ -1326,6 +1407,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0314A5B2218FAD15C99487FB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		66ACF3944257DC1461D19B28 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1339,6 +1435,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D718940F736D1880C818524 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		933D73C2046426200AD26C71 /* Check Pods Manifest.lock */ = {
@@ -1428,6 +1539,7 @@
 				3B22685F1C7D11DD00F793E4 /* Vec3.swift in Sources */,
 				3B7699141905FA1400781FC4 /* SGLProgram.mm in Sources */,
 				3B76991C1905FA1400781FC4 /* SGLUniform.mm in Sources */,
+				3BFEC2371C8F8EBA006B36EF /* SGLDebug.swift in Sources */,
 				3BF415BA1C78D17E008C1814 /* SGLMacSceneView.mm in Sources */,
 				3B2268551C7D11DD00F793E4 /* Plane.swift in Sources */,
 				3BDA7AA4197C72DB00F85A99 /* SGLDefaults.mm in Sources */,
@@ -1504,6 +1616,7 @@
 				3B2268601C7D11DD00F793E4 /* Vec3.swift in Sources */,
 				3BF56E471C78E46100303970 /* SGLShader.mm in Sources */,
 				3BF56E491C78E46100303970 /* SGLTexture.mm in Sources */,
+				3BFEC2381C8F8EBA006B36EF /* SGLDebug.swift in Sources */,
 				3BF56E4B1C78E46100303970 /* SGLUniform.mm in Sources */,
 				3B2268561C7D11DD00F793E4 /* Plane.swift in Sources */,
 				3BD403AB1C799818007C1D26 /* SGLMath.swift in Sources */,
@@ -1516,6 +1629,15 @@
 				3BF56E3B1C78E45400303970 /* AQDataExtensions.m in Sources */,
 				3B22682F1C7D048100F793E4 /* Constants.mm in Sources */,
 				3B22685A1C7D11DD00F793E4 /* Ray.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BFEC22B1C8E60EA006B36EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEFFCDC1C910ACE00E666E5 /* AQDataExtensions.m in Sources */,
+				3BFEC2321C8E60EA006B36EF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1541,6 +1663,16 @@
 			isa = PBXTargetDependency;
 			target = 3BF56E231C78E2FB00303970 /* SGLKitTouch */;
 			targetProxy = 3BF56E311C78E31100303970 /* PBXContainerItemProxy */;
+		};
+		3BFEC23A1C8F98C0006B36EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BFEC22E1C8E60EA006B36EF /* EncryptFile */;
+			targetProxy = 3BFEC2391C8F98C0006B36EF /* PBXContainerItemProxy */;
+		};
+		3BFEC23C1C8F98C7006B36EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BFEC22E1C8E60EA006B36EF /* EncryptFile */;
+			targetProxy = 3BFEC23B1C8F98C7006B36EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2061,6 +2193,42 @@
 			};
 			name = Release;
 		};
+		3BFEC2331C8E60EA006B36EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89CB1774399AFE8BEFF450CD /* Pods-EncryptFile.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3BFEC2341C8E60EA006B36EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02DBCD19C64A3211891C8728 /* Pods-EncryptFile.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2123,6 +2291,15 @@
 			buildConfigurations = (
 				3BF56E2E1C78E2FB00303970 /* Debug */,
 				3BF56E2F1C78E2FB00303970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BFEC2351C8E60EA006B36EF /* Build configuration list for PBXNativeTarget "EncryptFile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BFEC2331C8E60EA006B36EF /* Debug */,
+				3BFEC2341C8E60EA006B36EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

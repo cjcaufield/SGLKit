@@ -89,7 +89,7 @@ void draw(vec4 color, float shininess, float occlusion, float shadow, vec3 refle
     
     vec3 finalColor = emissive + lightLevel * (ambient + diffuse + specular + reflection);
     
-    FRAG_OUT = vec4(BLUE, 1.0); //vec4(finalColor, color.a);
+    FRAG_OUT = vec4(finalColor, color.a);
 }
 
 #endif
