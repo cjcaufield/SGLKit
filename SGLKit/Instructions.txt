@@ -18,7 +18,7 @@ Create a Project
 - Close Xcode (important), open Terminal.app, and go to the top-level folder for your project.
 - Enter the following command to create a Podile and an xcworkspace to wrap your project:
 
-    sudo pod init
+    pod init
 
 - Open the generated Podfile with your preferred editor.
 - Add the following line to your target entry:
@@ -30,7 +30,7 @@ Create a Project
 - Save and close.
 - Enter the following in Terminal.app:
 
-    sudo pod install
+    pod install
 
 - Now open the xcworkspace (not the xcodeproj), and follow the instructions for your platform below.
 
@@ -55,28 +55,6 @@ iOS
 - Make your View a subclass of SGLIosView, or SGLIosSceneView.
 - See SGLKit's iOS TestApps for setup and coding examples.
 - Connect ViewController and View???
-
-
-USAGE
-=====
-
-Scene
------
-
-Renderer
---------
-
-Meshes
-------
-
-Textures
---------
-
-Shaders
--------
-
-Math
-----
 
 
 SHADERS
