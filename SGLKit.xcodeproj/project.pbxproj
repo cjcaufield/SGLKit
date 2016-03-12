@@ -372,6 +372,10 @@
 		218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.release.xcconfig"; sourceTree = "<group>"; };
 		37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.debug.xcconfig"; sourceTree = "<group>"; };
+		3B0510D71C939B5600F12A11 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3B0510D81C939B5600F12A11 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3B0510D91C939B5600F12A11 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3B0510DA1C939B5600F12A11 /* SGLKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGLKit.podspec; sourceTree = "<group>"; };
 		3B12B6A119071D1F00C13154 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		3B12B6A219071D1F00C13154 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		3B12B6A319071D1F00C13154 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
@@ -410,7 +414,6 @@
 		3B3C1DEA1C5E765900D56F44 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		3B3C1DF01C5E7ACA00D56F44 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3B3C1DF11C5EECE700D56F44 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		3B3C1DF31C5F98F300D56F44 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGLMath.swift; sourceTree = "<group>"; };
 		3B3C1DF91C5FB78A00D56F44 /* SGLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLKit.h; sourceTree = "<group>"; };
 		3B45AF101C5FD63A002CCBE6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -777,6 +780,10 @@
 		3B4BEE4C1905C0D40008D382 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B0510DA1C939B5600F12A11 /* SGLKit.podspec */,
+				3B0510D81C939B5600F12A11 /* Podfile */,
+				3B0510D71C939B5600F12A11 /* LICENSE */,
+				3B0510D91C939B5600F12A11 /* README.md */,
 				3BD162B5190C3633002F057D /* Plan.txt */,
 				3B2AE0621C66F93A003478D6 /* Instructions.txt */,
 				3B4BEE4D1905C0D40008D382 /* SGLKit-Info.plist */,
@@ -787,7 +794,6 @@
 				3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */,
 				3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */,
 				3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */,
-				3B3C1DF31C5F98F300D56F44 /* Bridging-Header.h */,
 				3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */,
 			);
 			name = "Supporting Files";
@@ -1910,7 +1916,6 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SGLKit/SGLKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -1943,7 +1948,6 @@
 					"$(inherited)",
 					"COCOAPODS=1",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "SGLKit/SGLKit-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -2132,6 +2136,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2170,6 +2175,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (

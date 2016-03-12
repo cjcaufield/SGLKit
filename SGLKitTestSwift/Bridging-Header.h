@@ -9,7 +9,6 @@
 #import <SGLKit/SGLDefaults.h>
 #import <SGLKit/SGLUtilities.h>
 #import <SGLKit/SGLMeshes.h>
-
 #import <SGLKit/SGLContext.h>
 #import <SGLKit/SGLRenderer.h>
 #import <SGLKit/SGLScene.h>
@@ -22,16 +21,7 @@
 #import <SGLKit/SGLVertexBuffer.h>
 #import <SGLKit/SGLIndexBuffer.h>
 
-#ifdef SGL_MAC
-    #import <SGLKit/SGLMacSceneView.h>
-    #import <SGLKit/SGLMacView.h>
-    #import <SGLKit/SGLMacWindow.h>
-    #import <SGLKit/SGLMacWindowController.h>
-#endif
-
-#ifdef SGL_IOS
-    #import <SGLKit/SGLIosSceneView.h>
-    #import <SGLKit/SGLIosView.h>
-    #import <SGLKit/SGLIosViewController.h>
-    #import <SGLKit/SGLMotionManager.h>
-#endif
+#import <SGLKit/SGLMacSceneView.h>
+#import <SGLKit/SGLMacView.h>
+#import <SGLKit/SGLMacWindow.h>
+#import <SGLKit/SGLMacWindowController.h>

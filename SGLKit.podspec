@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
 spec.name = "SGLKit"
-spec.summary = "Simple OpenGL Framework for iOS and OSX that supports Swift, Objective-C, and C++."
+spec.summary = "Simple OpenGL Framework for iOS and OSX that supports Swift, Objective-C, and Objective-C++."
 
 spec.version = "4.0.0"
 
@@ -24,7 +24,9 @@ spec.osx.framework = "Cocoa", "CoreGraphics", "OpenGL", "CoreVideo", "CoreServic
 spec.ios.exclude_files = "**/osx/**/*.*"
 spec.osx.exclude_files = "**/ios/**/*.*"
 
-spec.source_files = "SGLKit/**/*.{m,mm}"
+spec.source_files = "SGLKit/**/*.{h,m,mm,swift}"
+
+spec.public_header_files = "SGLKit/**/*.h"
 
 spec.ios.resources = "SGLKit/**/*.{png,jpeg,jpg,storyboard,xib,glsl,vert,frag}"
 spec.osx.resources = "SGLKit/**/*.{png,jpeg,jpg,xib,glsl,vert,frag}"
