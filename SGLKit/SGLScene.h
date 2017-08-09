@@ -81,7 +81,7 @@ extern NSString* const SGLSceneNeedsDisplayNotification;
 - (void) rotateCamera:(vec2)radians;
 
 // Shaders
-- (void) addSceneShader:(SGLShader*)shader;
+- (void) addLitShader:(SGLShader*)shader;
 - (void) removeSceneShader:(SGLShader*)shader;
 - (void) setSceneUniforms:(SGLShader*)shader;
 

@@ -51,15 +51,17 @@ extension mat4 {
         self.setRow(3, vec4(vec3(0.0), 1.0))
     }
     
+    /*
     public func pointerToElements() -> UnsafePointer<Float> {
-        return UnsafePointer<Float>(unsafeAddressOf(self.elements.0))
+        return UnsafePointer<Float>(unsafeAddress(of: self.elements.0 as AnyObject))
     }
+    */
     
-    public func indexForRow(row: Int, col: Int) -> Int {
+    public func indexForRow(_ row: Int, col: Int) -> Int {
         return row * 4 + col
     }
     
-    public func indexIsValid(index: Int) -> Bool {
+    public func indexIsValid(_ index: Int) -> Bool {
         return index < 16
     }
     
@@ -126,11 +128,11 @@ extension mat4 {
         }
     }
     
-    public func at(row: Int, _ col: Int) -> Float {
+    public func at(_ row: Int, _ col: Int) -> Float {
         return self[row, col]
     }
     
-    public func row(row: Int) -> vec4 {
+    public func row(_ row: Int) -> vec4 {
         
         assert(row < 4)
         
@@ -142,7 +144,7 @@ extension mat4 {
         return vec4(x, y, z, w)
     }
     
-    public mutating func setRow(row: Int, _ value: vec4) {
+    public mutating func setRow(_ row: Int, _ value: vec4) {
         
         self[row, 0] = value.x
         self[row, 1] = value.y
@@ -175,17 +177,17 @@ extension mat4 {
         return result
     }
     
-    public mutating func fill(value: Float) {
+    public mutating func fill(_ value: Float) {
         for i in 0 ..< 16 {
             self[i] = value
         }
     }
     
-    public mutating func fill(values: UnsafePointer<Float>) {
+    public mutating func fill(_ values: UnsafePointer<Float>) {
         self.fill(values, count: 16)
     }
     
-    public mutating func fill(values: UnsafePointer<Float>, count: Int) {
+    public mutating func fill(_ values: UnsafePointer<Float>, count: Int) {
         for i in 0 ..< count {
             self[i] = values[i]
         }
@@ -202,7 +204,7 @@ extension mat4 {
         return mat4()
     }
     
-    public static func translation(v: vec3) -> mat4 {
+    public static func translation(_ v: vec3) -> mat4 {
         
         var tm = mat4()
         
@@ -213,7 +215,7 @@ extension mat4 {
         return tm
     }
     
-    public static func rotationYX(yrot: Float, xrot: Float) -> mat4 {
+    public static func rotationYX(_ yrot: Float, xrot: Float) -> mat4 {
         
         let siny = sin(yrot)
         let cosy = cos(yrot)
@@ -235,31 +237,32 @@ extension mat4 {
         return yrm * xrm
     }
     
-    public static func rotation(radians: Float, var axis: vec3) -> mat4 {
+    public static func rotation(_ radians: Float, axis: vec3) -> mat4 {
         
         let cos = cosf(radians)
         let sin = sinf(radians)
         let cosp = 1.0 - cos
         
-        axis.normalize()
+        var naxis = axis
+        naxis.normalize()
         
         var result = mat4()
         
-        result[0, 0] = cos + cosp * axis.x * axis.x
-        result[1, 1] = cos + cosp * axis.y * axis.y
-        result[2, 2] = cos + cosp * axis.z * axis.z
+        result[0, 0] = cos + cosp * naxis.x * naxis.x
+        result[1, 1] = cos + cosp * naxis.y * naxis.y
+        result[2, 2] = cos + cosp * naxis.z * naxis.z
         
-        result[0, 1] = cosp * axis.x * axis.y + axis.z * sin
-        result[1, 0] = cosp * axis.x * axis.y - axis.z * sin
-        result[1, 2] = cosp * axis.y * axis.z + axis.x * sin
-        result[2, 1] = cosp * axis.y * axis.z - axis.x * sin
-        result[0, 2] = cosp * axis.x * axis.z - axis.y * sin
-        result[2, 0] = cosp * axis.x * axis.z + axis.y * sin
+        result[0, 1] = cosp * naxis.x * naxis.y + naxis.z * sin
+        result[1, 0] = cosp * naxis.x * naxis.y - naxis.z * sin
+        result[1, 2] = cosp * naxis.y * naxis.z + naxis.x * sin
+        result[2, 1] = cosp * naxis.y * naxis.z - naxis.x * sin
+        result[0, 2] = cosp * naxis.x * naxis.z - naxis.y * sin
+        result[2, 0] = cosp * naxis.x * naxis.z + naxis.y * sin
         
         return result
     }
     
-    public static func scale(scale: vec3) -> mat4 {
+    public static func scale(_ scale: vec3) -> mat4 {
         
         var sm = mat4()
         
@@ -270,7 +273,7 @@ extension mat4 {
         return sm
     }
     
-    public static func ortho(left: Float, right: Float, bottom: Float, top: Float, near: Float, far: Float) -> mat4 {
+    public static func ortho(_ left: Float, right: Float, bottom: Float, top: Float, near: Float, far: Float) -> mat4 {
     
         var result = mat4()
         
@@ -285,7 +288,7 @@ extension mat4 {
         return result
     }
     
-    public static func projection(fovy: Float, aspect: Float, nearZ: Float, farZ: Float) -> mat4 {
+    public static func projection(_ fovy: Float, aspect: Float, nearZ: Float, farZ: Float) -> mat4 {
     
         let cotan = 1.0 / tanf(fovy / 2.0)
         
@@ -301,7 +304,7 @@ extension mat4 {
         return result
     }
     
-    public static func offsetProjection(left: Float, right: Float, bottom: Float, top: Float, near: Float, far: Float) -> mat4 {
+    public static func offsetProjection(_ left: Float, right: Float, bottom: Float, top: Float, near: Float, far: Float) -> mat4 {
     
         var result = mat4()
         
@@ -349,13 +352,13 @@ public func *(a: mat4, b: mat4) -> mat4 {
     return result
 }
 
-public func *=(inout matrix: mat4, scalar: Float) {
+public func *=(matrix: inout mat4, scalar: Float) {
     for i in 0 ..< 16 {
         matrix[i] *= scalar
     }
 }
 
-public func /=(inout matrix: mat4, scalar: Float) {
+public func /=(matrix: inout mat4, scalar: Float) {
     for i in 0 ..< 16 {
         matrix[i] /= scalar
     }

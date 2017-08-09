@@ -36,15 +36,39 @@ public extension mat3 {
         self.fill(buffer)
     }
     
+    /*
     public func pointerToElements() -> UnsafePointer<Float> {
+        
+        // Old way
         return UnsafePointer<Float>(unsafeAddressOf(self.elements.0))
+        
+        // New Way 1
+        //let x = Unmananged.passUnretained(self.elements.0).toOpaque()
+        //return UnsafePointer<Float>(self.elements.0 as AnyObject)
+        
+        // New Way 2
+        //withUnsafePointer(to: self.elements.0) {
+        //    return UnsafePointer<Float>($0)
+        //}
+        
+        // New Way 3
+        //return self.elements.0
+        
+        // New Way 4
+        //let f1 = Float(0)
+        //let f2 = (Float(0), Float(1), Float(2))
+        
+        //return UnsafePointer(f1)
+        
+        //return UnsafeRawPointer(self.elements)
     }
+    */
     
-    public func indexForRow(row: Int, col: Int) -> Int {
+    public func indexForRow(_ row: Int, col: Int) -> Int {
         return row * 3 + col
     }
     
-    public func indexIsValid(index: Int) -> Bool {
+    public func indexIsValid(_ index: Int) -> Bool {
         return index < 9
     }
     
@@ -97,11 +121,11 @@ public extension mat3 {
         }
     }
     
-    public func at(row: Int, _ col: Int) -> Float {
+    public func at(_ row: Int, _ col: Int) -> Float {
         return self[row, col]
     }
     
-    public func row(row: Int) -> vec3 {
+    public func row(_ row: Int) -> vec3 {
         
         let x = self[row, 0]
         let y = self[row, 1]
@@ -110,7 +134,7 @@ public extension mat3 {
         return vec3(x, y, z)
     }
     
-    public mutating func setRow(row: Int, v: vec3) {
+    public mutating func setRow(_ row: Int, v: vec3) {
         
         assert(row < 3)
         
@@ -177,13 +201,13 @@ public extension mat3 {
         return result
     }
     
-    public mutating func fill(value: Float) {
+    public mutating func fill(_ value: Float) {
         for i in 0 ..< 9 {
             self[i] = value
         }
     }
     
-    public mutating func fill(values: UnsafePointer<Float>) {
+    public mutating func fill(_ values: UnsafePointer<Float>) {
         for i in 0 ..< 9 {
             self[i] = values[i]
         }
@@ -196,11 +220,11 @@ public extension mat3 {
         }
     }
     
-    public static func identity() -> mat4 {
-        return mat4()
+    public static func identity() -> mat3 {
+        return mat3()
     }
     
-    public static func rotationX(radians: Float) -> mat3 {
+    public static func rotationX(_ radians: Float) -> mat3 {
         
         let s = sin(radians)
         let c = cos(radians)
@@ -215,7 +239,7 @@ public extension mat3 {
         return xrm
     }
     
-    public static func rotationY(radians: Float) -> mat3 {
+    public static func rotationY(_ radians: Float) -> mat3 {
     
         let s = sin(radians)
         let c = cos(radians)
@@ -230,7 +254,7 @@ public extension mat3 {
         return yrm
     }
     
-    public static func rotationZ(radians: Float) -> mat3 {
+    public static func rotationZ(_ radians: Float) -> mat3 {
     
         let s = sin(radians)
         let c = cos(radians)
@@ -245,7 +269,7 @@ public extension mat3 {
         return zrm
     }
     
-    public static func rotationYX(yradians: Float, xradians: Float) -> mat3 {
+    public static func rotationYX(_ yradians: Float, xradians: Float) -> mat3 {
     
         let siny = sin(yradians)
         let cosy = cos(yradians)
@@ -269,7 +293,7 @@ public extension mat3 {
         return yrm * xrm
     }
     
-    public static func scale(scale: vec3) -> mat3 {
+    public static func scale(_ scale: vec3) -> mat3 {
     
         var sm = mat3()
         
@@ -281,7 +305,7 @@ public extension mat3 {
     }
 }
 
-public func *(inout matrix: mat3, vector: vec3) -> vec3 {
+public func *(matrix: inout mat3, vector: vec3) -> vec3 {
     
     var result = vec3(0.0)
     
@@ -309,13 +333,13 @@ public func *(a: mat3, b: mat3) -> mat3 {
     return result
 }
 
-public func *=(inout matrix: mat3, scalar: Float) {
+public func *=(matrix: inout mat3, scalar: Float) {
     for i in 0 ..< 9 {
         matrix[i] *= scalar
     }
 }
 
-public func /=(inout matrix: mat3, scalar: Float) {
+public func /=(matrix: inout mat3, scalar: Float) {
     for i in 0 ..< 9 {
         matrix[i] /= scalar
     }

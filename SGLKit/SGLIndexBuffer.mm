@@ -13,13 +13,6 @@
 #import "SGLHeader.h"
 
 
-@interface SGLIndexBuffer ()
-
-//@property (nonatomic) unsigned int glName;
-
-@end
-
-
 @implementation SGLIndexBuffer
 
 - (id) initWithData:(GLushort*)data byteCount:(size_t)byteCount indexCount:(size_t)indexCount

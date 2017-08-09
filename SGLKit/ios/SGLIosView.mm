@@ -12,14 +12,19 @@
 #import "SGLShader.h"
 #import "SGLHeader.h"
 
+#pragma mark - Private
+
 @interface SGLIosView ()
 
 @property (nonatomic) int currentTextRow;
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLIosView
+
+#pragma mark - Lifecycle
 
 - (void) awakeFromNib
 {
@@ -33,6 +38,8 @@
     [self addGestureRecognizer:_tripleTapRecognizer];
 }
 
+#pragma mark - Rendering
+
 - (void) openGLWasPrepared
 {
     // nothing
@@ -41,11 +48,6 @@
 - (void) openGLWasDestroyed
 {
     // nothing
-}
-
-- (CGFloat) pixelDensity
-{
-    return self.contentScaleFactor;
 }
 
 - (void) update:(double)seconds
@@ -62,6 +64,8 @@
 {
     // nothing
 }
+
+#pragma mark - Text
 
 - (void) drawText:(NSString*)text
 {
@@ -96,6 +100,15 @@
     */
 }
 
+#pragma mark - Sizing
+
+- (CGFloat) pixelDensity
+{
+    return self.contentScaleFactor;
+}
+
+#pragma mark - Shaders
+
 - (IBAction) reloadShaders:(id)sender
 {
     #ifdef DEBUG
@@ -106,14 +119,16 @@
     #endif
 }
 
-- (IBAction) tripleTapGesture:(UITapGestureRecognizer*)recognizer
-{
-    [self reloadShaders:recognizer];
-}
-
 - (void) shadersDidReload
 {
     // nothing.
+}
+
+#pragma mark - Gestures
+
+- (IBAction) tripleTapGesture:(UITapGestureRecognizer*)recognizer
+{
+    [self reloadShaders:recognizer];
 }
 
 @end

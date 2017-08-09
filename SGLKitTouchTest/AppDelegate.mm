@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <SGLKit/SGLProgram.h>
+#import <SGLKit/SGLKit.h>
 
 @implementation AppDelegate
 
@@ -18,7 +18,7 @@
     // For this to work, you have to enable a webserver and make SGLKit (and other projects) visible.
     // See Instructions.txt for detailed instructions.
     
-    #if SGL_IOS_DEVICE
+    #ifdef SGL_IOS_DEVICE
         [SGLProgram registerSourcePath:@"http://localhost/SGLKit/Shaders"];
     #endif
     

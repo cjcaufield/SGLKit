@@ -26,20 +26,20 @@ class WindowController: SGLMacWindowController {
         super.init(coder: coder)
     }
     
-    override func windowTitleForDocumentDisplayName(name: String) -> String {
+    override func windowTitle(forDocumentDisplayName name: String) -> String {
         
         if let customView = self.view as? View {
             
             switch customView.shape {
-                case .Sphere:       return "Sphere"
-                case .Torus:        return "Torus"
-                case .Cone:         return "Cone"
-                case .Tetrahedron:  return "Tetrahedron"
-                case .Cube:         return "Cube"
-                case .Octahedron:   return "Octahedron"
-                case .Dodecahedron: return "Dodecahedron"
-                case .Icosahedron:  return "Icosahedron"
-                case .Teapot:       return "Teapot"
+                case .sphere:       return "Sphere"
+                case .torus:        return "Torus"
+                case .cone:         return "Cone"
+                case .tetrahedron:  return "Tetrahedron"
+                case .cube:         return "Cube"
+                case .octahedron:   return "Octahedron"
+                case .dodecahedron: return "Dodecahedron"
+                case .icosahedron:  return "Icosahedron"
+                case .teapot:       return "Teapot"
                 default:            break
             }
         }

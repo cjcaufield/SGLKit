@@ -44,9 +44,9 @@ typedef enum WrappingType
 typedef struct TextureOptions
 {
     TextureType textureType;
-    GLint width;
-    GLint height;
-    GLint sampler;
+    NSInteger width;
+    NSInteger height;
+    NSInteger sampler;
     ColorType colorType;
     SamplingType samplingType;
     WrappingType wrappingType;
@@ -61,10 +61,10 @@ typedef struct TextureOptions
 @interface SGLTexture : NSObject
 
 @property (readonly) unsigned int glName;
-@property (readonly) GLint sampler;
-@property (readonly) GLint width;
-@property (readonly) GLint height;
-@property (readonly) GLint maxMipLevel;
+@property (readonly) int sampler;
+@property (readonly) int width;
+@property (readonly) int height;
+@property (readonly) int maxMipLevel;
 @property (readonly) vec2 size;
 @property (readonly) BOOL isRenderTarget;
 @property (nonatomic) SamplingType samplingType;
@@ -93,7 +93,7 @@ typedef struct TextureOptions
 - (void) becomeRenderTarget;
 - (void) resignRenderTarget;
 
-- (GLint) mipLevelForSize:(IntSize)size;
-- (IntSize) sizeForMipLevel:(GLint)level;
+- (int) mipLevelForSize:(IntSize)size;
+- (IntSize) sizeForMipLevel:(int)level;
 
 @end

@@ -31,7 +31,23 @@ extension vec2: GenericVector {
         self.init(Float(v.x), Float(v.y))
     }
     
-    public func indexIsValid(index: Int) -> Bool {
+    public init(_ point: CGPoint) {
+        self.init(Float(point.x), Float(point.y))
+    }
+    
+    public init(_ size: CGSize) {
+        self.init(Float(size.width), Float(size.height))
+    }
+    
+    func toPoint() -> CGPoint {
+        return CGPoint(x: CGFloat(x), y: CGFloat(y))
+    }
+    
+    func toSize() -> CGSize {
+        return CGSize(width: CGFloat(x), height: CGFloat(y))
+    }
+    
+    public func indexIsValid(_ index: Int) -> Bool {
         return index < 4
     }
     
@@ -59,7 +75,7 @@ extension vec2: GenericVector {
         }
     }
     
-    public func at(index: Int) -> Float {
+    public func at(_ index: Int) -> Float {
         return self[index]
     }
     
@@ -71,7 +87,7 @@ extension vec2: GenericVector {
         return distance(self, ORIGIN_2D)
     }
     
-    public func dot(v: vec2) -> Float {
+    public func dot(_ v: vec2) -> Float {
         return self.x * v.x + self.y * v.y
     }
     
@@ -115,27 +131,27 @@ public func /(a: vec2, b: vec2) -> vec2 {
 
 // Mutating arithmetic operators.
 
-public func +=(inout a: vec2, b: vec2) {
+public func +=(a: inout vec2, b: vec2) {
     a.x += b.x
     a.y += b.y
 }
 
-public func -=(inout a: vec2, b: vec2) {
+public func -=(a: inout vec2, b: vec2) {
     a.x -= b.x
     a.y -= b.y
 }
 
-public func *=(inout a: vec2, b: vec2) {
+public func *=(a: inout vec2, b: vec2) {
     a.x *= b.x
     a.y *= b.y
 }
 
-public func /=(inout a: vec2, b: vec2) {
+public func /=(a: inout vec2, b: vec2) {
     a.x /= b.x
     a.y /= b.y
 }
 
-public func /=(inout vector: vec2, scalar: Float) {
+public func /=(vector: inout vec2, scalar: Float) {
     vector.x /= scalar
     vector.y /= scalar
 }
@@ -152,11 +168,11 @@ public func !=(a: vec2, b: vec2) -> Bool {
 
 //
 
-public func floor(v: vec2) -> vec2 {
+public func floor(_ v: vec2) -> vec2 {
     return vec2(floorf(v.x), floorf(v.y))
 }
 
-public func ceil(v: vec2) -> vec2 {
+public func ceil(_ v: vec2) -> vec2 {
     return vec2(ceilf(v.x), ceilf(v.y))
 }
 
@@ -164,14 +180,14 @@ public func randomVec2() -> vec2 {
     return vec2(randomFloat(), randomFloat())
 }
 
-public func randomVec2InRange(lo: Float, hi: Float) -> vec2 {
+public func randomVec2InRange(_ lo: Float, hi: Float) -> vec2 {
     return vec2(randomFloatInRange(lo, hi), randomFloatInRange(lo, hi))
 }
 
-public func minComponent(v: vec2) -> Float {
+public func minComponent(_ v: vec2) -> Float {
     return min(v.x, v.y)
 }
 
-public func maxComponent(v: vec2) -> Float {
+public func maxComponent(_ v: vec2) -> Float {
     return max(v.x, v.y)
 }

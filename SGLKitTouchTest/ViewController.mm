@@ -30,7 +30,7 @@
     _shader = [[SGLShader alloc] initWithName:@"Basic"];
     [_shader setVec4:vec4(vec3(0.5), 1.0) forName:@"color"];
     [_shader setFloat:32.0 forName:@"shininess"];
-    [[(id)[self view] scene] addSceneShader:_shader];
+    [[(id)[self view] scene] addLitShader:_shader];
     
     _axiiMesh = [SGLMeshes axiiMesh];
     _cubeMesh = [SGLMeshes cubeMesh];

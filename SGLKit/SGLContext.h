@@ -32,6 +32,7 @@
 
 + (void) lockGL;
 + (void) unlockGL;
++ (void) flushAll;
 + (void) checkForErrors;
 
 @end

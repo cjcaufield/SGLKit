@@ -24,6 +24,8 @@ const vec3 ABOVE_BACK_LIGHT_POS (0.0, 5000.0, -3500.0);
 
 NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotification";
 
+#pragma mark - Private
+
 @interface SGLScene ()
 
 @property (nonatomic, strong) NSHashTable* allSceneShaders;
@@ -32,6 +34,7 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLScene
 
@@ -99,11 +102,13 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     
     _colorShader = [[SGLShader alloc] initWithName:@"Color"];
     
-    [self addSceneShader:self.context.basicShader];
-    //[self addSceneShader:_colorShader];
+    [self addLitShader:self.context.basicShader];
+    //[self addLitShader:_colorShader];
     
     return self;
 }
+
+#pragma mark - Positioning
 
 - (void) setObjectDistance:(float)dist
 {
@@ -146,7 +151,7 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     vec3 translation = vec3(offset.x, offset.y, -_cameraDistance);
     vec2 rotation = vec2(+_monitorRotation.y, -_monitorRotation.x);
     
-    vec2 size = SizeToVec2(_viewUsedRect.size);
+    vec2 size = vec2(_viewUsedRect.size);
     
     float minScale = minComponent(size);
     
@@ -201,6 +206,8 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     [super transformWasChanged];
 }
 
+#pragma mark - Lighting
+
 - (void) lightingWasChanged
 {
     for (SGLShader* shader in self.allSceneShaders)
@@ -208,24 +215,6 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     
     for (SGLRenderer* child in self.children)
         [child lightingWasChanged];
-}
-
-- (void) addSceneShader:(SGLShader*)shader
-{
-    [self setSceneUniforms:shader];
-    
-    [self.allSceneShaders addObject:shader];
-}
-
-- (void) removeSceneShader:(SGLShader*)shader
-{
-    [self.allSceneShaders removeObject:shader];
-}
-
-- (void) setProjectionType:(ProjectionType)type
-{
-    _projectionType = type;
-    [self transformWasChanged];
 }
 
 - (void) setLightPosition:(vec3)pos
@@ -248,10 +237,7 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     [self lightingWasChanged];
 }
 
-- (void) update:(double)seconds
-{
-    // nothing
-}
+#pragma mark - Camera
 
 - (void) resetCamera
 {
@@ -279,14 +265,22 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     [self transformWasChanged];
 }
 
-- (NSArray*) overlayText
+- (void) setProjectionType:(ProjectionType)type
 {
-    return
-    @[
-        [NSString stringWithFormat:@"Camera Offset: %.2f, %.2f", _cameraOffset.x, _cameraOffset.y],
-        [NSString stringWithFormat:@"Origin Offset: %.2f, %.2f", _originOffset.x, _originOffset.y],
-        [NSString stringWithFormat:@"Center Offset: %.2f, %.2f", _centerOffset.x, _centerOffset.y]
-    ];
+    _projectionType = type;
+    [self transformWasChanged];
+}
+
+- (IBAction) resetCamera:(id)sender
+{
+    [self resetCamera];
+}
+
+#pragma mark - Drawing
+
+- (void) update:(double)seconds
+{
+    // nothing
 }
 
 - (void) render
@@ -300,9 +294,58 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
         [self renderAxes];
 }
 
-- (IBAction) resetCamera:(id)sender
+- (void) renderBoundingBox
 {
-    [self resetCamera];
+    // nothing
+}
+
+- (void) renderAxes
+{
+    #ifdef DRAW_AXII
+        
+        [_colorShader setVec4:vec4(1.0) forName:@"color"];
+        [_colorShader activate];
+        [_axiiMesh render];
+        
+    #endif
+}
+
+- (NSArray*) overlayText
+{
+    return
+    @[
+        [NSString stringWithFormat:@"Camera Offset: %.2f, %.2f", _cameraOffset.x, _cameraOffset.y],
+        [NSString stringWithFormat:@"Origin Offset: %.2f, %.2f", _originOffset.x, _originOffset.y],
+        [NSString stringWithFormat:@"Center Offset: %.2f, %.2f", _centerOffset.x, _centerOffset.y]
+    ];
+}
+
+- (void) setRenderingQuality:(unsigned int)quality
+{
+    super.renderingQuality = quality;
+    
+    // Nothing else yet.
+}
+
+- (void) requestRedisplay
+{
+    [super requestRedisplay];
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:SGLSceneNeedsDisplayNotification object:self];
+}
+
+#pragma mark - Shaders
+
+- (void) addLitShader:(SGLShader*)shader
+{
+    [self setSceneUniforms:shader];
+    
+    [self.allSceneShaders addObject:shader];
+}
+
+- (void) removeSceneShader:(SGLShader*)shader
+{
+    [self.allSceneShaders removeObject:shader];
 }
 
 - (void) setSceneUniforms:(SGLShader*)shader
@@ -327,21 +370,7 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
     [shader setFloat:_lightLevel forName:@"lightLevel"];
 }
 
-- (void) renderBoundingBox
-{
-    
-}
-
-- (void) renderAxes
-{
-    #ifdef DRAW_AXII
-        
-        [_colorShader setVec4:vec4(1.0) forName:@"color"];
-        [_colorShader activate];
-        [_axiiMesh render];
-        
-    #endif
-}
+#pragma mark - Transforms
 
 - (void) setInverseOrientationMatrix:(mat3)mat
 {
@@ -384,20 +413,6 @@ NSString* const SGLSceneNeedsDisplayNotification = @"SGLSceneNeedsDisplayNotific
         [_colorShader setMat4:axiiModelViewProjectionMatrix forName:@"modelViewProjectionMatrix"];
         
     #endif
-}
-
-- (void) setRenderingQuality:(int)quality
-{
-    super.renderingQuality = quality;
-    
-    // Nothing else yet.
-}
-
-- (void) requestRedisplay
-{
-    [super requestRedisplay];
-    
-    [NSNotificationCenter.defaultCenter postNotificationName:SGLSceneNeedsDisplayNotification object:self];
 }
 
 @end

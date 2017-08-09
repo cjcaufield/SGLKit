@@ -36,7 +36,7 @@ extension aabb {
         return hi.z - lo.z
     }
     
-    public func contains(p: vec3) -> Bool {
+    public func contains(_ p: vec3) -> Bool {
         
         return lo.x <= p.x && p.x <= hi.x &&
                lo.y <= p.y && p.y <= hi.y &&

@@ -37,16 +37,16 @@ public let OPAQUE_BLACK      = vec4(0, 0, 0, 1)
 
 public protocol GenericVector {
     
-    func +(a: Self, b: Self) -> Self
-    func -(a: Self, b: Self) -> Self
-    func *(a: Self, b: Self) -> Self
-    func /(a: Self, b: Self) -> Self
+    static func +(a: Self, b: Self) -> Self
+    static func -(a: Self, b: Self) -> Self
+    static func *(a: Self, b: Self) -> Self
+    static func /(a: Self, b: Self) -> Self
     
-    func *(v: Self, k: Float) -> Self
-    func *(k: Float, v: Self) -> Self
-    func /(v: Self, k: Float) -> Self
+    static func *(v: Self, k: Float) -> Self
+    static func *(k: Float, v: Self) -> Self
+    static func /(v: Self, k: Float) -> Self
     
-    func dot(v: Self) -> Float
+    func dot(_ v: Self) -> Float
     
     func length() -> Float
 }
@@ -57,43 +57,59 @@ public protocol GenericVector {
 //
 
 public func randomFloat() -> Float {
-    return Float(rand()) / Float(RAND_MAX)
+    return Float(arc4random()) / Float(RAND_MAX)
 }
 
-public func randomFloatInRange(lo: Float, _ hi: Float) -> Float {
+public func randomDouble() -> Double {
+    return Double(arc4random()) / Double(RAND_MAX)
+}
+
+public func randomFloatInRange(_ lo: Float, _ hi: Float) -> Float {
     return lo + randomFloat() * (hi - lo)
 }
 
-public func radians(degrees: Float) -> Float {
+public func randomDoubleInRange(_ lo: Double, _ hi: Double) -> Double {
+    return lo + randomDouble() * (hi - lo)
+}
+
+public func radians(_ degrees: Float) -> Float {
     return degrees * PI / 180.0
 }
 
-public func degrees(radians: Float) -> Float {
+public func degrees(_ radians: Float) -> Float {
     return radians * 180.0 / PI
 }
 
-public func mix<T: GenericVector>(a: T, _ b: T, offset: Float) -> T {
+public func mix(_ a: Float, _ b: Float, offset: Float) -> Float {
     return a + (b - a) * offset
 }
 
-public func length<T: GenericVector>(v: T) -> Float {
+public func mix(_ a: Double, _ b: Double, offset: Double) -> Double {
+    return a + (b - a) * offset
+}
+
+public func mix<T: GenericVector>(_ a: T, _ b: T, offset: Float) -> T {
+    return a + (b - a) * offset
+}
+
+public func length<T: GenericVector>(_ v: T) -> Float {
     return v.length()
 }
 
-public func distance<T: GenericVector>(a: T, _ b: T) -> Float {
+public func distance<T: GenericVector>(_ a: T, _ b: T) -> Float {
     return sqrtf(distancesqrd(a, b))
 }
 
-public func distancesqrd<T: GenericVector>(a: T, _ b: T) -> Float {
+public func distancesqrd<T: GenericVector>(_ a: T, _ b: T) -> Float {
     let diff = a - b
     return magnitudesqrd(diff)
 }
 
-public func magnitude<T: GenericVector>(v: T) -> Float {
+public func magnitude<T: GenericVector>(_ v: T) -> Float {
     return sqrtf(magnitudesqrd(v))
 }
 
-public func magnitudesqrd<T: GenericVector>(v: T) -> Float {
+public func magnitudesqrd<T: GenericVector>(_ v: T) -> Float {
     //return dot(v, v)
     //return v · v
     //let d = (v · v)
@@ -101,11 +117,11 @@ public func magnitudesqrd<T: GenericVector>(v: T) -> Float {
     return dot(v, v)
 }
 
-public func dot<T: GenericVector>(a: T, _ b: T) -> Float {
+public func dot<T: GenericVector>(_ a: T, _ b: T) -> Float {
     return a.dot(b)
 }
 
-public func normalize<T: GenericVector>(v: T) -> T {
+public func normalize<T: GenericVector>(_ v: T) -> T {
     let len = v.length()
     if len == 0.0 {
         return v

@@ -30,7 +30,21 @@ typedef struct ivec2
         explicit ivec2(int i) : x(i), y(i) {}
         
         explicit ivec2(const vec2& v);
-        
+    
+        ivec2(CGPoint point) : x(point.x), y(point.y) {}
+    
+        ivec2(CGSize size) : x(size.width), y(size.height) {}
+    
+        CGPoint toPoint()
+        {
+            return CGPointMake(x, y);
+        }
+    
+        CGSize toSize()
+        {
+            return CGSizeMake(x, y);
+        }
+    
         int& at(int i)
         {
             switch (i)

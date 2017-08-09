@@ -1,10 +1,10 @@
-INSTALLATION
-============
+INSTALLATION VIA COCOAPODS (COMING SOON)
+========================================
 
 About CocoaPods
 ---------------
 
-- SGLKit uses CocoaPods to simplify project setup.  If you're new to this, check out www.cocoapods.org.
+- SGLKit is available via CocoaPods to simplify project setup.  If you're new to this, check out www.cocoapods.org.
 - To install CocoaPods on your machine, enter the following in Terminal.app:
 
     sudo gem install cocoapods
@@ -34,6 +34,10 @@ Create a Project
 
 - Now open the xcworkspace (not the xcodeproj), and follow the instructions for your platform below.
 
+
+INTEGRATION
+===========
+
 Compiler Issues
 ---------------
 
@@ -57,16 +61,17 @@ iOS
 - Connect ViewController and View???
 
 
-SHADERS
-=======
+BUILDING SHADERS
+================
 
 Adding Shaders
 --------------
 
 - You can create your own shaders (SHADER_NAME.vert/frag) and add them to your app or frameworks's resources.
 - You can also create utility files to include in your shaders (FILE.glsl).
-- SGLKit will automatically handle these files when you create a new SGLShader with SHADER_NAME.
-- See SGLKit/Shaders for examples of universal Mac/iOS (GL/GLES) shaders.
+- SGLKit will automatically load and cache these files when you create a new SGLShader with SHADER_NAME.
+- There are macros available that allow you to create universal OSX/iOS (GL/GLES) shaders.
+- See SGLKit/Shaders for examples.
 
 - If you're creating a framework that uses SGLKit and has it's own shaders, you'll need to register them.
 - Before any of your framework's shaders are created, use the following code inside one of your classes:
@@ -83,7 +88,7 @@ Live-Reloading Shaders
 - For your app or framework's shaders to be live-reloadable, you need to register their paths.
 - Before any of your shaders are created, use code similar to the following inside one of your classes:
 
-[SGLProgram registerSourcePath:@"file:///Path/To/Your/Project/Shaders"];
+    [SGLProgram registerSourcePath:@"file:///Path/To/Your/Project/Shaders"];
 
 - or, more generically, something like:
 
@@ -124,16 +129,14 @@ iOS Device Live-Reloading Shaders
 
 5) Register shader directories
 
-- Register all shader project directories, eg. SGLKit/Shaders, YourFramework/Shaders, and YourApp/Shaders.
+- Within your application (not framework), register all shader URLs.
+- This should include parent frameworks, eg. SGLKit/Shaders, YourFramework/Shaders, and YourApp/Shaders.
 - Before any shaders are created, use the following code inside one of your classes:
 
     #include <SGLDebug.h>
 
     #ifdef SGL_IOS_DEVICE
-
-        NSString* path = @"http://MACHINE_NAME/path/to/project/Shaders"
-        [SGLProgram registerSourcePath:@"http://MACHINE_NAME.local/"]
-
+        [SGLProgram registerSourcePath:@"http://MACHINE_NAME/path/to/project/Shaders"]
     #endif
 
 Encrypting Shaders

@@ -25,11 +25,18 @@ struct mat4;
 #include <stdlib.h>
 #include <math.h>
 
+#ifdef SGL_IOS
+    #import <UIKit/UIKit.h>
+#endif
+
+#import <CoreGraphics/CGGeometry.h>
+
 #ifdef __cplusplus
     #include <algorithm>
 #endif
 
 #import "SGLDebug.h"
+#import "SGLTypes.h"
 #import "Constants.h"
 #import "IVec2.h"
 #import "Vec2.h"

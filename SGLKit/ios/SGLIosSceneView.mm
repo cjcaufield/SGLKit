@@ -15,6 +15,8 @@
 
 @implementation SGLIosSceneView
 
+#pragma mark - Lifecycle
+
 - (void) awakeFromNib
 {
     [super awakeFromNib];
@@ -46,6 +48,8 @@
     [_doubleTapRecognizer requireGestureRecognizerToFail:self.tripleTapRecognizer];
 }
 
+#pragma mark - Rendering
+
 - (void) openGLWasPrepared
 {
     [super openGLWasPrepared];
@@ -55,7 +59,7 @@
     self.scene = [[SGLScene alloc] initWithContext:controller.context];
     self.scene.renderingQuality = controller.renderingQuality;
     
-    vec2 viewSize = SizeToVec2(self.bounds.size);
+    vec2 viewSize = vec2(self.bounds.size);
     vec2 originOffset = -0.5 * viewSize;
     
     [self.scene setOriginOffset:originOffset
@@ -80,6 +84,13 @@
     [_scene update:seconds];
 }
 
+- (void) render
+{
+    [super render];
+    
+    [_scene render];
+}
+
 - (void) renderOverlay
 {
     [super renderOverlay];
@@ -87,12 +98,7 @@
     [self drawTextLines:_scene.overlayText];
 }
 
-- (void) render
-{
-    [super render];
-    
-    [_scene render];
-}
+#pragma mark - Gestures
 
 - (IBAction) singlePanGesture:(UIPanGestureRecognizer*)sender
 {
@@ -141,9 +147,11 @@
     [self resetCamera:nil];
 }
 
+#pragma mark - Sizing
+
 - (void) transformWasChanged
 {
-    vec2 viewSize = SizeToVec2(self.bounds.size);
+    vec2 viewSize = vec2(self.bounds.size);
     vec2 originOffset = -0.5 * viewSize;
     
     [self.scene setOriginOffset:originOffset

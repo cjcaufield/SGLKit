@@ -45,7 +45,7 @@
     _cubeShader = [[SGLShader alloc] initWithName:@"Basic"];
     [_cubeShader setVec4:color forName:@"color"];
     [_cubeShader setFloat:32.0 forName:@"shininess"];
-    [self.scene addSceneShader:_cubeShader];
+    [self.scene addLitShader:_cubeShader];
     
     _cubeMesh = [SGLMeshes cubeMesh];
 }

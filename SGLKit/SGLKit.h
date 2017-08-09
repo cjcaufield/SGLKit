@@ -6,9 +6,6 @@
 //  Copyright © 2016 Secret Geometry, Inc. All rights reserved.
 //
 
-#ifndef SGLKIT_H
-#define SGLKIT_H
-
 //
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
@@ -31,6 +28,7 @@
 #import <SGLKit/SGLVertexAttribute.h>
 #import <SGLKit/SGLVertexBuffer.h>
 #import <SGLKit/SGLIndexBuffer.h>
+#import <SGLKit/AQDataExtensions.h>
 
 #ifdef SGL_MAC
     #import <SGLKit/SGLMacSceneView.h>
@@ -51,6 +49,4 @@
     #import <UIKit/UIKit.h>
     FOUNDATION_EXPORT double SGLKitTouchVersionNumber;
     FOUNDATION_EXPORT const unsigned char SGLKitTouchVersionString[];
-#endif
-
 #endif

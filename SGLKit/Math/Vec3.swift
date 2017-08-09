@@ -36,7 +36,26 @@ extension vec3: GenericVector {
         self.init(i, v.x, v.y)
     }
     
-    public func indexIsValid(index: Int) -> Bool {
+    public init(_ color: XXColor?) {
+        
+        var v = vec4(0.0)
+        if color != nil {
+            v = vec4(color!)
+        }
+        
+        self.init(v.x, v.y, v.z)
+    }
+    
+    public func toColor() -> XXColor? {
+        return XXColor(
+            red:   CGFloat(self.x),
+            green: CGFloat(self.y),
+            blue:  CGFloat(self.z),
+            alpha: 1.0
+        )
+    }
+    
+    public func indexIsValid(_ index: Int) -> Bool {
         return index < 3
     }
     
@@ -68,7 +87,7 @@ extension vec3: GenericVector {
         }
     }
     
-    public func at(index: Int) -> Float {
+    public func at(_ index: Int) -> Float {
         return self[index]
     }
     
@@ -76,7 +95,7 @@ extension vec3: GenericVector {
         return distance(self, ORIGIN_3D)
     }
     
-    public func dot(v: vec3) -> Float {
+    public func dot(_ v: vec3) -> Float {
         return self.x * v.x + self.y * v.y + self.z * v.z
     }
     
@@ -90,31 +109,37 @@ extension vec3: GenericVector {
 
 // Arithmetic functions.
 
-public func +=(inout a: vec3, b: vec3) {
+public func +=(a: inout vec3, b: vec3) {
     a.x += b.x
     a.y += b.y
     a.z += b.z
 }
 
-public func -=(inout a: vec3, b: vec3) {
+public func -=(a: inout vec3, b: vec3) {
     a.x -= b.x
     a.y -= b.y
     a.z -= b.z
 }
 
-public func *=(inout a: vec3, b: vec3) {
+public func *=(a: inout vec3, b: vec3) {
     a.x *= b.x
     a.y *= b.y
     a.z *= b.z
 }
 
-public func /=(inout a: vec3, b: vec3) {
+public func *=(vector: inout vec3, scalar: Float) {
+    vector.x *= scalar
+    vector.y *= scalar
+    vector.z *= scalar
+}
+
+public func /=(a: inout vec3, b: vec3) {
     a.x /= b.x
     a.y /= b.y
     a.z /= b.z
 }
 
-public func /=(inout vector: vec3, scalar: Float) {
+public func /=(vector: inout vec3, scalar: Float) {
     vector.x /= scalar
     vector.y /= scalar
     vector.z /= scalar
@@ -166,19 +191,19 @@ public func randomVec3() -> vec3 {
     return vec3(randomFloat(), randomFloat(), randomFloat())
 }
 
-public func randomVec3InRange(lo: Float, _ hi: Float) -> vec3 {
+public func randomVec3InRange(_ lo: Float, _ hi: Float) -> vec3 {
     return vec3(randomFloatInRange(lo, hi), randomFloatInRange(lo, hi), randomFloatInRange(lo, hi))
 }
 
-public func maxComponent(v: vec3) -> Float {
+public func maxComponent(_ v: vec3) -> Float {
     return max(max(v.x, v.y), v.z)
 }
 
-public func minComponent(v: vec3) -> Float {
+public func minComponent(_ v: vec3) -> Float {
     return min(min(v.x, v.y), v.z)
 }
 
-public func cross(a: vec3, _ b: vec3) -> vec3 {
+public func cross(_ a: vec3, _ b: vec3) -> vec3 {
     let x = a.y * b.z - a.z * b.y
     let y = a.z * b.x - a.x * b.z
     let z = a.x * b.y - a.y * b.x

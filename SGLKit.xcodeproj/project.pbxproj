@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24D4C2F3B0FC12F785E2034F /* Pods_SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */; };
+		1411333B932B7900C3E1B9EF /* libPods-SGLKitTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 829E8C20A1C949D1A11BB8BD /* libPods-SGLKitTouch.a */; };
 		3B12B6A719071D1F00C13154 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B6A219071D1F00C13154 /* Document.m */; };
 		3B12B6A819071D1F00C13154 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B12B6A419071D1F00C13154 /* View.m */; };
 		3B12B6AE19071DC900C13154 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B12B6AA19071DC900C13154 /* MainMenu.xib */; };
 		3B12B6AF19071DC900C13154 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B12B6AC19071DC900C13154 /* Window.xib */; };
 		3B12B6B8190742E800C13154 /* SGLHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B12B6B61907426100C13154 /* SGLHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B17A5281C9A8AA300F8684B /* AQDataExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EA1905F9D600781FC4 /* AQDataExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B17A5291C9A8ABA00F8684B /* AQDataExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EA1905F9D600781FC4 /* AQDataExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B192AAA1C9FE89B00E6057B /* SGLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698F11905F9D600781FC4 /* SGLUtilities.mm */; };
+		3B192AAB1C9FE89D00E6057B /* SGLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698F11905F9D600781FC4 /* SGLUtilities.mm */; };
+		3B192AAC1C9FE93500E6057B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE2670B1C6438A7002271F3 /* Foundation.framework */; };
 		3B2268251C7D02C700F793E4 /* Conversions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2268241C7D02C700F793E4 /* Conversions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B2268261C7D02C700F793E4 /* Conversions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2268241C7D02C700F793E4 /* Conversions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B2268291C7D02D500F793E4 /* Functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2268271C7D02D500F793E4 /* Functions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,36 +26,6 @@
 		3B22682C1C7D02D500F793E4 /* Functions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268281C7D02D500F793E4 /* Functions.mm */; };
 		3B22682E1C7D048100F793E4 /* Constants.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B22682D1C7D048100F793E4 /* Constants.mm */; };
 		3B22682F1C7D048100F793E4 /* Constants.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B22682D1C7D048100F793E4 /* Constants.mm */; };
-		3B2268311C7D101400F793E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268301C7D101400F793E4 /* Constants.swift */; };
-		3B2268321C7D101400F793E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268301C7D101400F793E4 /* Constants.swift */; };
-		3B2268341C7D10A200F793E4 /* IVec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268331C7D10A200F793E4 /* IVec2.swift */; };
-		3B2268351C7D10A200F793E4 /* IVec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268331C7D10A200F793E4 /* IVec2.swift */; };
-		3B22683A1C7D11C700F793E4 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268391C7D11C700F793E4 /* Vec2.swift */; };
-		3B22683B1C7D11C700F793E4 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268391C7D11C700F793E4 /* Vec2.swift */; };
-		3B2268491C7D11DD00F793E4 /* AABB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683C1C7D11DD00F793E4 /* AABB.swift */; };
-		3B22684A1C7D11DD00F793E4 /* AABB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683C1C7D11DD00F793E4 /* AABB.swift */; };
-		3B22684D1C7D11DD00F793E4 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683E1C7D11DD00F793E4 /* Conversions.swift */; };
-		3B22684E1C7D11DD00F793E4 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683E1C7D11DD00F793E4 /* Conversions.swift */; };
-		3B22684F1C7D11DD00F793E4 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683F1C7D11DD00F793E4 /* Functions.swift */; };
-		3B2268501C7D11DD00F793E4 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683F1C7D11DD00F793E4 /* Functions.swift */; };
-		3B2268511C7D11DD00F793E4 /* Mat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268401C7D11DD00F793E4 /* Mat3.swift */; };
-		3B2268521C7D11DD00F793E4 /* Mat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268401C7D11DD00F793E4 /* Mat3.swift */; };
-		3B2268531C7D11DD00F793E4 /* Mat4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268411C7D11DD00F793E4 /* Mat4.swift */; };
-		3B2268541C7D11DD00F793E4 /* Mat4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268411C7D11DD00F793E4 /* Mat4.swift */; };
-		3B2268551C7D11DD00F793E4 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268421C7D11DD00F793E4 /* Plane.swift */; };
-		3B2268561C7D11DD00F793E4 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268421C7D11DD00F793E4 /* Plane.swift */; };
-		3B2268571C7D11DD00F793E4 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268431C7D11DD00F793E4 /* Quad.swift */; };
-		3B2268581C7D11DD00F793E4 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268431C7D11DD00F793E4 /* Quad.swift */; };
-		3B2268591C7D11DD00F793E4 /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268441C7D11DD00F793E4 /* Ray.swift */; };
-		3B22685A1C7D11DD00F793E4 /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268441C7D11DD00F793E4 /* Ray.swift */; };
-		3B22685B1C7D11DD00F793E4 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268451C7D11DD00F793E4 /* Sphere.swift */; };
-		3B22685C1C7D11DD00F793E4 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268451C7D11DD00F793E4 /* Sphere.swift */; };
-		3B22685D1C7D11DD00F793E4 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268461C7D11DD00F793E4 /* Tri.swift */; };
-		3B22685E1C7D11DD00F793E4 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268461C7D11DD00F793E4 /* Tri.swift */; };
-		3B22685F1C7D11DD00F793E4 /* Vec3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268471C7D11DD00F793E4 /* Vec3.swift */; };
-		3B2268601C7D11DD00F793E4 /* Vec3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268471C7D11DD00F793E4 /* Vec3.swift */; };
-		3B2268611C7D11DD00F793E4 /* Vec4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268481C7D11DD00F793E4 /* Vec4.swift */; };
-		3B2268621C7D11DD00F793E4 /* Vec4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268481C7D11DD00F793E4 /* Vec4.swift */; };
 		3B3513D51C5E66FD0090A2EB /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3513D41C5E66FD0090A2EB /* Document.swift */; };
 		3B3513D81C5E66FD0090A2EB /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B3513D61C5E66FD0090A2EB /* Window.xib */; };
 		3B3513DA1C5E66FD0090A2EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3513D91C5E66FD0090A2EB /* Assets.xcassets */; };
@@ -94,13 +69,11 @@
 		3B4D2DEE1C7C790B00E8ED77 /* Sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DDF1C7C790B00E8ED77 /* Sphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B4D2DEF1C7C790B00E8ED77 /* Tri.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DE01C7C790B00E8ED77 /* Tri.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B4D2DF01C7C790B00E8ED77 /* Tri.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4D2DE01C7C790B00E8ED77 /* Tri.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B7698C51905F8FA00781FC4 /* InvisibleCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */; };
 		3B7698F31905F9D600781FC4 /* AQDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */; };
 		3B7698F41905F9D600781FC4 /* SGLDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EC1905F9D600781FC4 /* SGLDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698F51905F9D600781FC4 /* SGLMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698ED1905F9D600781FC4 /* SGLMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698F71905F9D600781FC4 /* SGLTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698EF1905F9D600781FC4 /* SGLTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7698F81905F9D600781FC4 /* SGLUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698F01905F9D600781FC4 /* SGLUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B7698F91905F9D600781FC4 /* SGLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698F11905F9D600781FC4 /* SGLUtilities.mm */; };
 		3B76990D1905FA1400781FC4 /* SGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698FA1905FA1400781FC4 /* SGLContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B76990E1905FA1400781FC4 /* SGLContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FB1905FA1400781FC4 /* SGLContext.mm */; };
 		3B76990F1905FA1400781FC4 /* SGLIndexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7698FC1905FA1400781FC4 /* SGLIndexBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -110,7 +83,7 @@
 		3B7699131905FA1400781FC4 /* SGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699001905FA1400781FC4 /* SGLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7699141905FA1400781FC4 /* SGLProgram.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699011905FA1400781FC4 /* SGLProgram.mm */; };
 		3B7699151905FA1400781FC4 /* SGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699021905FA1400781FC4 /* SGLRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B7699161905FA1400781FC4 /* SGLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699031905FA1400781FC4 /* SGLRenderer.mm */; };
+		3B7699161905FA1400781FC4 /* SGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699031905FA1400781FC4 /* SGLRenderer.m */; };
 		3B7699171905FA1400781FC4 /* SGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699041905FA1400781FC4 /* SGLShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B7699181905FA1400781FC4 /* SGLShader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699051905FA1400781FC4 /* SGLShader.mm */; };
 		3B7699191905FA1400781FC4 /* SGLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7699061905FA1400781FC4 /* SGLTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,6 +93,8 @@
 		3B76991D1905FA1400781FC4 /* SGLVertexAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B76990A1905FA1400781FC4 /* SGLVertexAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B76991E1905FA1400781FC4 /* SGLVertexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B76990B1905FA1400781FC4 /* SGLVertexBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B76991F1905FA1400781FC4 /* SGLVertexBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B76990C1905FA1400781FC4 /* SGLVertexBuffer.mm */; };
+		3B76A5281CA01A1A001295EC /* SGLTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76A5271CA01A1A001295EC /* SGLTypes.swift */; };
+		3B76A5291CA01A1A001295EC /* SGLTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76A5271CA01A1A001295EC /* SGLTypes.swift */; };
 		3B9ADF571914A9F300B14F9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD161CE190881EC002F057D /* Foundation.framework */; };
 		3B9ADF5B1914A9F300B14F9C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDDA3FA1905C77300F47029 /* GLKit.framework */; };
 		3B9ADF631914A9F300B14F9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B9ADF611914A9F300B14F9C /* InfoPlist.strings */; };
@@ -131,16 +106,19 @@
 		3B9ADF781914A9F300B14F9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9ADF771914A9F300B14F9C /* Images.xcassets */; };
 		3B9ADF9E1914E5D600B14F9C /* SGLScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9ADF9C1914E5D600B14F9C /* SGLScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B9ADF9F1914E5D600B14F9C /* SGLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */; };
+		3BC3CE9C1C98CB4E005CB193 /* InvisibleCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC3CE991C98CB4E005CB193 /* InvisibleCursor.png */; };
+		3BC3CE9D1C98CB4E005CB193 /* WhiteIBeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC3CE9A1C98CB4E005CB193 /* WhiteIBeam.png */; };
+		3BC3CE9E1C98CB4E005CB193 /* WhiteIBeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC3CE9B1C98CB4E005CB193 /* WhiteIBeam@2x.png */; };
 		3BD042131C78EC90003E74B2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267111C658EB6002271F3 /* OpenGLES.framework */; };
 		3BD162411909940C002F057D /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD162401909940C002F057D /* CoreServices.framework */; };
 		3BD162B7190DED61002F057D /* SGLKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4BEE421905C0D40008D382 /* SGLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3BD162CD190F3980002F057D /* SGLMeshes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD162CB190F3980002F057D /* SGLMeshes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BD162CE190F3980002F057D /* SGLMeshes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BD162CC190F3980002F057D /* SGLMeshes.mm */; };
 		3BD403A61C798C6E007C1D26 /* SGLKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C1DF91C5FB78A00D56F44 /* SGLKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BD403AB1C799818007C1D26 /* SGLMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; };
 		3BD403AC1C799A99007C1D26 /* SGLMath.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BD403AD1C799D00007C1D26 /* SGLMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; };
 		3BD403AE1C799D0B007C1D26 /* SGLMath.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BD704971C969C7D0039624D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3BBC921C1C967C0E00495AD9 /* LICENSE */; };
+		3BD704981C969C7F0039624D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3BBC921C1C967C0E00495AD9 /* LICENSE */; };
 		3BDA7AA3197C72DB00F85A99 /* SGLDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BDA7AA1197C72DB00F85A99 /* SGLDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BDA7AA4197C72DB00F85A99 /* SGLDefaults.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA7AA2197C72DB00F85A99 /* SGLDefaults.mm */; };
 		3BDDA3FB1905C77400F47029 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDDA3FA1905C77300F47029 /* GLKit.framework */; };
@@ -163,6 +141,8 @@
 		3BE267131C658EB6002271F3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE267111C658EB6002271F3 /* OpenGLES.framework */; };
 		3BE36C661BF0144A00E0A93F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE36C651BF0144A00E0A93F /* OpenGL.framework */; };
 		3BE36C681BF015FD00E0A93F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE36C671BF015FD00E0A93F /* CoreVideo.framework */; };
+		3BE51ECA1CB4834600E10A02 /* SGLUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE51EC91CB4834600E10A02 /* SGLUtilities.swift */; };
+		3BE51ECB1CB4834600E10A02 /* SGLUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE51EC91CB4834600E10A02 /* SGLUtilities.swift */; };
 		3BE89AAD1C87666500BCC1D4 /* Basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A991C87666500BCC1D4 /* Basic.frag */; };
 		3BE89AAE1C87666500BCC1D4 /* Basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A991C87666500BCC1D4 /* Basic.frag */; };
 		3BE89AAF1C87666500BCC1D4 /* Basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = 3BE89A9A1C87666500BCC1D4 /* Basic.vert */; };
@@ -214,8 +194,6 @@
 		3BF415BE1C78D17E008C1814 /* SGLMacWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415B61C78D17E008C1814 /* SGLMacWindow.mm */; };
 		3BF415BF1C78D17E008C1814 /* SGLMacWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415B71C78D17E008C1814 /* SGLMacWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BF415C01C78D17E008C1814 /* SGLMacWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF415B81C78D17E008C1814 /* SGLMacWindowController.mm */; };
-		3BF4E30D19F1105200A0E560 /* WhiteIBeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */; };
-		3BF4E30E19F1105200A0E560 /* WhiteIBeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */; };
 		3BF53582191AC571003F4A4B /* View.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53581191AC571003F4A4B /* View.mm */; };
 		3BF5358D191AEB7C003F4A4B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF5358C191AEB7C003F4A4B /* OpenGLES.framework */; };
 		3BF56E2B1C78E2FB00303970 /* SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF56E241C78E2FB00303970 /* SGLKit.framework */; };
@@ -223,11 +201,10 @@
 		3BF56E331C78E3E800303970 /* SGLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF56E241C78E2FB00303970 /* SGLKit.framework */; };
 		3BF56E351C78E40B00303970 /* SGLKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF56E241C78E2FB00303970 /* SGLKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3BF56E381C78E45300303970 /* SGLDefaults.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA7AA2197C72DB00F85A99 /* SGLDefaults.mm */; };
-		3BF56E391C78E45400303970 /* SGLUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698F11905F9D600781FC4 /* SGLUtilities.mm */; };
 		3BF56E3A1C78E45400303970 /* SGLMeshes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BD162CC190F3980002F057D /* SGLMeshes.mm */; };
 		3BF56E3B1C78E45400303970 /* AQDataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */; };
 		3BF56E3D1C78E46100303970 /* SGLContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FB1905FA1400781FC4 /* SGLContext.mm */; };
-		3BF56E3F1C78E46100303970 /* SGLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699031905FA1400781FC4 /* SGLRenderer.mm */; };
+		3BF56E3F1C78E46100303970 /* SGLRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699031905FA1400781FC4 /* SGLRenderer.m */; };
 		3BF56E411C78E46100303970 /* SGLScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */; };
 		3BF56E431C78E46100303970 /* SGLMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7698FF1905FA1400781FC4 /* SGLMesh.mm */; };
 		3BF56E451C78E46100303970 /* SGLProgram.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B7699011905FA1400781FC4 /* SGLProgram.mm */; };
@@ -267,14 +244,43 @@
 		3BF56E6E1C78E81300303970 /* SGLIosView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415A71C78D173008C1814 /* SGLIosView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BF56E6F1C78E81300303970 /* SGLIosViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415A91C78D173008C1814 /* SGLIosViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BF56E701C78E81300303970 /* SGLMotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF415AB1C78D173008C1814 /* SGLMotionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BF56E851C78E84600303970 /* InvisibleCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */; };
-		3BF56E861C78E84600303970 /* WhiteIBeam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */; };
-		3BF56E871C78E84600303970 /* WhiteIBeam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */; };
+		3BFD1B8E1C9796FD000C3E90 /* SGLDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */; };
+		3BFD1B8F1C9796FD000C3E90 /* SGLMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; };
+		3BFD1B901C9796FD000C3E90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268301C7D101400F793E4 /* Constants.swift */; };
+		3BFD1B911C9796FD000C3E90 /* IVec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268331C7D10A200F793E4 /* IVec2.swift */; };
+		3BFD1B921C9796FD000C3E90 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268391C7D11C700F793E4 /* Vec2.swift */; };
+		3BFD1B931C9796FD000C3E90 /* Vec3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268471C7D11DD00F793E4 /* Vec3.swift */; };
+		3BFD1B941C9796FD000C3E90 /* Vec4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268481C7D11DD00F793E4 /* Vec4.swift */; };
+		3BFD1B951C9796FD000C3E90 /* Mat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268401C7D11DD00F793E4 /* Mat3.swift */; };
+		3BFD1B961C9796FD000C3E90 /* Mat4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268411C7D11DD00F793E4 /* Mat4.swift */; };
+		3BFD1B971C9796FD000C3E90 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268461C7D11DD00F793E4 /* Tri.swift */; };
+		3BFD1B981C9796FD000C3E90 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268431C7D11DD00F793E4 /* Quad.swift */; };
+		3BFD1B991C9796FD000C3E90 /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268441C7D11DD00F793E4 /* Ray.swift */; };
+		3BFD1B9A1C9796FD000C3E90 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268421C7D11DD00F793E4 /* Plane.swift */; };
+		3BFD1B9B1C9796FD000C3E90 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268451C7D11DD00F793E4 /* Sphere.swift */; };
+		3BFD1B9C1C9796FD000C3E90 /* AABB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683C1C7D11DD00F793E4 /* AABB.swift */; };
+		3BFD1B9D1C9796FD000C3E90 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683E1C7D11DD00F793E4 /* Conversions.swift */; };
+		3BFD1B9E1C9796FD000C3E90 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683F1C7D11DD00F793E4 /* Functions.swift */; };
+		3BFD1B9F1C97971C000C3E90 /* SGLDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */; };
+		3BFD1BA01C97971C000C3E90 /* SGLMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */; };
+		3BFD1BA11C97971C000C3E90 /* IVec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268331C7D10A200F793E4 /* IVec2.swift */; };
+		3BFD1BA21C97971C000C3E90 /* Vec2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268391C7D11C700F793E4 /* Vec2.swift */; };
+		3BFD1BA31C97971C000C3E90 /* Vec3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268471C7D11DD00F793E4 /* Vec3.swift */; };
+		3BFD1BA41C97971C000C3E90 /* Vec4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268481C7D11DD00F793E4 /* Vec4.swift */; };
+		3BFD1BA51C97971C000C3E90 /* Mat3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268401C7D11DD00F793E4 /* Mat3.swift */; };
+		3BFD1BA61C97971C000C3E90 /* Mat4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268411C7D11DD00F793E4 /* Mat4.swift */; };
+		3BFD1BA71C97971C000C3E90 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268461C7D11DD00F793E4 /* Tri.swift */; };
+		3BFD1BA81C97971C000C3E90 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268431C7D11DD00F793E4 /* Quad.swift */; };
+		3BFD1BA91C97971C000C3E90 /* Ray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268441C7D11DD00F793E4 /* Ray.swift */; };
+		3BFD1BAA1C97971C000C3E90 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268421C7D11DD00F793E4 /* Plane.swift */; };
+		3BFD1BAB1C97971C000C3E90 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268451C7D11DD00F793E4 /* Sphere.swift */; };
+		3BFD1BAC1C97971C000C3E90 /* AABB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683C1C7D11DD00F793E4 /* AABB.swift */; };
+		3BFD1BAD1C97971C000C3E90 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683E1C7D11DD00F793E4 /* Conversions.swift */; };
+		3BFD1BAE1C97971C000C3E90 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B22683F1C7D11DD00F793E4 /* Functions.swift */; };
+		3BFD1BAF1C979747000C3E90 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2268301C7D101400F793E4 /* Constants.swift */; };
 		3BFEC2321C8E60EA006B36EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2311C8E60EA006B36EF /* main.m */; };
-		3BFEC2371C8F8EBA006B36EF /* SGLDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */; };
-		3BFEC2381C8F8EBA006B36EF /* SGLDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */; };
-		B38EF4A2BBDC27AA7854A688 /* Pods_EncryptFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964D751683458D44B00B2705 /* Pods_EncryptFile.framework */; };
-		F9B013120924C61481822BB8 /* Pods_SGLKitTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */; };
+		AC71C288943E2EAF68F8D1D3 /* libPods-EncryptFile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F738370B0C908F0B15DA66FA /* libPods-EncryptFile.a */; };
+		CCB6F9BBCBCDD6B3050E9DA7 /* libPods-SGLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89444D433B475EA18D075598 /* libPods-SGLKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,20 +311,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3BF56E231C78E2FB00303970;
 			remoteInfo = SGLKitTouch;
-		};
-		3BFEC2391C8F98C0006B36EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BFEC22E1C8E60EA006B36EF;
-			remoteInfo = EncryptFile;
-		};
-		3BFEC23B1C8F98C7006B36EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B4BEE391905C0D40008D382 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3BFEC22E1C8E60EA006B36EF;
-			remoteInfo = EncryptFile;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -368,14 +360,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02DBCD19C64A3211891C8728 /* Pods-EncryptFile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptFile.release.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile.release.xcconfig"; sourceTree = "<group>"; };
-		218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.release.xcconfig"; sourceTree = "<group>"; };
-		37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.debug.xcconfig"; sourceTree = "<group>"; };
-		3B0510D71C939B5600F12A11 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		3B0510D81C939B5600F12A11 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		3B0510D91C939B5600F12A11 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3B0510DA1C939B5600F12A11 /* SGLKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGLKit.podspec; sourceTree = "<group>"; };
+		24702055CEFF0CE13573BA16 /* Pods-SGLKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.debug.xcconfig"; sourceTree = "<group>"; };
 		3B12B6A119071D1F00C13154 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		3B12B6A219071D1F00C13154 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		3B12B6A319071D1F00C13154 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
@@ -445,7 +430,6 @@
 		3B4D2DDE1C7C790B00E8ED77 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
 		3B4D2DDF1C7C790B00E8ED77 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
 		3B4D2DE01C7C790B00E8ED77 /* Tri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tri.h; sourceTree = "<group>"; };
-		3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvisibleCursor.png; sourceTree = "<group>"; };
 		3B7698EA1905F9D600781FC4 /* AQDataExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQDataExtensions.h; sourceTree = "<group>"; };
 		3B7698EB1905F9D600781FC4 /* AQDataExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQDataExtensions.m; sourceTree = "<group>"; };
 		3B7698EC1905F9D600781FC4 /* SGLDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLDebug.h; sourceTree = "<group>"; };
@@ -462,7 +446,7 @@
 		3B7699001905FA1400781FC4 /* SGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLProgram.h; sourceTree = "<group>"; };
 		3B7699011905FA1400781FC4 /* SGLProgram.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLProgram.mm; sourceTree = "<group>"; };
 		3B7699021905FA1400781FC4 /* SGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLRenderer.h; sourceTree = "<group>"; };
-		3B7699031905FA1400781FC4 /* SGLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLRenderer.mm; sourceTree = "<group>"; };
+		3B7699031905FA1400781FC4 /* SGLRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGLRenderer.m; sourceTree = "<group>"; };
 		3B7699041905FA1400781FC4 /* SGLShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLShader.h; sourceTree = "<group>"; };
 		3B7699051905FA1400781FC4 /* SGLShader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLShader.mm; sourceTree = "<group>"; };
 		3B7699061905FA1400781FC4 /* SGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLTexture.h; sourceTree = "<group>"; };
@@ -472,6 +456,7 @@
 		3B76990A1905FA1400781FC4 /* SGLVertexAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLVertexAttribute.h; sourceTree = "<group>"; };
 		3B76990B1905FA1400781FC4 /* SGLVertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLVertexBuffer.h; sourceTree = "<group>"; };
 		3B76990C1905FA1400781FC4 /* SGLVertexBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLVertexBuffer.mm; sourceTree = "<group>"; };
+		3B76A5271CA01A1A001295EC /* SGLTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGLTypes.swift; sourceTree = "<group>"; };
 		3B9ADF561914A9F300B14F9C /* SGLKitTouchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGLKitTouchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9ADF581914A9F300B14F9C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3B9ADF601914A9F300B14F9C /* SGLKitTouchTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SGLKitTouchTest-Info.plist"; sourceTree = "<group>"; };
@@ -490,6 +475,13 @@
 		3B9ADF9C1914E5D600B14F9C /* SGLScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLScene.h; sourceTree = "<group>"; };
 		3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SGLScene.mm; sourceTree = "<group>"; };
 		3BAAC85B1B329CC300E29C19 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../External/libssh2-for-iOS-master/lib/libcrypto.a"; sourceTree = "<group>"; };
+		3BBC921C1C967C0E00495AD9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3BBC921D1C967C0E00495AD9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3BBC921E1C967C0E00495AD9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3BBC921F1C967C0E00495AD9 /* SGLKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SGLKit.podspec; sourceTree = "<group>"; };
+		3BC3CE991C98CB4E005CB193 /* InvisibleCursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InvisibleCursor.png; path = Images/InvisibleCursor.png; sourceTree = "<group>"; };
+		3BC3CE9A1C98CB4E005CB193 /* WhiteIBeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WhiteIBeam.png; path = Images/WhiteIBeam.png; sourceTree = "<group>"; };
+		3BC3CE9B1C98CB4E005CB193 /* WhiteIBeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WhiteIBeam@2x.png"; path = "Images/WhiteIBeam@2x.png"; sourceTree = "<group>"; };
 		3BC5E6E31913D3B000FCF32F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3BD042181C78EE09003E74B2 /* SGLKitTouch-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SGLKitTouch-Info.plist"; sourceTree = "<group>"; };
 		3BD161CE190881EC002F057D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -520,6 +512,7 @@
 		3BE267111C658EB6002271F3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		3BE36C651BF0144A00E0A93F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3BE36C671BF015FD00E0A93F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3BE51EC91CB4834600E10A02 /* SGLUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGLUtilities.swift; sourceTree = "<group>"; };
 		3BE89A991C87666500BCC1D4 /* Basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Basic.frag; path = Shaders/Basic.frag; sourceTree = "<group>"; };
 		3BE89A9A1C87666500BCC1D4 /* Basic.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Basic.vert; path = Shaders/Basic.vert; sourceTree = "<group>"; };
 		3BE89A9B1C87666500BCC1D4 /* BasicTexture.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = BasicTexture.frag; path = Shaders/BasicTexture.frag; sourceTree = "<group>"; };
@@ -557,8 +550,6 @@
 		3BF415B61C78D17E008C1814 /* SGLMacWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLMacWindow.mm; path = osx/SGLMacWindow.mm; sourceTree = "<group>"; };
 		3BF415B71C78D17E008C1814 /* SGLMacWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGLMacWindowController.h; path = osx/SGLMacWindowController.h; sourceTree = "<group>"; };
 		3BF415B81C78D17E008C1814 /* SGLMacWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SGLMacWindowController.mm; path = osx/SGLMacWindowController.mm; sourceTree = "<group>"; };
-		3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteIBeam.png; sourceTree = "<group>"; };
-		3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhiteIBeam@2x.png"; sourceTree = "<group>"; };
 		3BF53580191AC571003F4A4B /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		3BF53581191AC571003F4A4B /* View.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = View.mm; sourceTree = "<group>"; };
 		3BF5358C191AEB7C003F4A4B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
@@ -566,11 +557,14 @@
 		3BFEC22F1C8E60EA006B36EF /* EncryptFile */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EncryptFile; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFEC2311C8E60EA006B36EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BFEC2361C8F8EBA006B36EF /* SGLDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGLDebug.swift; sourceTree = "<group>"; };
-		70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.debug.xcconfig"; sourceTree = "<group>"; };
-		84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.release.xcconfig"; sourceTree = "<group>"; };
-		89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGLKitTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89CB1774399AFE8BEFF450CD /* Pods-EncryptFile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptFile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile.debug.xcconfig"; sourceTree = "<group>"; };
-		964D751683458D44B00B2705 /* Pods_EncryptFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EncryptFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE8406B5C71FE6FA6D8CFB7 /* Pods-EncryptFile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptFile.release.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile.release.xcconfig"; sourceTree = "<group>"; };
+		829E8C20A1C949D1A11BB8BD /* libPods-SGLKitTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGLKitTouch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89444D433B475EA18D075598 /* libPods-SGLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SGLKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97688ECDB7CF93FCC8063A29 /* Pods-SGLKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit.release.xcconfig"; sourceTree = "<group>"; };
+		9C996D728AC8CD8EB74C8FBD /* Pods-SGLKitTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.release.xcconfig"; sourceTree = "<group>"; };
+		D1E15D489B6AE3271F97522D /* Pods-SGLKitTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGLKitTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch.debug.xcconfig"; sourceTree = "<group>"; };
+		E1833883A62E554E23E1C41C /* Pods-EncryptFile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncryptFile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile.debug.xcconfig"; sourceTree = "<group>"; };
+		F738370B0C908F0B15DA66FA /* libPods-EncryptFile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EncryptFile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,7 +586,7 @@
 				3BD162411909940C002F057D /* CoreServices.framework in Frameworks */,
 				3BDDA3FD1905C77B00F47029 /* GLUT.framework in Frameworks */,
 				3BDDA3FB1905C77400F47029 /* GLKit.framework in Frameworks */,
-				24D4C2F3B0FC12F785E2034F /* Pods_SGLKit.framework in Frameworks */,
+				CCB6F9BBCBCDD6B3050E9DA7 /* libPods-SGLKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,12 +631,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B192AAC1C9FE93500E6057B /* Foundation.framework in Frameworks */,
 				3BD042131C78EC90003E74B2 /* OpenGLES.framework in Frameworks */,
 				3BF56E591C78E4C100303970 /* UIKit.framework in Frameworks */,
 				3BF56E561C78E4B700303970 /* CoreGraphics.framework in Frameworks */,
 				3BF56E571C78E4B700303970 /* CoreMotion.framework in Frameworks */,
 				3BF56E581C78E4B700303970 /* GLKit.framework in Frameworks */,
-				F9B013120924C61481822BB8 /* Pods_SGLKitTouch.framework in Frameworks */,
+				1411333B932B7900C3E1B9EF /* libPods-SGLKitTouch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +645,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B38EF4A2BBDC27AA7854A688 /* Pods_EncryptFile.framework in Frameworks */,
+				AC71C288943E2EAF68F8D1D3 /* libPods-EncryptFile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +701,10 @@
 		3B4BEE381905C0D40008D382 = {
 			isa = PBXGroup;
 			children = (
+				3BBC921F1C967C0E00495AD9 /* SGLKit.podspec */,
+				3BBC921D1C967C0E00495AD9 /* Podfile */,
+				3BBC921E1C967C0E00495AD9 /* README.md */,
+				3BBC921C1C967C0E00495AD9 /* LICENSE */,
 				3B4BEE4B1905C0D40008D382 /* SGLKit */,
 				3B4BEE761905C1090008D382 /* SGLKitTest */,
 				3B3513D11C5E66FD0090A2EB /* SGLKitTestSwift */,
@@ -714,7 +713,7 @@
 				3BFEC2301C8E60EA006B36EF /* EncryptFile */,
 				3B4BEE441905C0D40008D382 /* Frameworks */,
 				3B4BEE431905C0D40008D382 /* Products */,
-				9A5243A77F39051AEC1F0763 /* Pods */,
+				563AFC6AC3820468F05C6F45 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -757,9 +756,9 @@
 				3BD161CE190881EC002F057D /* Foundation.framework */,
 				3BC5E6E31913D3B000FCF32F /* CoreFoundation.framework */,
 				3B9ADF581914A9F300B14F9C /* CoreGraphics.framework */,
-				218BC413E7F07443D108AF06 /* Pods_SGLKit.framework */,
-				89704F89704E3E0DFC48183E /* Pods_SGLKitTouch.framework */,
-				964D751683458D44B00B2705 /* Pods_EncryptFile.framework */,
+				F738370B0C908F0B15DA66FA /* libPods-EncryptFile.a */,
+				89444D433B475EA18D075598 /* libPods-SGLKit.a */,
+				829E8C20A1C949D1A11BB8BD /* libPods-SGLKitTouch.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -772,6 +771,7 @@
 				3BDDA3F01905C2BC00F47029 /* Objects */,
 				3BDDA3EE1905C26900F47029 /* Views */,
 				3BDDA3ED1905C24800F47029 /* Shaders */,
+				3BC3CE981C98CB1F005CB193 /* Images */,
 				3B4BEE4C1905C0D40008D382 /* Supporting Files */,
 			);
 			path = SGLKit;
@@ -780,10 +780,6 @@
 		3B4BEE4C1905C0D40008D382 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3B0510DA1C939B5600F12A11 /* SGLKit.podspec */,
-				3B0510D81C939B5600F12A11 /* Podfile */,
-				3B0510D71C939B5600F12A11 /* LICENSE */,
-				3B0510D91C939B5600F12A11 /* README.md */,
 				3BD162B5190C3633002F057D /* Plan.txt */,
 				3B2AE0621C66F93A003478D6 /* Instructions.txt */,
 				3B4BEE4D1905C0D40008D382 /* SGLKit-Info.plist */,
@@ -791,9 +787,6 @@
 				3B4BEE4E1905C0D40008D382 /* InfoPlist.strings */,
 				3B4BEE511905C0D40008D382 /* SGLKit-Prefix.pch */,
 				3BD1622719089902002F057D /* SGLKitTouch-Prefix.pch */,
-				3B7698C31905F8FA00781FC4 /* InvisibleCursor.png */,
-				3BF4E30B19F1105200A0E560 /* WhiteIBeam.png */,
-				3BF4E30C19F1105200A0E560 /* WhiteIBeam@2x.png */,
 				3BE89AD91C8A277300BCC1D4 /* encrypt_shaders.py */,
 			);
 			name = "Supporting Files";
@@ -877,10 +870,12 @@
 				3B7698ED1905F9D600781FC4 /* SGLMath.h */,
 				3B3C1DF41C5F98F400D56F44 /* SGLMath.swift */,
 				3B7698EF1905F9D600781FC4 /* SGLTypes.h */,
+				3B76A5271CA01A1A001295EC /* SGLTypes.swift */,
 				3BDA7AA1197C72DB00F85A99 /* SGLDefaults.h */,
 				3BDA7AA2197C72DB00F85A99 /* SGLDefaults.mm */,
 				3B7698F01905F9D600781FC4 /* SGLUtilities.h */,
 				3B7698F11905F9D600781FC4 /* SGLUtilities.mm */,
+				3BE51EC91CB4834600E10A02 /* SGLUtilities.swift */,
 				3BD162CB190F3980002F057D /* SGLMeshes.h */,
 				3BD162CC190F3980002F057D /* SGLMeshes.mm */,
 				3B7698EA1905F9D600781FC4 /* AQDataExtensions.h */,
@@ -915,6 +910,16 @@
 				3B9ADF661914A9F300B14F9C /* SGLKitTouchTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BC3CE981C98CB1F005CB193 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3BC3CE991C98CB4E005CB193 /* InvisibleCursor.png */,
+				3BC3CE9A1C98CB4E005CB193 /* WhiteIBeam.png */,
+				3BC3CE9B1C98CB4E005CB193 /* WhiteIBeam@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		3BDDA3ED1905C24800F47029 /* Shaders */ = {
@@ -959,7 +964,7 @@
 				3B7698FA1905FA1400781FC4 /* SGLContext.h */,
 				3B7698FB1905FA1400781FC4 /* SGLContext.mm */,
 				3B7699021905FA1400781FC4 /* SGLRenderer.h */,
-				3B7699031905FA1400781FC4 /* SGLRenderer.mm */,
+				3B7699031905FA1400781FC4 /* SGLRenderer.m */,
 				3B9ADF9C1914E5D600B14F9C /* SGLScene.h */,
 				3B9ADF9D1914E5D600B14F9C /* SGLScene.mm */,
 				3B7698FE1905FA1400781FC4 /* SGLMesh.h */,
@@ -1005,15 +1010,15 @@
 			path = EncryptFile;
 			sourceTree = "<group>";
 		};
-		9A5243A77F39051AEC1F0763 /* Pods */ = {
+		563AFC6AC3820468F05C6F45 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */,
-				291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */,
-				70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */,
-				84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */,
-				89CB1774399AFE8BEFF450CD /* Pods-EncryptFile.debug.xcconfig */,
-				02DBCD19C64A3211891C8728 /* Pods-EncryptFile.release.xcconfig */,
+				E1833883A62E554E23E1C41C /* Pods-EncryptFile.debug.xcconfig */,
+				4EE8406B5C71FE6FA6D8CFB7 /* Pods-EncryptFile.release.xcconfig */,
+				24702055CEFF0CE13573BA16 /* Pods-SGLKit.debug.xcconfig */,
+				97688ECDB7CF93FCC8063A29 /* Pods-SGLKit.release.xcconfig */,
+				D1E15D489B6AE3271F97522D /* Pods-SGLKitTouch.debug.xcconfig */,
+				9C996D728AC8CD8EB74C8FBD /* Pods-SGLKitTouch.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1064,6 +1069,7 @@
 				3B4D2DCB1C7C595B00E8ED77 /* IVec2.h in Headers */,
 				3BDA7AA3197C72DB00F85A99 /* SGLDefaults.h in Headers */,
 				3BD403AE1C799D0B007C1D26 /* SGLMath.swift in Headers */,
+				3B17A5281C9A8AA300F8684B /* AQDataExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,6 +1116,7 @@
 				3B4D2DCC1C7C595B00E8ED77 /* IVec2.h in Headers */,
 				3BF56E701C78E81300303970 /* SGLMotionManager.h in Headers */,
 				3BD403AC1C799A99007C1D26 /* SGLMath.swift in Headers */,
+				3B17A5291C9A8ABA00F8684B /* AQDataExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1138,17 +1145,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B4BEE6A1905C0D40008D382 /* Build configuration list for PBXNativeTarget "SGLKit" */;
 			buildPhases = (
-				933D73C2046426200AD26C71 /* Check Pods Manifest.lock */,
+				7DCE3071DDAD86796C91F8BC /* 📦 Check Pods Manifest.lock */,
 				3B4BEE3D1905C0D40008D382 /* Sources */,
 				3B4BEE3E1905C0D40008D382 /* Frameworks */,
 				3B4BEE3F1905C0D40008D382 /* Headers */,
 				3B4BEE401905C0D40008D382 /* Resources */,
-				D43AC63F186F6187ACDCDF20 /* Copy Pods Resources */,
+				97BC2285419E199AC8ED403F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BFEC23A1C8F98C0006B36EF /* PBXTargetDependency */,
 			);
 			name = SGLKit;
 			productName = SGLKit;
@@ -1216,17 +1222,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BF56E2D1C78E2FB00303970 /* Build configuration list for PBXNativeTarget "SGLKitTouch" */;
 			buildPhases = (
-				AEF5341BC860C3FA70FC4931 /* Check Pods Manifest.lock */,
+				AE5A61B8ECC089DBC103D028 /* 📦 Check Pods Manifest.lock */,
 				3BF56E1F1C78E2FB00303970 /* Sources */,
 				3BF56E201C78E2FB00303970 /* Frameworks */,
 				3BF56E211C78E2FB00303970 /* Headers */,
 				3BF56E221C78E2FB00303970 /* Resources */,
-				66ACF3944257DC1461D19B28 /* Copy Pods Resources */,
+				C23DA3BC016CA4C5098DA682 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BFEC23C1C8F98C7006B36EF /* PBXTargetDependency */,
 			);
 			name = SGLKitTouch;
 			productName = SGLKitTouch;
@@ -1237,11 +1242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BFEC2351C8E60EA006B36EF /* Build configuration list for PBXNativeTarget "EncryptFile" */;
 			buildPhases = (
-				0314A5B2218FAD15C99487FB /* Check Pods Manifest.lock */,
+				D9666FE97F207F39F3CD5461 /* 📦 Check Pods Manifest.lock */,
 				3BFEC22B1C8E60EA006B36EF /* Sources */,
 				3BFEC22C1C8E60EA006B36EF /* Frameworks */,
 				3BFEC22D1C8E60EA006B36EF /* CopyFiles */,
-				6D718940F736D1880C818524 /* Copy Pods Resources */,
+				0AD6F600ADFE47F7D3B553C2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1259,20 +1264,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Secret Geometry, Inc.";
 				TargetAttributes = {
 					3B3513CF1C5E66FD0090A2EB = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0820;
+					};
+					3B4BEE411905C0D40008D382 = {
+						LastSwiftMigration = 0820;
 					};
 					3B9ADF551914A9F300B14F9C = {
 						DevelopmentTeam = B55ZL2Y7PW;
 					};
 					3BE266E41C62E9AB002271F3 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = B55ZL2Y7PW;
+						LastSwiftMigration = 0820;
 					};
 					3BF56E231C78E2FB00303970 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0820;
 					};
 					3BFEC22E1C8E60EA006B36EF = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1319,18 +1331,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE89ACD1C87666500BCC1D4 /* Gaussian.vert in Resources */,
+				3BC3CE9C1C98CB4E005CB193 /* InvisibleCursor.png in Resources */,
 				3BE89AC51C87666500BCC1D4 /* CopyTexture.frag in Resources */,
-				3B7698C51905F8FA00781FC4 /* InvisibleCursor.png in Resources */,
 				3BE89AC91C87666500BCC1D4 /* Fragment.glsl in Resources */,
+				3BC3CE9D1C98CB4E005CB193 /* WhiteIBeam.png in Resources */,
+				3BC3CE9E1C98CB4E005CB193 /* WhiteIBeam@2x.png in Resources */,
 				3BE89ABF1C87666500BCC1D4 /* Copy.vert in Resources */,
 				3BE89AD11C87666500BCC1D4 /* Utilities.glsl in Resources */,
 				3BE89AB91C87666500BCC1D4 /* Combine.frag in Resources */,
-				3BF4E30E19F1105200A0E560 /* WhiteIBeam@2x.png in Resources */,
 				3BE89AAD1C87666500BCC1D4 /* Basic.frag in Resources */,
 				3BE89AB31C87666500BCC1D4 /* BasicTexture.vert in Resources */,
+				3BD704971C969C7D0039624D /* LICENSE in Resources */,
 				3BE89AC71C87666500BCC1D4 /* CopyTexture.vert in Resources */,
 				3BE89ABD1C87666500BCC1D4 /* Copy.frag in Resources */,
-				3BF4E30D19F1105200A0E560 /* WhiteIBeam.png in Resources */,
 				3BE89ADA1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */,
 				3B4BEE501905C0D40008D382 /* InfoPlist.strings in Resources */,
 				3BE89AC11C87666500BCC1D4 /* CopyPixels.frag in Resources */,
@@ -1387,16 +1400,14 @@
 				3BE89ACC1C87666500BCC1D4 /* Gaussian.frag in Resources */,
 				3BE89AB41C87666500BCC1D4 /* BasicTexture.vert in Resources */,
 				3BE89ACE1C87666500BCC1D4 /* Gaussian.vert in Resources */,
-				3BF56E851C78E84600303970 /* InvisibleCursor.png in Resources */,
-				3BF56E861C78E84600303970 /* WhiteIBeam.png in Resources */,
 				3BE89AB01C87666500BCC1D4 /* Basic.vert in Resources */,
 				3BE89ABA1C87666500BCC1D4 /* Combine.frag in Resources */,
 				3BE89AD41C87666500BCC1D4 /* Vertex.glsl in Resources */,
+				3BD704981C969C7F0039624D /* LICENSE in Resources */,
 				3BE89AC41C87666500BCC1D4 /* CopyPixels.vert in Resources */,
 				3BE89AC01C87666500BCC1D4 /* Copy.vert in Resources */,
 				3BE89AC81C87666500BCC1D4 /* CopyTexture.vert in Resources */,
 				3BE89AAE1C87666500BCC1D4 /* Basic.frag in Resources */,
-				3BF56E871C78E84600303970 /* WhiteIBeam@2x.png in Resources */,
 				3BE89AC61C87666500BCC1D4 /* CopyTexture.frag in Resources */,
 				3BE89ADB1C8A277300BCC1D4 /* encrypt_shaders.py in Resources */,
 				3BE89AD01C87666500BCC1D4 /* Platform.glsl in Resources */,
@@ -1413,44 +1424,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0314A5B2218FAD15C99487FB /* Check Pods Manifest.lock */ = {
+		0AD6F600ADFE47F7D3B553C2 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		66ACF3944257DC1461D19B28 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D718940F736D1880C818524 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1458,14 +1439,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EncryptFile/Pods-EncryptFile-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		933D73C2046426200AD26C71 /* Check Pods Manifest.lock */ = {
+		7DCE3071DDAD86796C91F8BC /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1473,34 +1454,64 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AEF5341BC860C3FA70FC4931 /* Check Pods Manifest.lock */ = {
+		97BC2285419E199AC8ED403F /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D43AC63F186F6187ACDCDF20 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGLKit/Pods-SGLKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5A61B8ECC089DBC103D028 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C23DA3BC016CA4C5098DA682 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SGLKitTouch/Pods-SGLKitTouch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9666FE97F207F39F3CD5461 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1521,43 +1532,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B22685B1C7D11DD00F793E4 /* Sphere.swift in Sources */,
+				3BFD1B8E1C9796FD000C3E90 /* SGLDebug.swift in Sources */,
+				3B192AAB1C9FE89D00E6057B /* SGLUtilities.mm in Sources */,
+				3BFD1B8F1C9796FD000C3E90 /* SGLMath.swift in Sources */,
+				3BFD1B901C9796FD000C3E90 /* Constants.swift in Sources */,
+				3BFD1B911C9796FD000C3E90 /* IVec2.swift in Sources */,
+				3BFD1B921C9796FD000C3E90 /* Vec2.swift in Sources */,
+				3BE51ECA1CB4834600E10A02 /* SGLUtilities.swift in Sources */,
+				3BFD1B931C9796FD000C3E90 /* Vec3.swift in Sources */,
+				3BFD1B941C9796FD000C3E90 /* Vec4.swift in Sources */,
+				3BFD1B951C9796FD000C3E90 /* Mat3.swift in Sources */,
+				3BFD1B961C9796FD000C3E90 /* Mat4.swift in Sources */,
+				3BFD1B971C9796FD000C3E90 /* Tri.swift in Sources */,
+				3BFD1B981C9796FD000C3E90 /* Quad.swift in Sources */,
+				3BFD1B991C9796FD000C3E90 /* Ray.swift in Sources */,
+				3BFD1B9A1C9796FD000C3E90 /* Plane.swift in Sources */,
+				3BFD1B9B1C9796FD000C3E90 /* Sphere.swift in Sources */,
+				3BFD1B9C1C9796FD000C3E90 /* AABB.swift in Sources */,
+				3BFD1B9D1C9796FD000C3E90 /* Conversions.swift in Sources */,
+				3BFD1B9E1C9796FD000C3E90 /* Functions.swift in Sources */,
 				3B22682B1C7D02D500F793E4 /* Functions.mm in Sources */,
-				3B2268311C7D101400F793E4 /* Constants.swift in Sources */,
-				3BD403AD1C799D00007C1D26 /* SGLMath.swift in Sources */,
 				3B9ADF9F1914E5D600B14F9C /* SGLScene.mm in Sources */,
 				3B76991F1905FA1400781FC4 /* SGLVertexBuffer.mm in Sources */,
-				3B2268531C7D11DD00F793E4 /* Mat4.swift in Sources */,
 				3B7699181905FA1400781FC4 /* SGLShader.mm in Sources */,
 				3BD162CE190F3980002F057D /* SGLMeshes.mm in Sources */,
-				3B2268611C7D11DD00F793E4 /* Vec4.swift in Sources */,
-				3B22684F1C7D11DD00F793E4 /* Functions.swift in Sources */,
-				3B2268491C7D11DD00F793E4 /* AABB.swift in Sources */,
 				3B7699121905FA1400781FC4 /* SGLMesh.mm in Sources */,
-				3B22684D1C7D11DD00F793E4 /* Conversions.swift in Sources */,
+				3B76A5281CA01A1A001295EC /* SGLTypes.swift in Sources */,
 				3B7699101905FA1400781FC4 /* SGLIndexBuffer.mm in Sources */,
-				3B2268341C7D10A200F793E4 /* IVec2.swift in Sources */,
-				3B22685D1C7D11DD00F793E4 /* Tri.swift in Sources */,
 				3B76990E1905FA1400781FC4 /* SGLContext.mm in Sources */,
-				3B2268511C7D11DD00F793E4 /* Mat3.swift in Sources */,
 				3B7698F31905F9D600781FC4 /* AQDataExtensions.m in Sources */,
-				3B22683A1C7D11C700F793E4 /* Vec2.swift in Sources */,
-				3B22685F1C7D11DD00F793E4 /* Vec3.swift in Sources */,
 				3B7699141905FA1400781FC4 /* SGLProgram.mm in Sources */,
 				3B76991C1905FA1400781FC4 /* SGLUniform.mm in Sources */,
-				3BFEC2371C8F8EBA006B36EF /* SGLDebug.swift in Sources */,
 				3BF415BA1C78D17E008C1814 /* SGLMacSceneView.mm in Sources */,
-				3B2268551C7D11DD00F793E4 /* Plane.swift in Sources */,
 				3BDA7AA4197C72DB00F85A99 /* SGLDefaults.mm in Sources */,
-				3B2268571C7D11DD00F793E4 /* Quad.swift in Sources */,
 				3B76991A1905FA1400781FC4 /* SGLTexture.mm in Sources */,
-				3B7698F91905F9D600781FC4 /* SGLUtilities.mm in Sources */,
-				3B7699161905FA1400781FC4 /* SGLRenderer.mm in Sources */,
+				3B7699161905FA1400781FC4 /* SGLRenderer.m in Sources */,
 				3BF415C01C78D17E008C1814 /* SGLMacWindowController.mm in Sources */,
 				3BF415BE1C78D17E008C1814 /* SGLMacWindow.mm in Sources */,
 				3BF415BC1C78D17E008C1814 /* SGLMacView.mm in Sources */,
 				3B22682E1C7D048100F793E4 /* Constants.mm in Sources */,
-				3B2268591C7D11DD00F793E4 /* Ray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1598,43 +1611,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B22685C1C7D11DD00F793E4 /* Sphere.swift in Sources */,
+				3BFD1BAF1C979747000C3E90 /* Constants.swift in Sources */,
+				3B192AAA1C9FE89B00E6057B /* SGLUtilities.mm in Sources */,
+				3BFD1B9F1C97971C000C3E90 /* SGLDebug.swift in Sources */,
+				3BFD1BA01C97971C000C3E90 /* SGLMath.swift in Sources */,
+				3BFD1BA11C97971C000C3E90 /* IVec2.swift in Sources */,
+				3BFD1BA21C97971C000C3E90 /* Vec2.swift in Sources */,
+				3BE51ECB1CB4834600E10A02 /* SGLUtilities.swift in Sources */,
+				3BFD1BA31C97971C000C3E90 /* Vec3.swift in Sources */,
+				3BFD1BA41C97971C000C3E90 /* Vec4.swift in Sources */,
+				3BFD1BA51C97971C000C3E90 /* Mat3.swift in Sources */,
+				3BFD1BA61C97971C000C3E90 /* Mat4.swift in Sources */,
+				3BFD1BA71C97971C000C3E90 /* Tri.swift in Sources */,
+				3BFD1BA81C97971C000C3E90 /* Quad.swift in Sources */,
+				3BFD1BA91C97971C000C3E90 /* Ray.swift in Sources */,
+				3BFD1BAA1C97971C000C3E90 /* Plane.swift in Sources */,
+				3BFD1BAB1C97971C000C3E90 /* Sphere.swift in Sources */,
+				3BFD1BAC1C97971C000C3E90 /* AABB.swift in Sources */,
+				3BFD1BAD1C97971C000C3E90 /* Conversions.swift in Sources */,
+				3BFD1BAE1C97971C000C3E90 /* Functions.swift in Sources */,
 				3B22682C1C7D02D500F793E4 /* Functions.mm in Sources */,
-				3B2268321C7D101400F793E4 /* Constants.swift in Sources */,
 				3BF56E511C78E47E00303970 /* SGLIosSceneView.mm in Sources */,
 				3BF56E521C78E47E00303970 /* SGLIosView.mm in Sources */,
 				3BF56E531C78E47E00303970 /* SGLIosViewController.mm in Sources */,
-				3B2268541C7D11DD00F793E4 /* Mat4.swift in Sources */,
 				3BF56E541C78E47E00303970 /* SGLMotionManager.mm in Sources */,
 				3BF56E3D1C78E46100303970 /* SGLContext.mm in Sources */,
-				3B2268621C7D11DD00F793E4 /* Vec4.swift in Sources */,
-				3B2268501C7D11DD00F793E4 /* Functions.swift in Sources */,
-				3B22684A1C7D11DD00F793E4 /* AABB.swift in Sources */,
-				3BF56E3F1C78E46100303970 /* SGLRenderer.mm in Sources */,
-				3B22684E1C7D11DD00F793E4 /* Conversions.swift in Sources */,
+				3B76A5291CA01A1A001295EC /* SGLTypes.swift in Sources */,
+				3BF56E3F1C78E46100303970 /* SGLRenderer.m in Sources */,
 				3BF56E411C78E46100303970 /* SGLScene.mm in Sources */,
-				3B2268351C7D10A200F793E4 /* IVec2.swift in Sources */,
-				3B22685E1C7D11DD00F793E4 /* Tri.swift in Sources */,
 				3BF56E431C78E46100303970 /* SGLMesh.mm in Sources */,
-				3B2268521C7D11DD00F793E4 /* Mat3.swift in Sources */,
 				3BF56E451C78E46100303970 /* SGLProgram.mm in Sources */,
-				3B22683B1C7D11C700F793E4 /* Vec2.swift in Sources */,
-				3B2268601C7D11DD00F793E4 /* Vec3.swift in Sources */,
 				3BF56E471C78E46100303970 /* SGLShader.mm in Sources */,
 				3BF56E491C78E46100303970 /* SGLTexture.mm in Sources */,
-				3BFEC2381C8F8EBA006B36EF /* SGLDebug.swift in Sources */,
 				3BF56E4B1C78E46100303970 /* SGLUniform.mm in Sources */,
-				3B2268561C7D11DD00F793E4 /* Plane.swift in Sources */,
-				3BD403AB1C799818007C1D26 /* SGLMath.swift in Sources */,
-				3B2268581C7D11DD00F793E4 /* Quad.swift in Sources */,
 				3BF56E4E1C78E46100303970 /* SGLVertexBuffer.mm in Sources */,
 				3BF56E501C78E46100303970 /* SGLIndexBuffer.mm in Sources */,
 				3BF56E381C78E45300303970 /* SGLDefaults.mm in Sources */,
-				3BF56E391C78E45400303970 /* SGLUtilities.mm in Sources */,
 				3BF56E3A1C78E45400303970 /* SGLMeshes.mm in Sources */,
 				3BF56E3B1C78E45400303970 /* AQDataExtensions.m in Sources */,
 				3B22682F1C7D048100F793E4 /* Constants.mm in Sources */,
-				3B22685A1C7D11DD00F793E4 /* Ray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1669,16 +1684,6 @@
 			isa = PBXTargetDependency;
 			target = 3BF56E231C78E2FB00303970 /* SGLKitTouch */;
 			targetProxy = 3BF56E311C78E31100303970 /* PBXContainerItemProxy */;
-		};
-		3BFEC23A1C8F98C0006B36EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3BFEC22E1C8E60EA006B36EF /* EncryptFile */;
-			targetProxy = 3BFEC2391C8F98C0006B36EF /* PBXContainerItemProxy */;
-		};
-		3BFEC23C1C8F98C7006B36EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3BFEC22E1C8E60EA006B36EF /* EncryptFile */;
-			targetProxy = 3BFEC23B1C8F98C7006B36EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1798,7 +1803,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SGLKitTestSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTestSwift;
@@ -1806,6 +1811,7 @@
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTestSwift/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1824,12 +1830,13 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SGLKitTestSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTestSwift/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1844,14 +1851,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1880,14 +1892,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1895,20 +1912,22 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
 		3B4BEE6B1905C0D40008D382 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37AF32235D8886230112B1B2 /* Pods-SGLKit.debug.xcconfig */;
+			baseConfigurationReference = 24702055CEFF0CE13573BA16 /* Pods-SGLKit.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKit/SGLKit-Prefix.pch";
@@ -1926,21 +1945,23 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
 		3B4BEE6C1905C0D40008D382 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 291C5AA002AEB331F76F9BE5 /* Pods-SGLKit.release.xcconfig */;
+			baseConfigurationReference = 97688ECDB7CF93FCC8063A29 /* Pods-SGLKit.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKit/SGLKit-Prefix.pch";
@@ -1957,6 +1978,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -1964,12 +1986,12 @@
 		3B4BEE9F1905C1090008D382 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTest/SGLKitTest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1988,12 +2010,12 @@
 		3B4BEEA01905C1090008D382 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTest/SGLKitTest-Prefix.pch";
 				INFOPLIST_FILE = "SGLKitTest/SGLKitTest-Info.plist";
@@ -2008,6 +2030,7 @@
 		3B9ADF8B1914A9F300B14F9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -2015,7 +2038,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTouchTest/SGLKitTouchTest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2023,9 +2046,8 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SGLKitTouchTest/SGLKitTouchTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2038,6 +2060,7 @@
 		3B9ADF8C1914A9F300B14F9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -2045,13 +2068,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SGLKitTouchTest/SGLKitTouchTest-Prefix.pch";
 				INFOPLIST_FILE = "SGLKitTouchTest/SGLKitTouchTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.secretgeometry.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2065,6 +2087,7 @@
 		3BE266F41C62E9AB002271F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -2073,21 +2096,22 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = B55ZL2Y7PW;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SGLKitTouchTestSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouchTestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTouchTestSwift/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2095,6 +2119,7 @@
 		3BE266F51C62E9AB002271F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -2103,18 +2128,19 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = B55ZL2Y7PW;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SGLKitTouchTestSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouchTestSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "SGLKitTouchTestSwift/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2122,20 +2148,21 @@
 		};
 		3BF56E2E1C78E2FB00303970 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70BDC2BFF309F8BDCC70A674 /* Pods-SGLKitTouch.debug.xcconfig */;
+			baseConfigurationReference = D1E15D489B6AE3271F97522D /* Pods-SGLKitTouch.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2145,14 +2172,16 @@
 				);
 				INFOPLIST_FILE = "SGLKit/SGLKitTouch-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_CFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouch;
 				PRODUCT_MODULE_NAME = SGLKit;
 				PRODUCT_NAME = SGLKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2161,20 +2190,21 @@
 		};
 		3BF56E2F1C78E2FB00303970 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84E6455AAB2B63947199B689 /* Pods-SGLKitTouch.release.xcconfig */;
+			baseConfigurationReference = 9C996D728AC8CD8EB74C8FBD /* Pods-SGLKitTouch.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2184,14 +2214,16 @@
 				);
 				INFOPLIST_FILE = "SGLKit/SGLKitTouch-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.secretgeometry.SGLKitTouch;
 				PRODUCT_MODULE_NAME = SGLKit;
 				PRODUCT_NAME = SGLKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2201,7 +2233,7 @@
 		};
 		3BFEC2331C8E60EA006B36EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89CB1774399AFE8BEFF450CD /* Pods-EncryptFile.debug.xcconfig */;
+			baseConfigurationReference = E1833883A62E554E23E1C41C /* Pods-EncryptFile.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
@@ -2219,7 +2251,7 @@
 		};
 		3BFEC2341C8E60EA006B36EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02DBCD19C64A3211891C8728 /* Pods-EncryptFile.release.xcconfig */;
+			baseConfigurationReference = 4EE8406B5C71FE6FA6D8CFB7 /* Pods-EncryptFile.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;

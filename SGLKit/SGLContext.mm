@@ -7,6 +7,7 @@
 #import "SGLTexture.h"
 #import "SGLUtilities.h"
 #import "SGLHeader.h"
+#import "SGLDebug.h"
 
 #ifdef SGL_MAC
     #import <GLUT/GLUT.h>
@@ -16,6 +17,7 @@ static NSRecursiveLock* glLock = nil;
 //static int lockDepth = 0;
 //static NSTimeInterval lockTimes[128] = {0.0};
 
+#pragma mark - Private
 
 @interface SGLContext ()
 
@@ -24,8 +26,11 @@ static NSRecursiveLock* glLock = nil;
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLContext
+
+#pragma mark - Creation
 
 + (void) initialize
 {
@@ -34,49 +39,8 @@ static NSRecursiveLock* glLock = nil;
     #else
         NSLog(@"SGLKit running in RELEASE mode.");
     #endif
-    
+        
     glLock = [[NSRecursiveLock alloc] init];
-    
-    /*
-    #ifndef SGL_IOS_SIMULATOR
-        NSString* sglSourcePath = [@__FILE__ stringByDeletingLastPathComponent];
-        sglSourcePath = [sglSourcePath stringByAppendingPathComponent:@"Shaders"];
-        sglSourcePath = [@"file://" stringByAppendingString:sglSourcePath];
-        [SGLProgram registerSourcePath:sglSourcePath];
-    #endif
-    */
-}
-
-+ (void) checkForErrors
-{
-    GLenum error;
-    
-    do
-    {
-        error = glGetError();
-        SGL_ASSERT(error == GL_NO_ERROR);
-    }
-    while (error != GL_NO_ERROR);
-}
-
-+ (void) lockGL
-{
-    //lockTimes[lockDepth] = NSDate.timeIntervalSinceReferenceDate;
-    //SGL_METHOD_LOG_ARGS(@"%d", lockDepth);
-    //lockDepth++;
-    
-    SGL_ASSERT(glLock != nil);
-    [glLock lock];
-}
-
-+ (void) unlockGL
-{
-    //lockDepth--;
-    //NSTimeInterval duration = NSDate.timeIntervalSinceReferenceDate - lockTimes[lockDepth];
-    //SGL_METHOD_LOG_ARGS(@"%d, %.3f", lockDepth, duration);
-    
-    SGL_ASSERT(glLock != nil);
-    [glLock unlock];
 }
 
 - (id) initWithCocoaContext:(id)cc
@@ -102,29 +66,6 @@ static NSRecursiveLock* glLock = nil;
     return self;
 }
 
-- (const mat4) modelViewMatrix
-{   
-    return _modelViewStack.back();
-}
-
-- (void) setModelViewMatrix:(const mat4)matrix
-{
-    _modelViewStack.back() = matrix;
-}
-
-- (void) setBackfaceCulling:(BOOL)b
-{
-	if (_backfaceCulling == b)
-        return;
-    
-    _backfaceCulling = b;
-    
-    if (_backfaceCulling)
-        glEnable(GL_CULL_FACE);
-    else
-        glDisable(GL_CULL_FACE);
-}
-
 - (void) activate
 {
     #ifdef SGL_MAC
@@ -133,6 +74,40 @@ static NSRecursiveLock* glLock = nil;
     #ifdef SGL_IOS
         EAGLContext.currentContext = self.cocoaContext;
     #endif
+}
+
+#pragma mark - Locking
+
++ (void) lockGL
+{
+    //lockTimes[lockDepth] = NSDate.timeIntervalSinceReferenceDate;
+    //SGL_METHOD_LOG_ARGS(@"%d", lockDepth);
+    //lockDepth++;
+    
+    SGL_ASSERT(glLock != nil);
+    [glLock lock];
+}
+
++ (void) unlockGL
+{
+    //lockDepth--;
+    //NSTimeInterval duration = NSDate.timeIntervalSinceReferenceDate - lockTimes[lockDepth];
+    //SGL_METHOD_LOG_ARGS(@"%d, %.3f", lockDepth, duration);
+    
+    SGL_ASSERT(glLock != nil);
+    [glLock unlock];
+}
+
+#pragma mark - Transform
+
+- (const mat4) modelViewMatrix
+{   
+    return _modelViewStack.back();
+}
+
+- (void) setModelViewMatrix:(const mat4)matrix
+{
+    _modelViewStack.back() = matrix;
 }
 
 - (void) push
@@ -179,6 +154,23 @@ static NSRecursiveLock* glLock = nil;
     self.modelViewMatrix = newMatrix;
 }
 
+#pragma mark - State
+
+- (void) setBackfaceCulling:(BOOL)b
+{
+	if (_backfaceCulling == b)
+        return;
+    
+    _backfaceCulling = b;
+    
+    if (_backfaceCulling)
+        glEnable(GL_CULL_FACE);
+    else
+        glDisable(GL_CULL_FACE);
+}
+
+#pragma mark - Clearing
+
 - (void) clear
 {
     [self clear:TRANSPARENT_BLACK];
@@ -188,6 +180,26 @@ static NSRecursiveLock* glLock = nil;
 {
     glClearColor(color.x, color.y, color.z, color.w);
     glClear(GL_COLOR_BUFFER_BIT);
+}
+
+#pragma mark - Commands
+
++ (void) flushAll
+{
+    glBindFramebuffer(UInt32(GL_FRAMEBUFFER), 0);
+    glFinish();
+}
+
++ (void) checkForErrors
+{
+    GLenum error;
+    
+    do
+    {
+        error = glGetError();
+        SGL_ASSERT(error == GL_NO_ERROR);
+    }
+    while (error != GL_NO_ERROR);
 }
 
 @end

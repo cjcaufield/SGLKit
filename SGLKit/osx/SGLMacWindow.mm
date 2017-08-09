@@ -6,6 +6,7 @@
 #import "SGLMacWindowController.h"
 #import "SGLDebug.h"
 
+#pragma mark - Private
 
 @interface SGLMacWindow ()
 
@@ -17,6 +18,7 @@
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLMacWindow
 
@@ -39,15 +41,88 @@
     return self;
 }
 
-- (void) encodeRestorableStateWithCoder:(NSCoder*)coder
+#pragma mark - Mouse
+
+- (void) sendEvent:(NSEvent*)event
 {
-    [super encodeRestorableStateWithCoder:coder];
+    BOOL isMouseEvent = YES;
+    
+    switch (event.type)
+    {
+        case NSMouseMoved:
+            // Nothing to do, but don't wan't the default case.
+            break;
+            
+        case NSLeftMouseDown:
+        {
+            _mouseDownLoc = NSEvent.mouseLocation;
+            _mouseDownFrame = self.frame;
+            
+            NSRect contentRect = [self contentRectForFrameRect:self.frame];
+            _mouseDownWasOnFrame = (NSPointInRect(_mouseDownLoc, contentRect) == NO);
+            _mouseIsDown = YES;
+            
+            break;
+        }
+            
+        case NSLeftMouseDragged:
+        {
+            if (_mouseDownWasOnFrame)
+            {
+                CGFloat dx = NSEvent.mouseLocation.x - _mouseDownLoc.x;
+                CGFloat dy = NSEvent.mouseLocation.y - _mouseDownLoc.y;
+                
+                if (dx == 0.0 && dy == 0.0)
+                    break;
+                
+                _actualFrame = _mouseDownFrame;
+                _actualFrame.origin.x += dx;
+                _actualFrame.origin.y += dy;
+                [self sendRepositionNotification];
+            }
+            
+            break;
+        }
+            
+        case NSLeftMouseUp:
+            _mouseIsDown = NO;
+            break;
+            
+        case NSRightMouseDown:
+            _rightMouseIsDown = YES;
+            break;
+            
+        case NSRightMouseUp:
+            _rightMouseIsDown = NO;
+            break;
+            
+        case NSOtherMouseDown:
+            _otherMouseIsDown = YES;
+            break;
+            
+        case NSOtherMouseUp:
+            _otherMouseIsDown = NO;
+            break;
+            
+        default:
+            isMouseEvent = NO;
+    }
+    
+    if (isMouseEvent)
+        _timeOfLastMouseInteraction = NSDate.timeIntervalSinceReferenceDate;
+    
+    [super sendEvent:event];
 }
 
-- (void) restoreStateWithCoder:(NSCoder*)coder
+- (NSTimeInterval) timeSinceLastMouseInteraction
 {
-    [super restoreStateWithCoder:coder];
+    if (_mouseIsDown || _rightMouseIsDown || _otherMouseIsDown)
+        return 0.0;
+    
+    return NSDate.timeIntervalSinceReferenceDate - _timeOfLastMouseInteraction;
 }
+
+#pragma mark - Frame
 
 - (void) setFrame:(NSRect)frame display:(BOOL)display
 {
@@ -79,111 +154,14 @@
     [self sendRepositionNotification];
 }
 
-- (void) sendEvent:(NSEvent*)event
-{	
-    BOOL isMouseEvent = YES;
-    
-	switch (event.type)
-	{
-        case NSMouseMoved:
-            // Nothing to do, but don't wan't the default case.
-			break;
-            
-		case NSLeftMouseDown:
-		{
-			_mouseDownLoc = NSEvent.mouseLocation;
-			_mouseDownFrame = self.frame;
-			
-			NSRect contentRect = [self contentRectForFrameRect:self.frame];
-			_mouseDownWasOnFrame = (NSPointInRect(_mouseDownLoc, contentRect) == NO);
-            _mouseIsDown = YES;
-            
-			break;
-		}
-            
-		case NSLeftMouseDragged:
-		{
-			if (_mouseDownWasOnFrame)
-			{
-				CGFloat dx = NSEvent.mouseLocation.x - _mouseDownLoc.x;
-				CGFloat dy = NSEvent.mouseLocation.y - _mouseDownLoc.y;
-				
-                if (dx == 0.0 && dy == 0.0)
-                    break;
-                
-				_actualFrame = _mouseDownFrame;
-				_actualFrame.origin.x += dx;
-				_actualFrame.origin.y += dy;
-                [self sendRepositionNotification];
-			}
-            
-			break;
-		}
-            
-        case NSLeftMouseUp:
-            _mouseIsDown = NO;
-			break;
-            
-        case NSRightMouseDown:
-            _rightMouseIsDown = YES;
-            break;
-            
-        case NSRightMouseUp:
-            _rightMouseIsDown = NO;
-            break;
-            
-        case NSOtherMouseDown:
-            _otherMouseIsDown = YES;
-            break;
-            
-        case NSOtherMouseUp:
-            _otherMouseIsDown = NO;
-            break;
-            
-        default:
-            isMouseEvent = NO;
-	}
-	
-    if (isMouseEvent)
-        _timeOfLastMouseInteraction = NSDate.timeIntervalSinceReferenceDate;
-    
-	[super sendEvent:event];
+- (void) sendRepositionNotification
+{
+    id controller = (id)self.windowController;
+    if ([controller respondsToSelector:@selector(windowDidReposition)])
+        [controller windowDidReposition];
 }
 
-// CJC temp
-/*
-- (BOOL) isOpaque
-{
-    // CJC: I can't figure out why this doesn't work.
-    //return (transparent == NO);
-    
-    // For now, windows are always non-opaque.
-    return NO;
-    
-    // CJC: testing
-    //return YES;
-}
-*/
-
-/*
-- (void) setTransparent:(BOOL)b
-{
-    if (transparent == b)
-        return;
-    
-    transparent = b;
-    
-    //float alpha = (transparent) ? 0.0f : 1.0f;
-    //self.backgroundColor = [NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:alpha];
-    
-    self.backgroundColor = [NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-}
-*/
-
-- (BOOL) isZoomed
-{
-    return NSEqualRects(self.frame, self.zoomedFrame);
-}
+#pragma mark - Sizing
 
 - (void) resizeForContentSize:(NSSize)newSize display:(BOOL)display animate:(BOOL)animate
 {
@@ -210,26 +188,6 @@
     NSRect newFrame = [self makeFrameFitOnScreen:self.frame];
     
     [self setFrame:newFrame display:YES animate:animate];
-}
-
-- (void) zoom:(id)sender
-{
-    NSRect newFrame;
-    
-    BOOL userFrameIsValid = NSEqualRects(_userFrame, NSZeroRect) == NO;
-    
-    // The user can only unzoom if a valid user frame exists.
-    if (self.isZoomed && userFrameIsValid)
-    {
-        newFrame = [self makeFrameFitOnScreen:_userFrame];
-    }
-    else
-    {
-        newFrame  = self.zoomedFrame;
-        _userFrame = self.frame;
-    }
-    
-    [self setFrame:newFrame display:YES animate:NO];
 }
 
 - (NSRect) makeFrameFitOnScreen:(NSRect)frame
@@ -307,24 +265,68 @@
     return newOrigin;
 }
 
+#pragma mark - Zoom
+
+- (void) zoom:(id)sender
+{
+    NSRect newFrame;
+    
+    BOOL userFrameIsValid = NSEqualRects(_userFrame, NSZeroRect) == NO;
+    
+    // The user can only unzoom if a valid user frame exists.
+    if (self.isZoomed && userFrameIsValid)
+    {
+        newFrame = [self makeFrameFitOnScreen:_userFrame];
+    }
+    else
+    {
+        newFrame  = self.zoomedFrame;
+        _userFrame = self.frame;
+    }
+    
+    [self setFrame:newFrame display:YES animate:NO];
+}
+
 - (NSRect) zoomedFrame
 {
     return self.screen.visibleFrame;
 }
 
-- (NSTimeInterval) timeSinceLastMouseInteraction
+- (BOOL) isZoomed
 {
-    if (_mouseIsDown || _rightMouseIsDown || _otherMouseIsDown)
-        return 0.0;
-    
-    return NSDate.timeIntervalSinceReferenceDate - _timeOfLastMouseInteraction;
+    return NSEqualRects(self.frame, self.zoomedFrame);
 }
 
-- (void) sendRepositionNotification
+//#pragma mark - Transparency
+
+// CJC temp
+/*
+- (BOOL) isOpaque
 {
-    id controller = (id)self.windowController;
-    if ([controller respondsToSelector:@selector(windowDidReposition)])
-        [controller windowDidReposition];
+    // CJC: I can't figure out why this doesn't work.
+    //return (transparent == NO);
+    
+    // For now, windows are always non-opaque.
+    return NO;
+    
+    // CJC: testing
+    //return YES;
 }
+*/
+
+/*
+- (void) setTransparent:(BOOL)b
+{
+    if (transparent == b)
+        return;
+    
+    transparent = b;
+    
+    //float alpha = (transparent) ? 0.0f : 1.0f;
+    //self.backgroundColor = [NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:alpha];
+    
+    self.backgroundColor = [NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0];
+}
+*/
 
 @end

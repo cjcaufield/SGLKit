@@ -8,22 +8,22 @@
 
 enum Shape: Int {
     
-    case Sphere = 0
-    case Torus = 1
-    case Cone = 2
-    case Axii = 3
-    case Tetrahedron = 4
-    case Cube = 6
-    case Octahedron = 8
-    case Dodecahedron = 12
-    case Icosahedron = 20
-    case Teapot = 100
+    case sphere = 0
+    case torus = 1
+    case cone = 2
+    case axii = 3
+    case tetrahedron = 4
+    case cube = 6
+    case octahedron = 8
+    case dodecahedron = 12
+    case icosahedron = 20
+    case teapot = 100
 }
 
 
 class View: SGLMacSceneView {
 
-    var shape = Shape.Cube
+    var shape = Shape.cube
     var cubeMesh: SGLMesh?
     var cubeShader: SGLShader?
     
@@ -53,7 +53,7 @@ class View: SGLMacSceneView {
         self.cubeShader = SGLShader(name: "Basic")
         self.cubeShader!.setVec4(color, forName: "color")
         self.cubeShader!.setFloat(32.0, forName: "shininess")
-        self.scene.addSceneShader(self.cubeShader)
+        self.scene.addLitShader(self.cubeShader)
         
         self.cubeMesh = SGLMeshes.cubeMesh()!
     }
@@ -64,10 +64,10 @@ class View: SGLMacSceneView {
         
         switch self.shape {
             
-            case .Axii:
+            case .axii:
                 break;
                 
-            case .Cube:
+            case .cube:
                 self.cubeShader!.activate()
                 self.cubeMesh!.render()
                 
@@ -76,8 +76,8 @@ class View: SGLMacSceneView {
         }
     }
 
-    @IBAction func changeShape(sender: AnyObject?) {
-        if let tag = sender?.tag() {
+    @IBAction func changeShape(_ sender: AnyObject?) {
+        if let tag = sender?.tag {
             if let shape = Shape(rawValue: tag) {
                 self.shape = shape
                 self.window?.windowController?.synchronizeWindowTitleWithDocumentName()

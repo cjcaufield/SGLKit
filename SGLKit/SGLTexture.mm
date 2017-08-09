@@ -26,6 +26,7 @@ inline uint8_t randomUInt8()
     return random() % 256;
 }
 
+#pragma mark - Private
 
 @interface SGLTexture ()
 
@@ -41,18 +42,11 @@ inline uint8_t randomUInt8()
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLTexture
 
-+ (void) deactivateAll
-{
-    for (unsigned int i = 0; i < MAX_NUM_SAMPLERS; i++)
-    {
-        glActiveTexture(GL_TEXTURE0 + i);
-        glDisable(GL_TEXTURE_2D);
-        glDisable(GL_TEXTURE_CUBE_MAP);
-    }
-}
+#pragma mark - Creation
 
 - (id) initWithFilename:(NSString*)filename options:(TextureOptions*)options
 {
@@ -101,7 +95,7 @@ inline uint8_t randomUInt8()
     _size   = vec2(_width, _height);
     
     _textureType       = options->textureType;
-    _sampler           = options->sampler;
+    _sampler           = (int)options->sampler;
     _colorType         = options->colorType;
     _samplingType      = options->samplingType;
     _wrappingType      = options->wrappingType;
@@ -255,10 +249,10 @@ inline uint8_t randomUInt8()
     self = [super init];
     
     _textureType = options->textureType;
-    _width = options->width;
-    _height = options->height;
+    _width = (int)options->width;
+    _height = (int)options->height;
     _size = vec2(_width, _height);
-    _sampler = options->sampler;
+    _sampler = (int)options->sampler;
     _colorType = options->colorType;
     _samplingType = options->samplingType;
     _wrappingType = options->wrappingType;
@@ -431,6 +425,8 @@ inline uint8_t randomUInt8()
     }
 }
 
+#pragma mark - Destruction
+
 - (void) dealloc
 {
     //NSLog(@"Destroying Texture: %d, %d", width, height);
@@ -449,6 +445,8 @@ inline uint8_t randomUInt8()
     if (_canBeRenderTarget)
         glDeleteFramebuffers(1, &_glFboName);
 }
+
+#pragma mark - Mip Levels
 
 - (GLint) mipLevelForSize:(IntSize)givenSize
 {
@@ -486,6 +484,8 @@ inline uint8_t randomUInt8()
     
     return result;
 }
+
+#pragma mark - Types
 
 - (void) setSamplingType:(SamplingType)newType
 {
@@ -533,6 +533,8 @@ inline uint8_t randomUInt8()
     }
 }
 
+#pragma mark - Activation
+
 - (void) activate
 {
     glActiveTexture(GL_TEXTURE0 + _sampler);
@@ -553,6 +555,18 @@ inline uint8_t randomUInt8()
         glTexParameteri(_glType, GL_TEXTURE_MAX_LEVEL,  _maxMipLevel);
     #endif
 }
+
++ (void) deactivateAll
+{
+    for (unsigned int i = 0; i < MAX_NUM_SAMPLERS; i++)
+    {
+        glActiveTexture(GL_TEXTURE0 + i);
+        glDisable(GL_TEXTURE_2D);
+        glDisable(GL_TEXTURE_CUBE_MAP);
+    }
+}
+
+#pragma mark - Writing
 
 - (void) write:(const void*)data
 {
@@ -592,6 +606,8 @@ inline uint8_t randomUInt8()
     
     glTexSubImage2D(_glType, 0, p.x, p.y, s.x, s.y, dataTypeGL, GL_UNSIGNED_BYTE, data);
 }
+
+#pragma mark - Render Target
 
 - (void) becomeRenderTarget
 {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 //
 // IVec2
@@ -26,9 +27,24 @@ extension ivec2: GenericVector {
         self.x = i
         self.y = j
     }
-    
-    public init(v: vec2) {
+    public init(_ v: vec2) {
         self.init(Int32(v.x), Int32(v.y))
+    }
+    
+    public init(_ point: CGPoint) {
+        self.init(Int32(point.x), Int32(point.y))
+    }
+    
+    public init(_ size: CGSize) {
+        self.init(Int32(size.width), Int32(size.height))
+    }
+    
+    func toPoint() -> CGPoint {
+        return CGPoint(x: CGFloat(x), y: CGFloat(y))
+    }
+    
+    func toSize() -> CGSize {
+        return CGSize(width: CGFloat(x), height: CGFloat(y))
     }
     
     subscript(index: Int32) -> Int32 {
@@ -55,7 +71,7 @@ extension ivec2: GenericVector {
         }
     }
     
-    public func at(index: Int32) -> Int32 {
+    public func at(_ index: Int32) -> Int32 {
         return self[index]
     }
     
@@ -67,7 +83,7 @@ extension ivec2: GenericVector {
         return distance(self, ivec2(0))
     }
     
-    public func dot(v: ivec2) -> Float {
+    public func dot(_ v: ivec2) -> Float {
         return Float(self.x * v.x + self.y * v.y)
     }
 }
@@ -116,22 +132,22 @@ public func /(a: ivec2, b: ivec2) -> ivec2 {
 
 // Mutating arithmetic operators.
 
-public func +=(inout a: ivec2, b: ivec2) {
+public func +=(a: inout ivec2, b: ivec2) {
     a.x += b.x
     a.y += b.y
 }
 
-public func -=(inout a: ivec2, b: ivec2) {
+public func -=(a: inout ivec2, b: ivec2) {
     a.x -= b.x
     a.y -= b.y
 }
 
-public func *=(inout a: ivec2, b: ivec2) {
+public func *=(a: inout ivec2, b: ivec2) {
     a.x *= b.x
     a.y *= b.y
 }
 
-public func /=(inout a: ivec2, b: ivec2) {
+public func /=(a: inout ivec2, b: ivec2) {
     a.x /= b.x
     a.y /= b.y
 }

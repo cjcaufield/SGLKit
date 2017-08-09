@@ -31,6 +31,7 @@ static NSCursor* gWhiteIBeamCursor = nil;
 static const NSTimeInterval BACKGROUND_REFRESH_INTERVAL = 1.0 / 2.0;
 static const NSTimeInterval FAKE_TIME_INTERVAL = 0.25 * (1.0 / 60.0);
 
+#pragma mark - Private
 
 @interface SGLMacView ()
 
@@ -47,6 +48,7 @@ static const NSTimeInterval FAKE_TIME_INTERVAL = 0.25 * (1.0 / 60.0);
 
 @end
 
+#pragma mark - Functions
 
 static CVReturn DisplayLinkCallback
 (
@@ -66,51 +68,11 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     return 0.38 * oldAverage + 0.62 * newValue;
 }
 
+#pragma mark - Public
 
 @implementation SGLMacView
 
-+ (NSCursor*) invisibleCursor
-{
-    return gInvisibleCursor;
-}
-
-+ (NSCursor*) whiteIBeamCursor
-{
-    return gWhiteIBeamCursor;
-}
-
-- (NSOpenGLPixelFormat*) sharedPixelFormat
-{
-    if (gSharedPixelFormat == nil)
-    {
-        NSOpenGLPixelFormatAttribute attrs[64];
-        
-        int i = 0;
-        attrs[i++] = NSOpenGLPFADoubleBuffer;
-        attrs[i++] = NSOpenGLPFANoRecovery;
-        attrs[i++] = NSOpenGLPFAAccelerated;
-        //attrs[i++] = NSOpenGLPFAWindow;
-        attrs[i++] = NSOpenGLPFAColorSize;      attrs[i++] = 24;
-        attrs[i++] = NSOpenGLPFAAlphaSize;      attrs[i++] = 8;
-        //attrs[i++] = NSOpenGLPFAOpenGLProfile;  attrs[i++] = NSOpenGLProfileVersion3_2Core;
-        
-        // DEPTH NOT USED YET
-        //attrs[i++] = NSOpenGLPFADepthSize; attrs[i++] = 32;
-        
-        attrs[i++] = 0;
-        
-        gSharedPixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:attrs];
-        SGL_ASSERT(gSharedPixelFormat != nil);
-    }
-    
-    return gSharedPixelFormat;
-}
-
-- (void) createContext
-{
-    self.openGLContext = [[NSOpenGLContext alloc] initWithFormat:gSharedPixelFormat shareContext:gSharedContext];
-    self.openGLContext.view = self;
-}
+#pragma mark - Creation
 
 - (id) initWithFrame:(NSRect)frame
 {
@@ -209,15 +171,100 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     [self killDisplayLink];
 }
 
+#pragma mark - Cocoa Classes
+
+- (NSOpenGLPixelFormat*) sharedPixelFormat
+{
+    if (gSharedPixelFormat == nil)
+    {
+        NSOpenGLPixelFormatAttribute attrs[64];
+        
+        int i = 0;
+        attrs[i++] = NSOpenGLPFADoubleBuffer;
+        attrs[i++] = NSOpenGLPFANoRecovery;
+        attrs[i++] = NSOpenGLPFAAccelerated;
+        //attrs[i++] = NSOpenGLPFAWindow;
+        attrs[i++] = NSOpenGLPFAColorSize;      attrs[i++] = 24;
+        attrs[i++] = NSOpenGLPFAAlphaSize;      attrs[i++] = 8;
+        //attrs[i++] = NSOpenGLPFAOpenGLProfile;  attrs[i++] = NSOpenGLProfileVersion3_2Core;
+        
+        // DEPTH NOT USED YET
+        //attrs[i++] = NSOpenGLPFADepthSize; attrs[i++] = 32;
+        
+        attrs[i++] = 0;
+        
+        gSharedPixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes:attrs];
+        SGL_ASSERT(gSharedPixelFormat != nil);
+    }
+    
+    return gSharedPixelFormat;
+}
+
+- (void) createContext
+{
+    self.openGLContext = [[NSOpenGLContext alloc] initWithFormat:gSharedPixelFormat shareContext:gSharedContext];
+    self.openGLContext.view = self;
+}
+
+#pragma mark - Lifecycle
+
 - (void) awakeFromNib
 {
     SGL_METHOD_LOG;
+}
+
+- (BOOL) acceptsFirstResponder
+{
+    return YES;
+}
+
+- (void) windowWillClose
+{
+    [self killDisplayLink];
+}
+
+#pragma mark - Sizing
+
+- (CGFloat) width
+{
+    return self.bounds.size.width;
+}
+
+- (CGFloat) height
+{
+    return self.bounds.size.height;
+}
+
+- (CGFloat) aspectRatio
+{
+    return self.width / self.height;
 }
 
 - (float) pixelDensity
 {
     return [self convertSizeToBacking:CGSizeMake(1.0, 1.0)].width;
 }
+
+- (void) reshape
+{
+    [self lockContext];
+    
+    [self.openGLContext makeCurrentContext];
+    [self.openGLContext update];
+    
+    NSRect backingRect = [self convertRectToBacking:self.bounds];
+    
+    glViewport(0, 0, int(backingRect.size.width), int(backingRect.size.height));
+    
+    [self unlockContext];
+}
+
+- (void) reposition
+{
+    // nothing.
+}
+
+#pragma mark - Rendering
 
 - (void) prepareOpenGL
 {
@@ -230,13 +277,13 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     _context = [[SGLContext alloc] initWithCocoaContext:self.openGLContext];
     _timeOfLastFrame = NSDate.timeIntervalSinceReferenceDate;
     
-    // Synchronize buffer swaps with vertical refresh rate.  This prevents tearing, even with double buffers.
+        // Synchronize buffer swaps with vertical refresh rate.  This prevents tearing, even with double buffers.
     #ifdef SYNC_WITH_SCREEN_REFRESH
         GLint swap = 1;
         [self.openGLContext setValues:&swap forParameter:NSOpenGLCPSwapInterval];
     #endif
-    
-    // 
+        
+        //
     #ifdef USE_TRANSPARENCY
         GLint opacity = 0;
         [self.openGLContext setValues:&opacity forParameter:NSOpenGLCPSurfaceOpacity];
@@ -279,32 +326,46 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
 }
 */
 
-- (CGFloat) width
+- (void) update
 {
-    return self.bounds.size.width;
+    [self lockContext];
+    [super update];
+    [self unlockContext];
 }
 
-- (CGFloat) height
+- (void) update:(double)seconds
 {
-    return self.bounds.size.height;
-}
-
-- (CGFloat) aspectRatio
-{
-    return self.width / self.height;
-}
-
-- (BOOL) shouldRenderContinuously
-{
-    return YES;
-}
-
-- (void) setRenderingQuality:(int)quality
-{
-    _renderingQuality = quality;
+    _elapsedTime += seconds;
     
-    if (self.shouldRenderContinuously == NO)
-        self.needsDisplay = YES;
+    if (_highQualityBackgroundWindows)
+    {
+        _timeEffectsLevel = 1.0;
+    }
+    else
+    {
+        if (self.window.isMainWindow)
+        {
+            float newTimeEffectsLevel = _timeEffectsLevel + FOCUS_IN_SPEED * seconds;
+            
+            if (newTimeEffectsLevel > 1.0)
+                newTimeEffectsLevel = 1.0;
+            if (newTimeEffectsLevel < 0.0)
+                newTimeEffectsLevel = 0.0;
+            
+            _timeEffectsLevel = newTimeEffectsLevel;
+        }
+        else
+        {
+            float newTimeEffectsLevel = _timeEffectsLevel - FOCUS_OUT_SPEED * seconds;
+            
+            if (newTimeEffectsLevel > 1.0)
+                newTimeEffectsLevel = 1.0;
+            if (newTimeEffectsLevel < 0.0)
+                newTimeEffectsLevel = 0.0;
+            
+            _timeEffectsLevel = newTimeEffectsLevel;
+        }
+    }
 }
 
 - (void) drawRect:(NSRect)rect
@@ -362,47 +423,20 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     [self unlockContext];
 }
 
-- (void) update:(double)seconds
+- (BOOL) shouldRenderContinuously
 {
-    _elapsedTime += seconds;
-    
-    if (_highQualityBackgroundWindows)
-    {
-        _timeEffectsLevel = 1.0;
-    }
-    else
-    {
-        if (self.window.isMainWindow)
-        {
-            float newTimeEffectsLevel = _timeEffectsLevel + FOCUS_IN_SPEED * seconds;
-            
-            if (newTimeEffectsLevel > 1.0)
-                newTimeEffectsLevel = 1.0;
-            if (newTimeEffectsLevel < 0.0)
-                newTimeEffectsLevel = 0.0;
-            
-            _timeEffectsLevel = newTimeEffectsLevel;
-        }
-        else
-        {
-            float newTimeEffectsLevel = _timeEffectsLevel - FOCUS_OUT_SPEED * seconds;
-            
-            if (newTimeEffectsLevel > 1.0)
-                newTimeEffectsLevel = 1.0;
-            if (newTimeEffectsLevel < 0.0)
-                newTimeEffectsLevel = 0.0;
-            
-            _timeEffectsLevel = newTimeEffectsLevel;
-        }
-    }
+    return YES;
 }
 
-- (void) update
+- (void) setRenderingQuality:(int)quality
 {
-    [self lockContext];
-    [super update];
-    [self unlockContext];
+    _renderingQuality = quality;
+    
+    if (self.shouldRenderContinuously == NO)
+        self.needsDisplay = YES;
 }
+
+#pragma mark - Display Link
 
 // This is the entry point for the display link rendering thread.  It's called after each vsync.
 - (CVReturn) getFrameForTime:(const CVTimeStamp*)outputTime
@@ -448,6 +482,33 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     return kCVReturnSuccess;
 }
 
+- (void) startDisplayLink
+{
+    CVDisplayLinkStart(_displayLink);
+}
+
+/*
+- (void) stopDisplayLink
+{
+    CVDisplayLinkStop(_displayLink);
+}
+*/
+
+- (void) killDisplayLink
+{
+    [self lockContext];
+    _isPrepared = NO;
+    [self unlockContext];
+    
+    if (_displayLink != nil)
+    {
+        CVDisplayLinkRelease(_displayLink);
+        _displayLink = nil;
+    }
+}
+
+#pragma mark - Text
+
 - (void) drawText:(NSString*)text
 {
     [self drawTextLines:@[text]];
@@ -478,15 +539,26 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     //[_context restoreMatrices];
 }
 
+#pragma mark - Shaders
+
+- (IBAction) reloadShaders:(id)sender
+{
+    #ifdef DEBUG
+        
+        [self lockContext];
+        [SGLShader reloadAll];
+        [self shadersDidReload];
+        [self unlockContext];
+        
+    #endif
+}
+
 - (void) shadersDidReload
 {
     // nothing.
 }
 
-- (void) windowWillClose
-{
-    [self killDisplayLink];
-}
+#pragma mark - Locking
 
 - (void) lockContext
 {
@@ -501,30 +573,7 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     [SGLContext unlockGL];
 }
 
-- (void) startDisplayLink
-{
-    CVDisplayLinkStart(_displayLink);
-}
-
-/*
-- (void) stopDisplayLink
-{
-    CVDisplayLinkStop(_displayLink);
-}
-*/
-
-- (void) killDisplayLink
-{
-    [self lockContext];
-    _isPrepared = NO;
-    [self unlockContext];
-    
-    if (_displayLink != nil)
-    {
-        CVDisplayLinkRelease(_displayLink);
-        _displayLink = nil;
-    }
-}
+#pragma mark - Rendering
 
 - (void) render
 {
@@ -546,28 +595,16 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     [self drawTextLines:lines];
 }
 
-- (void) reshape
-{
-    [self lockContext];
+#pragma mark - Cursor
 
-    [self.openGLContext makeCurrentContext];
-    [self.openGLContext update];
-    
-    NSRect backingRect = [self convertRectToBacking:self.bounds];
-    
-    glViewport(0, 0, int(backingRect.size.width), int(backingRect.size.height));
-    
-    [self unlockContext];
++ (NSCursor*) invisibleCursor
+{
+    return gInvisibleCursor;
 }
 
-- (void) reposition
++ (NSCursor*) whiteIBeamCursor
 {
-    // nothing.
-}
-
-- (BOOL) acceptsFirstResponder
-{
-    return YES;
+    return gWhiteIBeamCursor;
 }
 
 - (void) updateTrackingAreas
@@ -630,17 +667,7 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
 
 #endif // USE_TRACKING_AREA
 
-- (IBAction) reloadShaders:(id)sender
-{
-    #ifdef DEBUG
-    
-        [self lockContext];
-        [SGLShader reloadAll];
-        [self shadersDidReload];
-        [self unlockContext];
-        
-    #endif
-}
+#pragma mark - Capabilities
 
 - (void) checkGLCapabilities
 {
@@ -663,7 +690,7 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
 	// iMac	   2006-2007
 	
 	if (strstr((char*)renderer, "Intel GMA 950") != NULL)
-        ExitGracefully(@"Your graphics card (Intel GMA 950) is not supported.");
+        [SGLUtilities exitGracefullyWithMessage:@"Your graphics card (Intel GMA 950) is not supported."];
 	
 	// Intel GMA X3100
 	// Unsupported: Breaks frequently.  Renders slowly.
@@ -672,7 +699,7 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
 	
     #ifndef ALLOW_INTEL_GMA_X3100
         if (strstr((char*)renderer, "X3100") != NULL)
-            ExitGracefully(@"Your graphics card (Intel GMA X3100) is not supported.");
+            [SGLUtilities exitGracefullyWithMessage:@"Your graphics card (Intel GMA X3100) is not supported."];
     #endif
 	
 	// ATI Mobility Radeon X1600
@@ -684,14 +711,14 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
 	// iMac 2006-2007
 	
 	if (strstr((char*)renderer, "X1600") != NULL)
-        ExitGracefully(@"Your graphics card (ATI Radeon X1600) is not supported.");
+        [SGLUtilities exitGracefullyWithMessage:@"Your graphics card (ATI Radeon X1600) is not supported."];
 	
 	// ATI Radeon X1900 XT
 	// Unsupported: Red frame box.
 	// MacPro 2006-2007
 	
 	if (strstr((char*)renderer, "X1900") != NULL)
-        ExitGracefully(@"Your graphics card (ATI Radeon X1900 XT) is not supported.");
+        [SGLUtilities exitGracefullyWithMessage:@"Your graphics card (ATI Radeon X1900 XT) is not supported."];
 	
 	// NVIDIA Quadro FX 4500
 	// Supported: Characters are shifted.
@@ -779,13 +806,13 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     //int minorVersion = version[2] - '0';
     
     if (majorVersion < 2)
-        ExitGracefully(@"OpenGL 2.0 or later is required.");
+        [SGLUtilities exitGracefullyWithMessage:@"OpenGL 2.0 or later is required."];
     
     int glslMajorVersion = glslVersion[0] - '0';
     //int glslMinorVersion = glslVersion[2] - '0';
     
     if (10 * glslMajorVersion + glslMajorVersion < 11)
-        ExitGracefully(@"GLSL 1.1 or later is required.");
+        [SGLUtilities exitGracefullyWithMessage:@"GLSL 1.1 or later is required."];
     
     //
     // Textures.
@@ -800,7 +827,7 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
     NSLog(@"Max Texture Image Units: %d", maxTextureImageUnits);
     
     if (/*maxTextureUnits < 8 ||*/ maxTextureImageUnits < 8)
-        ExitGracefully(@"A GPU with at least eight texture units is required.");
+        [SGLUtilities exitGracefullyWithMessage:@"A GPU with at least eight texture units is required."];
     
     //
     // Extensions.
@@ -811,10 +838,10 @@ NSTimeInterval smoothAdd(NSTimeInterval oldAverage, NSTimeInterval newValue)
         const GLubyte* extensions = glGetString(GL_EXTENSIONS);
         
         if (strstr((char*)extensions, "GL_ARB_framebuffer_object") == NULL)
-            ExitGracefully(@"The OpenGL framebuffer extension is required.");
+            [SGLUtilities exitGracefullyWithMessage:@"The OpenGL framebuffer extension is required."];
         
         //if (strstr((char*)extensions, "GL_EXT_framebuffer_object") == NULL)
-        //    ExitGracefully(@"The OpenGL framebuffer extension is required.");
+        //    [SGLUtilities exitGracefullyWithMessage:@"The OpenGL framebuffer extension is required.");
         
         //NSLog(@"Extensions: %s", extensions);
     

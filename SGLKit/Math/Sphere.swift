@@ -27,11 +27,11 @@ extension sphere {
         return 2.0 * Float(PI) * self.radius
     }
     
-    public func contains(point: vec3) -> Bool {
+    public func contains(_ point: vec3) -> Bool {
         return distancesqrd(self.center, point) <= self.radius * self.radius
     }
     
-    public func convertSphereCoordsToCartesian(coords: vec2) -> vec3 {
+    public func convertSphereCoordsToCartesian(_ coords: vec2) -> vec3 {
         
         // Find the point on the sphere when it's at the origin.
         let angles = convertSphereCoordsToEuler(coords)
@@ -46,7 +46,7 @@ extension sphere {
         return vec3(x, y, z) + self.center
     }
     
-    public func convertSphereCoordsToEuler(coords: vec2) -> vec2 {
+    public func convertSphereCoordsToEuler(_ coords: vec2) -> vec2 {
         return vec2(-coords.x / radius, +coords.y / radius)
     }
 }

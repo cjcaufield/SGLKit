@@ -8,7 +8,7 @@
 
 import Foundation
 
-public func intersect(r: ray, s: sphere, sphereAspect: Float, inout intersectPos: vec3) -> Bool
+public func intersect(_ r: ray, s: sphere, sphereAspect: Float, intersectPos: inout vec3) -> Bool
 {
     var theray = r
     var thesphere = s
@@ -84,7 +84,7 @@ public func intersect(r: ray, s: sphere, sphereAspect: Float, inout intersectPos
     return true
 }
 
-public func intersects(aray: ray, _ atri: tri) -> Bool
+public func intersects(_ aray: ray, _ atri: tri) -> Bool
 {
     // Calculate the triangle's edge vectors and normal.
     
@@ -149,7 +149,7 @@ public func intersects(aray: ray, _ atri: tri) -> Bool
     return true
 }
 
-public func intersects(r: ray, q: quad) -> Bool {
+public func intersects(_ r: ray, q: quad) -> Bool {
     
     // There are better methods, but this is the easiest for now.
     

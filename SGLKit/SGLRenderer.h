@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSArray* dependents;
 @property (nonatomic) NSTimeInterval timeOfLastDraw;
 @property (nonatomic) BOOL needsDisplay;
-@property (nonatomic) int renderingQuality;
+@property (nonatomic) unsigned int renderingQuality;
 @property (nonatomic) float timeEffectsLevel;
 @property (nonatomic) SGLMesh* mesh;
 @property (nonatomic) SGLShader* shader;

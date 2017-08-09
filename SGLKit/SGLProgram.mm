@@ -26,6 +26,8 @@ static BOOL gShouldLoadShadersFromProject = NO;
     #define LOAD_SHADERS_FROM_PROJECT
 #endif
 
+#pragma mark - Private
+
 @interface SGLProgram ()
 
 @property (nonatomic) unsigned int vertexShader;
@@ -33,8 +35,11 @@ static BOOL gShouldLoadShadersFromProject = NO;
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLProgram
+
+#pragma mark - Configuration
 
 + (void) registerBundle:(NSBundle*)bundle
 {
@@ -58,6 +63,8 @@ static BOOL gShouldLoadShadersFromProject = NO;
     
     gShaderEncryptionPassword = password;
 }
+
+#pragma mark - Loading
 
 + (SGLProgram*) programNamed:(NSString*)name
 {
@@ -259,6 +266,8 @@ static BOOL gShouldLoadShadersFromProject = NO;
     return mergedSource;
 }
 
+#pragma mark - Creation
+
 - (id) initWithName:(NSString*)name
 {
     return [self initWithName:name defines:@[]];
@@ -278,18 +287,6 @@ static BOOL gShouldLoadShadersFromProject = NO;
     [self reload];
     
     return self;
-}
-
-- (void) dealloc
-{
-    glDeleteShader(_vertexShader);
-    glDeleteShader(_fragmentShader);
-    glDeleteProgram(_glName);
-}
-
-+ (void) deleteAll
-{
-    [sharedPrograms removeAllObjects];
 }
 
 + (void) reloadAll
@@ -313,18 +310,34 @@ static BOOL gShouldLoadShadersFromProject = NO;
     [self compile];
 }
 
+- (void) activate
+{
+    SGL_ASSERT(glIsProgram(_glName));
+    glUseProgram(_glName);
+}
+
+#pragma mark - Destruction
+
+- (void) dealloc
+{
+    glDeleteShader(_vertexShader);
+    glDeleteShader(_fragmentShader);
+    glDeleteProgram(_glName);
+}
+
++ (void) deleteAll
+{
+    [sharedPrograms removeAllObjects];
+}
+
+#pragma mark - Compilation
+
 - (void) compile
 {
     [self compileVertexSource];
     [self compileFragmentSource];
     [self link];
     [self createUniforms];
-}
-
-- (void) activate
-{
-    SGL_ASSERT(glIsProgram(_glName));
-    glUseProgram(_glName);
 }
 
 - (void) compileVertexSource
@@ -392,6 +405,8 @@ static BOOL gShouldLoadShadersFromProject = NO;
     
     return shader;
 }
+
+#pragma mark - Linking
 
 - (BOOL) link
 {

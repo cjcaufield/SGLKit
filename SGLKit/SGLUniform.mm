@@ -14,6 +14,7 @@
 #import "SGLDebug.h"
 #import "SGLHeader.h"
 
+#pragma mark - Base
 
 @implementation SGLUniform
 
@@ -64,6 +65,7 @@
 
 @end
 
+#pragma mark - Float
 
 @implementation SGLFloatUniform
 
@@ -104,6 +106,7 @@
 
 @end
 
+#pragma mark - Vec2
 
 @implementation SGLVec2Uniform
 
@@ -151,6 +154,7 @@
 
 @end
 
+#pragma mark - Vec3
 
 @implementation SGLVec3Uniform
 
@@ -199,6 +203,7 @@
 
 @end
 
+#pragma mark - Vec4
 
 @implementation SGLVec4Uniform
 
@@ -248,6 +253,7 @@
 
 @end
 
+#pragma mark - Mat3
 
 @implementation SGLMat3Uniform
 
@@ -298,6 +304,7 @@
 
 @end
 
+#pragma mark - Mat4
 
 @implementation SGLMat4Uniform
 
@@ -349,6 +356,7 @@
 
 @end
 
+#pragma mark - Texture
 
 @implementation SGLTextureUniform
 

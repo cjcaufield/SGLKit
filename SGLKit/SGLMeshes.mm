@@ -13,6 +13,8 @@
 
 @implementation SGLMeshes
 
+#pragma mark - Quad Meshes
+
 + (SGLMesh*) quadMesh
 {
     static GLfloat vertexData[] =
@@ -105,6 +107,54 @@
                               indexCount:0];
 }
 
+#pragma mark - Other Meshes
+
++ (SGLMesh*) lineMesh
+{
+    static GLfloat vertexData[] =
+    {
+        // position.xyz     // color.rgb
+        
+        0.0f, 0.0f, 0.0f,   1.0f,  1.0f,  1.0f,
+        1.0f, 1.0f, 1.0f,   1.0f,  1.0f,  1.0f,
+    };
+    
+    NSArray* attrs = @[ @(POSITIONS), @(RGBACOLORS) ];
+    
+    return [[SGLMesh alloc] initWithMode:MeshMode_Lines
+                              vertexData:vertexData
+                        vertexAttributes:attrs
+                             vertexCount:sizeof(vertexData) / (sizeof(GLfloat) * 6)
+                               indexData:nil
+                              indexCount:0];
+}
+
++ (SGLMesh*) axiiMesh
+{
+    static GLfloat vertexData[] =
+    {
+        // position.xyz     // color.rgb
+        
+        0.0f, 0.0f, 0.0f,   1.0f,  0.0f,  0.0f,
+        1.0f, 0.0f, 0.0f,   1.0f,  0.0f,  0.0f,
+        
+        0.0f, 0.0f, 0.0f,   0.0f,  1.0f,  0.0f,
+        0.0f, 1.0f, 0.0f,   0.0f,  1.0f,  0.0f,
+        
+        0.0f, 0.0f, 0.0f,   0.0f,  0.0f,  1.0f,
+        0.0f, 0.0f, 1.0f,   0.0f,  0.0f,  1.0f,
+    };
+    
+    NSArray* attrs = @[ @(POSITIONS), @(RGBACOLORS) ];
+    
+    return [[SGLMesh alloc] initWithMode:MeshMode_Lines
+                              vertexData:vertexData
+                        vertexAttributes:attrs
+                             vertexCount:sizeof(vertexData) / (sizeof(GLfloat) * 6)
+                               indexData:nil
+                              indexCount:0];
+}
+
 + (SGLMesh*) cubeMesh
 {
     static GLfloat vertexData[] =
@@ -156,52 +206,6 @@
     NSArray* attrs = @[ @(POSITIONS), @(NORMALS) ];
     
     return [[SGLMesh alloc] initWithMode:MeshMode_Triangles
-                              vertexData:vertexData
-                        vertexAttributes:attrs
-                             vertexCount:sizeof(vertexData) / (sizeof(GLfloat) * 6)
-                               indexData:nil
-                              indexCount:0];
-}
-
-+ (SGLMesh*) axiiMesh
-{
-    static GLfloat vertexData[] =
-    {
-        // position.xyz     // color.rgb
-        
-        0.0f, 0.0f, 0.0f,   1.0f,  0.0f,  0.0f,
-        1.0f, 0.0f, 0.0f,   1.0f,  0.0f,  0.0f,
-        
-        0.0f, 0.0f, 0.0f,   0.0f,  1.0f,  0.0f,
-        0.0f, 1.0f, 0.0f,   0.0f,  1.0f,  0.0f,
-        
-        0.0f, 0.0f, 0.0f,   0.0f,  0.0f,  1.0f,
-        0.0f, 0.0f, 1.0f,   0.0f,  0.0f,  1.0f,
-    };
-    
-    NSArray* attrs = @[ @(POSITIONS), @(RGBACOLORS) ];
-    
-    return [[SGLMesh alloc] initWithMode:MeshMode_Lines
-                              vertexData:vertexData
-                        vertexAttributes:attrs
-                             vertexCount:sizeof(vertexData) / (sizeof(GLfloat) * 6)
-                               indexData:nil
-                              indexCount:0];
-}
-    
-+ (SGLMesh*) lineMesh
-{
-    static GLfloat vertexData[] =
-    {
-        // position.xyz     // color.rgb
-        
-        0.0f, 0.0f, 0.0f,   1.0f,  1.0f,  1.0f,
-        1.0f, 1.0f, 1.0f,   1.0f,  1.0f,  1.0f,
-    };
-    
-    NSArray* attrs = @[ @(POSITIONS), @(RGBACOLORS) ];
-    
-    return [[SGLMesh alloc] initWithMode:MeshMode_Lines
                               vertexData:vertexData
                         vertexAttributes:attrs
                              vertexCount:sizeof(vertexData) / (sizeof(GLfloat) * 6)

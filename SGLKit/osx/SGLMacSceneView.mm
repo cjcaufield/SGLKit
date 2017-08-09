@@ -16,6 +16,8 @@
 
 @implementation SGLMacSceneView
 
+#pragma mark - Creation
+
 - (id) initWithFrame:(NSRect)frame
 {
     self = [super initWithFrame:frame];
@@ -44,6 +46,22 @@
     [self removeObservers];
 }
 
+#pragma mark - Observers
+
+- (void) addObservers
+{
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(sceneChanged:) name:SGLSceneNeedsDisplayNotification object:nil];
+}
+
+- (void) removeObservers
+{
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self name:SGLSceneNeedsDisplayNotification object:nil];
+}
+
+#pragma mark - Rendering
+
 - (void) openGLWasPrepared
 {
     [self addObservers];
@@ -58,16 +76,25 @@
     [super openGLWasPrepared];
 }
 
-- (void) addObservers
+- (void) update:(double)seconds
 {
-    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(sceneChanged:) name:SGLSceneNeedsDisplayNotification object:nil];
+    [super update:seconds];
+    
+    [_scene update:seconds];
 }
 
-- (void) removeObservers
+- (void) render
 {
-    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-    [center removeObserver:self name:SGLSceneNeedsDisplayNotification object:nil];
+    [super render];
+    
+    [_scene render];
+}
+
+- (void) renderOverlay
+{
+    [super renderOverlay];
+    
+    [self drawTextLines:_scene.overlayText];
 }
 
 - (void) requestRedisplay
@@ -75,6 +102,15 @@
     if (self.shouldRenderContinuously == NO)
         self.forceNextFrameToRender = YES;
 }
+
+- (void) setRenderingQuality:(int)quality
+{
+    super.renderingQuality = quality;
+    
+    _scene.renderingQuality = quality;
+}
+
+#pragma mark - Changes
 
 - (void) sceneChanged:(NSNotification*)note
 {
@@ -91,17 +127,17 @@
     NSRect actualFrame = [window contentRectForFrameRect:windowFrame];
     
     //vec2 screenOrigin = PointToVec2(screen.frame.origin);
-    vec2 screenSize = SizeToVec2(screen.frame.size);
+    vec2 screenSize = vec2(screen.frame.size);
     
-    _actualFrameOrigin = PointToVec2(actualFrame.origin);
-    _actualFrameSize = SizeToVec2(actualFrame.size);
+    _actualFrameOrigin = vec2(actualFrame.origin);
+    _actualFrameSize = vec2(actualFrame.size);
     
     _actualFrameOrigin.x -= screen.frame.origin.x;
     _actualFrameOrigin.y -= screen.frame.origin.y;
     
     vec2 originOffset = _actualFrameOrigin - 0.5 * screenSize; // - screenOrigin;
     vec2 centerOffset = originOffset + 0.5 * _actualFrameSize;
-    vec2 viewSize = SizeToVec2(self.frame.size);
+    vec2 viewSize = vec2(self.frame.size);
     
     [_scene setOriginOffset:originOffset
                centerOffset:centerOffset
@@ -110,6 +146,8 @@
     
     _scene.viewUsedRect = self.frame;
 }
+
+#pragma mark - Sizing
 
 - (void) reposition
 {
@@ -123,26 +161,12 @@
     [self transformWasChanged];
 }
 
-- (void) update:(double)seconds
+- (IBAction) resetCamera:(id)sender
 {
-    [super update:seconds];
-    
-    [_scene update:seconds];
+    [_scene resetCamera];
 }
 
-- (void) renderOverlay
-{
-    [super renderOverlay];
-    
-    [self drawTextLines:_scene.overlayText];
-}
-
-- (void) render
-{
-    [super render];
-    
-    [_scene render];
-}
+#pragma mark - Gestures
 
 - (void) scrollWheel:(NSEvent*)event
 {
@@ -167,18 +191,6 @@
         vec2 offset = 0.01f * vec2(event.deltaX, -event.deltaY);
         [_scene rotateCamera:offset];
     }
-}
-
-- (IBAction) resetCamera:(id)sender
-{
-    [_scene resetCamera];
-}
-
-- (void) setRenderingQuality:(int)quality
-{
-    super.renderingQuality = quality;
-    
-    _scene.renderingQuality = quality;
 }
 
 @end

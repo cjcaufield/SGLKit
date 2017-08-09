@@ -10,25 +10,25 @@ import UIKit
 
 enum Shape: Int
 {
-    case SPHERE = 0
-    case TORUS = 1
-    case CONE = 2
-    case AXII = 3
-    case TETRAHEDRON = 4
-    case CUBE = 6
-    case OCTAHEDRON = 8
-    case DODECAHEDRON = 12
-    case ICOSAHEDRON = 20
-    case TEAPOT = 100
+    case sphere = 0
+    case torus = 1
+    case cone = 2
+    case axii = 3
+    case tetrahedron = 4
+    case cube = 6
+    case octahedron = 8
+    case dodecahedron = 12
+    case icosahedron = 20
+    case teapot = 100
 }
 
 class ViewController: SGLIosViewController {
     
-    var shape = Shape.CUBE
+    var shape = Shape.cube
     var shader: SGLShader!
     var cubeMesh: SGLMesh!
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
 
@@ -36,14 +36,14 @@ class ViewController: SGLIosViewController {
         
         super.setupGL()
         
-        let color = vec4(1.0, 0.0, 0.0, 1.0)
+        let color = vec4(1.0, 1.0, 1.0, 1.0)
         
         self.shader = SGLShader(name: "Basic")
         self.shader.setVec4(color, forName: "color")
         self.shader.setFloat(32.0, forName: "shininess")
         
         let scene = (self.view as! View).scene
-        scene.addSceneShader(self.shader)
+        scene?.addLitShader(self.shader)
         
         self.cubeMesh = SGLMeshes.cubeMesh()
     }
@@ -56,10 +56,10 @@ class ViewController: SGLIosViewController {
         
         switch self.shape {
         
-            case .AXII:
+            case .axii:
                 break
                 
-            case .CUBE:
+            case .cube:
                 self.shader.activate()
                 self.cubeMesh.render()
                 
@@ -69,12 +69,12 @@ class ViewController: SGLIosViewController {
         
         // CJC: hack to still show axes with render method override.
         let scene = (self.view as! View).scene
-        if scene.showAxes {
-            scene.renderAxes()
+        if (scene?.showAxes)! {
+            scene?.renderAxes()
         }
     }
 
-    @IBAction func changeShape(sender: AnyObject?) {
+    @IBAction func changeShape(_ sender: AnyObject?) {
         if let tag = sender?.tag {
             if let shape = Shape(rawValue: tag) {
                 self.shape = shape

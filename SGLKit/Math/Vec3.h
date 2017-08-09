@@ -32,7 +32,30 @@ typedef struct vec3
         vec3(vec2 v, float k) : x(v.x), y(v.y), z(k) {}
         
         explicit vec3(const vec4& v);
-        
+    
+        vec3(NSArray* array)
+        {
+            x = [array[0] floatValue];
+            y = [array[1] floatValue];
+            z = [array[2] floatValue];
+        }
+    
+        vec3(XXColor* color);
+    
+        NSArray* toArray(vec3 v)
+        {
+            id nx = @(v.x);
+            id ny = @(v.y);
+            id nz = @(v.z);
+            
+            return @[nx, ny, nz, @1.0f];
+        }
+    
+        XXColor* toColor(vec3 v)
+        {
+            return [XXColor colorWithRed:v.x green:v.y blue:v.z alpha:1.0];
+        }
+    
         float& at(int i)
         {
             switch (i)

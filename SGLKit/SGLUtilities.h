@@ -16,47 +16,38 @@
     #include <vector>
 #endif
 
-void SGLCheckForErrors();
+//
+// Helpful methods.
+//
+
+@interface SGLUtilities : NSObject
+
++ (void) checkForErrors;
 
 #ifdef SGL_MAC
-    void ExitGracefully(NSString* message);
+    + (void) exitGracefullyWithMessage:(NSString*)message;
 #endif
 
-void SwapTextures(__strong SGLTexture** tex1, __strong SGLTexture** tex2);
++ (void) swapTexture:(__strong SGLTexture**)tex1 with:(__strong SGLTexture**)tex2;
 
-void DrawTexture(SGLTexture* tex, vec2 outputSize, SamplingType samplingType);
++ (void) drawTexture:(SGLTexture*)tex outputSize:(vec2)size samplingType:(SamplingType)type;
+
+@end
 
 #ifdef __cplusplus
+
+    //
+    // Equality operators for common Cocoa structs.
+    //
 
     bool operator==(const NSRange& a, const NSRange& b);
     bool operator==(const CGPoint& a, const CGPoint& b);
     bool operator==(const CGSize& a, const CGSize& b);
     bool operator==(const CGRect& a, const CGRect& b);
 
-#endif
-
-CGPoint Vec2ToPoint(vec2 vec);
-vec2 PointToVec2(CGPoint point);
-
-CGPoint IVec2ToPoint(ivec2 vec);
-ivec2 PointToIVec2(CGPoint size);
-
-CGSize Vec2ToSize(vec2 vec);
-vec2 SizeToVec2(CGSize size);
-
-CGSize IVec2ToSize(ivec2 vec);
-ivec2 SizeToIVec2(CGSize size);
-
-NSArray* Vec3ToArray(vec3 vec);
-vec3 ArrayToVec3(NSArray* array);
-
-XXColor* Vec3ToColor(vec3 vec);
-vec3 ColorToVec3(XXColor* color);
-
-XXColor* Vec4ToColor(vec4 vec);
-vec4 ColorToVec4(XXColor* color);
-
-#ifdef __cplusplus
+    //
+    // Array and Vector conversions to NSData.
+    //
 
     template <typename T, int N>
     NSData* CArrayToData(T (&array)[N])
@@ -73,6 +64,10 @@ vec4 ColorToVec4(XXColor* color);
     }
 
 #endif
+
+//
+// Add objects to arrays while preventing duplicates.
+//
 
 @interface NSMutableArray (Unique)
 

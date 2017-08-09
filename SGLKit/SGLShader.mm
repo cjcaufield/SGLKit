@@ -18,6 +18,8 @@ static NSMutableArray* gAllShaders = nil;
 
 static __weak SGLShader* gCurrentShader = nil;
 
+#pragma mark - Private
+
 @interface SGLShader ()
 
 @property (nonatomic, strong) NSMutableDictionary* uniforms;
@@ -25,43 +27,11 @@ static __weak SGLShader* gCurrentShader = nil;
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLShader
 
-+ (void) deactivateAll
-{
-    gCurrentShader = nil;
-    
-    glUseProgram(0);
-}
-
-+ (void) reloadAll
-{
-    [SGLProgram reloadAll];
-    
-    for (NSValue* value in gAllShaders)
-    {
-        SGLShader* shader = [value nonretainedObjectValue];
-        [shader reloadUniforms];
-    }
-}
-
-+ (void) deleteAll
-{
-    [gAllShaders removeAllObjects];
-}
-
-+ (SGLShader*) currentShader
-{
-    return gCurrentShader;
-}
-
-- (void) recompile
-{
-    self.program = [SGLProgram programNamed:self.name defines:self.defines];
-    
-    [self reloadUniforms];
-}
+#pragma mark - Creation
 
 - (id) initWithName:(NSString*)name
 {
@@ -105,6 +75,45 @@ static __weak SGLShader* gCurrentShader = nil;
     
     _activationCount++;
 }
+
+- (void) recompile
+{
+    self.program = [SGLProgram programNamed:self.name defines:self.defines];
+    
+    [self reloadUniforms];
+}
+
++ (SGLShader*) currentShader
+{
+    return gCurrentShader;
+}
+
+#pragma mark - Destruction
+
++ (void) deactivateAll
+{
+    gCurrentShader = nil;
+    
+    glUseProgram(0);
+}
+
++ (void) reloadAll
+{
+    [SGLProgram reloadAll];
+    
+    for (NSValue* value in gAllShaders)
+    {
+        SGLShader* shader = [value nonretainedObjectValue];
+        [shader reloadUniforms];
+    }
+}
+
++ (void) deleteAll
+{
+    [gAllShaders removeAllObjects];
+}
+
+#pragma mark - Setters
 
 - (void) setFloat:(float)value forName:(NSString*)aName
 {
@@ -212,6 +221,8 @@ static __weak SGLShader* gCurrentShader = nil;
     [uniform setValue:tex];
 }
 
+#pragma mark - Uniforms
+
 - (void) reloadUniforms
 {
     NSMutableDictionary* newUniforms = [[NSMutableDictionary alloc] initWithDictionary:_program.uniforms copyItems:YES];
@@ -247,6 +258,8 @@ static __weak SGLShader* gCurrentShader = nil;
     
     return uniform;
 }
+
+#pragma mark - Debug
 
 - (NSString*) description
 {

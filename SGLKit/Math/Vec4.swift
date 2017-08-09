@@ -33,7 +33,51 @@ extension vec4: GenericVector {
         self.init(v.x, v.y, v.z, l)
     }
     
-    public func indexIsValid(index: Int) -> Bool {
+    public init(_ color: XXColor?) {
+        
+        if let c = color {
+            
+            let cgColor = c.cgColor
+            let components = cgColor.components
+            let componentCount = cgColor.numberOfComponents
+            
+            switch componentCount {
+            
+            case 2:
+                self.x = Float((components?[0])!)
+                self.y = Float((components?[0])!)
+                self.z = Float((components?[0])!)
+                self.w = Float((components?[1])!)
+                return
+            
+            case 4:
+                self.x = Float((components?[0])!)
+                self.y = Float((components?[1])!)
+                self.z = Float((components?[2])!)
+                self.w = Float((components?[3])!)
+                return
+                
+            default:
+                break
+            }
+        }
+        
+        self.x = Float(0.0)
+        self.y = Float(0.0)
+        self.z = Float(0.0)
+        self.w = Float(0.0)
+    }
+    
+    public func toColor() -> XXColor? {
+        return XXColor(
+            red:   CGFloat(self.x),
+            green: CGFloat(self.y),
+            blue:  CGFloat(self.z),
+            alpha: CGFloat(self.w)
+        )
+    }
+    
+    public func indexIsValid(_ index: Int) -> Bool {
         return index < 4
     }
     
@@ -69,7 +113,7 @@ extension vec4: GenericVector {
         }
     }
     
-    public func at(index: Int) -> Float {
+    public func at(_ index: Int) -> Float {
         return self[index]
     }
     
@@ -77,7 +121,7 @@ extension vec4: GenericVector {
         return distance(self, ORIGIN_4D)
     }
     
-    public func dot(v: vec4) -> Float {
+    public func dot(_ v: vec4) -> Float {
         return self.x * v.x + self.y * v.y + self.z * v.z + self.w * v.w
     }
     
@@ -91,35 +135,35 @@ extension vec4: GenericVector {
 
 // Arithmetic functions.
 
-public func +=(inout a: vec4, b: vec4) {
+public func +=(a: inout vec4, b: vec4) {
     a.x += b.x
     a.y += b.y
     a.z += b.z
     a.w += b.w
 }
 
-public func -=(inout a: vec4, b: vec4) {
+public func -=(a: inout vec4, b: vec4) {
     a.x -= b.x
     a.y -= b.y
     a.z -= b.z
     a.w -= b.w
 }
 
-public func *=(inout a: vec4, b: vec4) {
+public func *=(a: inout vec4, b: vec4) {
     a.x *= b.x
     a.y *= b.y
     a.z *= b.z
     a.w *= b.w
 }
 
-public func /=(inout a: vec4, b: vec4) {
+public func /=(a: inout vec4, b: vec4) {
     a.x /= b.x
     a.y /= b.y
     a.z /= b.z
     a.w /= b.w
 }
 
-public func /=(inout vector: vec4, scalar: Float) {
+public func /=(vector: inout vec4, scalar: Float) {
     vector.x /= scalar
     vector.y /= scalar
     vector.z /= scalar
@@ -172,14 +216,14 @@ public func randomVec4() -> vec4 {
     return vec4(randomFloat(), randomFloat(), randomFloat(), randomFloat())
 }
 
-public func randomVec4InRange(lo: Float, hi: Float) -> vec4 {
+public func randomVec4InRange(_ lo: Float, hi: Float) -> vec4 {
     return vec4(randomFloatInRange(lo, hi), randomFloatInRange(lo, hi), randomFloatInRange(lo, hi), randomFloatInRange(lo, hi))
 }
 
-public func maxComponent(v: vec4) -> Float {
+public func maxComponent(_ v: vec4) -> Float {
     return max(max(max(v.x, v.y), v.z), v.w)
 }
 
-public func minComponent(v: vec4) -> Float {
+public func minComponent(_ v: vec4) -> Float {
     return min(min(min(v.x, v.y), v.z), v.w)
 }

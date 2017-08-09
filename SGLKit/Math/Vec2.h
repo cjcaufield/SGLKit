@@ -30,11 +30,19 @@ typedef struct vec2
         vec2(float i, float j) : x(i), y(j) {}
         
         vec2(ivec2 v) : x(v.x), y(v.y) {}
+    
+        vec2(CGPoint point) : x(point.x), y(point.y) {}
+    
+        vec2(CGSize size) : x(size.width), y(size.height) {}
         
         explicit vec2(const vec3& v);
         
         explicit vec2(const vec4& v);
-        
+    
+        CGPoint toPoint() { return CGPointMake(x, y); }
+    
+        CGSize toSize() { return CGSizeMake(x, y); }
+    
         float& at(int i)
         {
             switch (i)

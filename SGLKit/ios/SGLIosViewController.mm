@@ -16,6 +16,7 @@
 
 EAGLSharegroup* __weak sharedRenderingGroup = nil;
 
+#pragma mark - Private
 
 @interface SGLIosViewController ()
 
@@ -23,8 +24,11 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
 
 @end
 
+#pragma mark - Public
 
 @implementation SGLIosViewController
+
+#pragma mark - Lifecycle
 
 - (void) viewDidLoad
 {
@@ -72,6 +76,35 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
     [super viewDidUnload];
 }
 
+- (void) didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    
+    if (self.isViewLoaded && self.view.window == nil)
+    {
+        self.view = nil;
+        
+        [self tearDownGL];
+        
+        if (EAGLContext.currentContext == _cocoaContext)
+            EAGLContext.currentContext = nil;
+        
+        _context = nil;
+        _cocoaContext = nil;
+    }
+}
+
+- (void) dealloc
+{
+    [self removeObservers];
+    [self tearDownGL];
+    
+    if (EAGLContext.currentContext == _cocoaContext)
+        EAGLContext.currentContext = nil;
+}
+
+#pragma mark - Observers
+
 - (void) addObservers
 {
     NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
@@ -88,47 +121,7 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
     //[center removeObserver:self name:SGLAccelerationChangedNotification object:nil];
 }
 
-- (void) requestRedisplay
-{
-    // CJC revisit: should setNeedsDisplay only be called for continuous rendering qualities?
-    //if (self.shouldRenderContinuously == NO)
-    [self.view setNeedsDisplay];
-}
-
-- (void) sceneChanged:(NSNotification*)note
-{
-    SGLScene* scene = [(id)self.view scene];
-    
-    if (note.object == scene)
-        [self requestRedisplay];
-}
-
-- (void) dealloc
-{
-    [self removeObservers];
-    [self tearDownGL];
-    
-    if (EAGLContext.currentContext == _cocoaContext)
-        EAGLContext.currentContext = nil;
-}
-
-- (void) didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-
-    if (self.isViewLoaded && self.view.window == nil)
-    {
-        self.view = nil;
-        
-        [self tearDownGL];
-        
-        if (EAGLContext.currentContext == _cocoaContext)
-            EAGLContext.currentContext = nil;
-        
-        _context = nil;
-        _cocoaContext = nil;
-    }
-}
+#pragma mark - Rendering
 
 - (void) setupGL
 {
@@ -180,6 +173,23 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
         [scene render];
 }
 
+- (void) requestRedisplay
+{
+    // CJC revisit: should setNeedsDisplay only be called for continuous rendering qualities?
+    //if (self.shouldRenderContinuously == NO)
+    [self.view setNeedsDisplay];
+}
+
+- (void) sceneChanged:(NSNotification*)note
+{
+    SGLScene* scene = [(id)self.view scene];
+    
+    if (note.object == scene)
+        [self requestRedisplay];
+}
+
+#pragma mark - Layout
+
 - (void) viewWillLayoutSubviews
 {
     SGL_METHOD_LOG;
@@ -195,6 +205,8 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
     
     [(id)self.view transformWasChanged];
 }
+
+#pragma mark - Rotation
 
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation duration:(NSTimeInterval)duration
 {
@@ -226,7 +238,7 @@ EAGLSharegroup* __weak sharedRenderingGroup = nil;
     
     SGLScene* scene = [(id)self.view scene];
     
-    vec2 viewSize = SizeToVec2(self.view.bounds.size);
+    vec2 viewSize = vec2(self.view.bounds.size);
     vec2 originOffset = -0.5 * viewSize;
     
     float pixelDensity = [(id)self.view pixelDensity];

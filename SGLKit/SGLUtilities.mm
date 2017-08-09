@@ -12,7 +12,9 @@
 #import "SGLDebug.h"
 #import "SGLHeader.h"
 
-void SGLCheckForErrors()
+@implementation SGLUtilities
+
++ (void) checkForErrors
 {
     GLenum error;
     
@@ -26,7 +28,7 @@ void SGLCheckForErrors()
 
 #ifdef SGL_MAC
 
-    void ExitGracefully(NSString* message)
+    + (void) exitGracefullyWithMessage:(NSString*)message
     {
         NSLog(@"%@", message);
         
@@ -45,14 +47,14 @@ void SGLCheckForErrors()
 
 #endif
 
-void SwapTextures(__strong SGLTexture** tex1, __strong SGLTexture** tex2)
++ (void) swapTexture:(__strong SGLTexture**)tex1 with:(__strong SGLTexture**)tex2
 {
     SGLTexture* tempTex = *tex1;
     *tex1 = *tex2;
     *tex2 = tempTex;
 }
 
-void DrawTexture(SGLTexture* tex, vec2 outputSize, SamplingType samplingType)
++ (void) drawTexture:(SGLTexture*)tex outputSize:(vec2)outputSize samplingType:(SamplingType)samplingType
 {
     if (tex == nil)
         return;
@@ -84,110 +86,7 @@ void DrawTexture(SGLTexture* tex, vec2 outputSize, SamplingType samplingType)
     tex.samplingType = oldSamplingType;
 }
 
-NSArray* Vec3ToArray(vec3 v)
-{
-    id nx = @(v.x);
-    id ny = @(v.y);
-    id nz = @(v.z);
-    
-    return @[nx, ny, nz, @1.0f];
-}
-
-vec3 ArrayToVec3(NSArray* array)
-{
-    float r = [array[0] floatValue];
-    float g = [array[1] floatValue];
-    float b = [array[2] floatValue];
-    
-    return vec3(r, g, b);
-}
-
-XXColor* Vec3ToColor(vec3 v)
-{
-	return Vec4ToColor(vec4(v, 1.0)); // Always full alpha.
-}
-
-vec3 ColorToVec3(XXColor* color)
-{
-	vec4 v = ColorToVec4(color);
-	return vec3(v.x, v.y, v.z);
-}
-
-XXColor* Vec4ToColor(vec4 v)
-{
-    return [XXColor colorWithRed:v.x green:v.y blue:v.z alpha:v.w];
-}
-
-vec4 ColorToVec4(XXColor* color)
-{
-    if (color == nil)
-        return TRANSPARENT_BLACK;
-    
-    CGFloat r, g, b, a;
-    CGColorRef cgColor = color.CGColor;
-    size_t componentCount = CGColorGetNumberOfComponents(cgColor);
-    const CGFloat* components = CGColorGetComponents(cgColor);
-    
-    switch (componentCount)
-    {
-        case 2:
-            r = g = b = components[0];
-            a = components[1];
-            break;
-            
-        case 4:
-            r = components[0];
-            g = components[1];
-            b = components[2];
-            a = components[3];
-            break;
-            
-        default:
-            return TRANSPARENT_BLACK;
-    }
-    
-    return vec4(r, g, b, a);
-}
-
-CGPoint Vec2ToPoint(vec2 vec)
-{
-    return CGPointMake(vec.x, vec.y);
-}
-
-vec2 PointToVec2(CGPoint point)
-{
-    return vec2(point.x, point.y);
-}
-
-CGPoint IVec2ToPoint(ivec2 vec)
-{
-    return Vec2ToPoint(vec2(vec));
-}
-
-ivec2 PointToIVec2(CGPoint size)
-{
-    return ivec2(PointToVec2(size));
-}
-
-CGSize Vec2ToSize(vec2 vec)
-{
-    return CGSizeMake(vec.x, vec.y);
-}
-
-vec2 SizeToVec2(CGSize size)
-{
-    return vec2(size.width, size.height);
-}
-
-CGSize IVec2ToSize(ivec2 vec)
-{
-    return Vec2ToSize(vec2(vec));
-}
-
-ivec2 SizeToIVec2(CGSize size)
-{
-    return ivec2(SizeToVec2(size));
-}
+@end
 
 @implementation NSMutableArray (Unique)
 

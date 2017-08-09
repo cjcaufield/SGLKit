@@ -30,7 +30,42 @@ typedef struct vec4
         vec4(float i, float j, float k, float l) : x(i), y(j), z(k), w(l) {}
         
         vec4(vec3 v, float l) : x(v.x), y(v.y), z(v.z), w(l) {}
+    
+        vec4(XXColor* color)
+        {
+            if (color != nil)
+            {
+                CGColorRef cgColor = color.CGColor;
+                size_t componentCount = CGColorGetNumberOfComponents(cgColor);
+                const CGFloat* components = CGColorGetComponents(cgColor);
+                
+                switch (componentCount)
+                {
+                    case 2:
+                        x = y = z = components[0];
+                        w = components[1];
+                        return;
+                        
+                    case 4:
+                        x = components[0];
+                        y = components[1];
+                        z = components[2];
+                        w = components[3];
+                        return;
+                        
+                    default:
+                        break;
+                }
+            }
+            
+            x = y = z = w = 0.0f;
+        }
         
+        XXColor* toColor(vec4 v)
+        {
+            return [XXColor colorWithRed:v.x green:v.y blue:v.z alpha:v.w];
+        }
+    
         float& at(int i)
         {
             switch (i)

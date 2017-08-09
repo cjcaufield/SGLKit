@@ -29,22 +29,22 @@ extension ray {
     }
 }
 
-public func +=(inout r: ray, v: vec3) {
+public func +=(r: inout ray, v: vec3) {
     r.origin += v
     r.target += v
 }
 
-public func -=(inout r: ray, v: vec3) {
+public func -=(r: inout ray, v: vec3) {
     r.origin -= v
     r.target -= v
 }
 
-public func *=(inout r: ray, v: vec3) {
+public func *=(r: inout ray, v: vec3) {
     r.origin *= v
     r.target *= v
 }
 
-public func /=(inout r: ray, v: vec3) {
+public func /=(r: inout ray, v: vec3) {
     r.origin /= v
     r.target /= v
 }

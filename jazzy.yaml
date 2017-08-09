@@ -1,0 +1,10 @@
+jazzy \
+  --objc \
+  --clean \
+  --author Colin Caufield \
+  --github_url https://github.com/cjcaufield/SGLKit \
+  --module-version 4.0.1 \
+  --umbrella-header SGLKit/SGLKit.h \
+  --framework-root . \
+  --module SGLKit
+  --xcodebuild-arguments --objc,SGLKit/SGLKit.h,-x,objective-c,-isysroot

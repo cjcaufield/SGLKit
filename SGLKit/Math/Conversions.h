@@ -21,6 +21,15 @@
 
     inline vec3::vec3(const vec4& v) : x(v.x), y(v.y), z(v.z) {}
 
+    inline vec3::vec3(XXColor* color)
+    {
+        vec4 v = vec4(color);
+        
+        x = v.x;
+        y = v.y;
+        z = v.z;
+    }
+
     inline mat3::mat3(const mat4& m)
     {
         for (int i = 0; i < 3; i++)

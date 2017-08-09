@@ -18,6 +18,8 @@ NSString* const SGLAccelerationChangedNotification = @"SGLAccelerationChangedNot
 
 static SGLMotionManager* shared = nil;
 
+#pragma mark - Private
+
 @interface SGLMotionManager ()
 
 @property (nonatomic, strong) CMMotionManager* motionManager;
@@ -28,7 +30,11 @@ static SGLMotionManager* shared = nil;
 
 @end
 
+#pragma mark - Public
+
 @implementation SGLMotionManager
+
+#pragma mark - Creation
 
 + (SGLMotionManager*) shared
 {
@@ -52,6 +58,8 @@ static SGLMotionManager* shared = nil;
     
     return self;
 }
+
+#pragma mark - Control
 
 - (void) startMotionDetection
 {
@@ -107,6 +115,9 @@ static SGLMotionManager* shared = nil;
                 case UIInterfaceOrientationLandscapeRight:
                     radians = -M_PI_2;
                     break;
+                    
+                case UIInterfaceOrientationUnknown:
+                    break;
             }
             
             mat3 viewMatrix = mat3::rotationZ(radians);
@@ -116,7 +127,7 @@ static SGLMotionManager* shared = nil;
             id topController = [(id)self.window.rootViewController topViewController];
             
             MonitorRenderer* monitorRenderer = nil;
-            if ([topController isKindOfClass:[CRTViewController class]])
+            if ([topController isKindOfClass:[CathodeViewController class]])
                 monitorRenderer = [topController monitorRenderer];
             */
             
@@ -184,7 +195,9 @@ static SGLMotionManager* shared = nil;
                 float delta = motionManager.deviceMotionUpdateInterval;
                 
                 vec2 distanceChange = forceVec2D * delta * delta;
-                
+                (void)distanceChange;
+            
+                // CJC: revisit
                 //monitorRenderer.springOffset += distanceChange;
                 
                 _lastAcceleration = acceleration;
