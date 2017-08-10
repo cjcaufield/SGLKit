@@ -1,5 +1,5 @@
 //
-// Copyright 2014 Secret Geometry, Inc.  All rights reserved.
+// Copyright 2017 Secret Geometry, Inc.  All rights reserved.
 //
 
 #include <Vertex.glsl>
